@@ -115,9 +115,6 @@ function output_hdr_menulist($curmenu) {
 		<li class="<?php is_active_class($curmenu,"faq") ?>">
 			<a href="<?php echo get_option('home'); ?>/faq/">よくある質問</a>
 		</li>
-		<li class="<?php is_active_class($curmenu, "about") ?>">
-			<a href="<?php echo get_option('home'); ?>/about/">FABBWORKSについて</a>
-		</li>
 		<li class="<?php is_active_class($curmenu,"contact") ?>">
 			<a href="<?php echo get_option('home'); ?>/contact/">お問い合わせ</a>
 		</li>

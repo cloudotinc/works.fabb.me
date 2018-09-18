@@ -2213,10 +2213,10 @@ and more scalable.
 #header-fixed .logo {
   display: block;
   float: left;
-  margin-top: 1.4em;
+  margin-top: 19px;
 }
 #header-fixed .logo img {
-  height: 1em;
+  height: 20px;
   width: auto;
 }
 #header-fixed .menu-wrapper {
@@ -6395,18 +6395,6 @@ you can add resource intensive styles.
   #header-fixed .btn-mypage {
     width: 80px;
   }
-  #header-fixed .logo {
-    margin-top: 1.55em;
-  }
-  #header-fixed .logo img {
-    height: 0.8em;
-  }
-  #header-fixed .menulist > li > a {
-    font-size: 0.6em;
-  }
-  #header-fixed .std-btn-small, #header-fixed .std-btn-small-inv {
-    font-size: 0.6em;
-  }
 
   /*********************
   NAVIGATION STYLES
@@ -7430,11 +7418,11 @@ you can add resource intensive styles.
     margin: 13px 7px;
   }
   #header-fixed .menulist > li > a {
-    font-size: 0.8em;
+    font-size: 14px;
     padding: 4px 0 4px 1px;
   }
   #header-fixed .std-btn-small, #header-fixed .std-btn-small-inv {
-    font-size: 0.8em;
+    font-size: 14px;
     width: 70px;
     margin-left: 15px;
   }
@@ -7665,12 +7653,6 @@ you can add resource intensive styles.
     max-height: 114px;
     overflow: hidden;
   }
-  #header-fixed .logo {
-    margin-top: 1.2em;
-  }
-  #header-fixed .logo img {
-    height: 1.4em;
-  }
 }
 /*********************
 LARGE VIEWING SIZE
@@ -7696,10 +7678,10 @@ This is for the larger monitors and possibly full screen viewers.
     max-width: 1040px;
   }
   #header-fixed .logo {
-    margin-top: 1.5em;
+    margin-top: 18px;
   }
   #header-fixed .logo img {
-    height: 0.9em;
+    height: 22px;
   }
   #header-fixed .menu-wrapper {
     margin-top: 3px;
@@ -7711,11 +7693,11 @@ This is for the larger monitors and possibly full screen viewers.
     margin: 13px 14px;
   }
   #header-fixed .menulist > li > a {
-    font-size: 0.8em;
+    font-size: 16px;
     padding: 4px 0;
   }
   #header-fixed .std-btn-small, #header-fixed .std-btn-small-inv {
-    font-size: 0.8em;
+    font-size: 16px;
     width: 100px;
   }
   #header-fixed .snslinks {
