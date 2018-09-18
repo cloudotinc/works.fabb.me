@@ -3134,7 +3134,7 @@ author style
   display: block;
   padding-top: 67.24%;
 }
-.postlist .postlist-item .postimage img, .postlist li.product .postimage img, .woocommerce ul.products .postlist-item .postimage img, .woocommerce ul.products li.product .postimage img {
+.postlist li.product .postimage img, .woocommerce ul.products .postlist-item .postimage img, .woocommerce ul.products li.product .postimage img {
   height: auto;
   width: 100%;
   margin: 0;
@@ -3147,9 +3147,21 @@ author style
   transform: translate(-50%, -50%);
   background: #fff;
 }
-.postlist .postlist-item .postimage img.adjust-h, .postlist li.product .postimage img.adjust-h, .woocommerce ul.products .postlist-item .postimage img.adjust-h, .woocommerce ul.products li.product .postimage img.adjust-h {
+.postlist .postlist-item .postimage img {
+  height: auto;
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  background: #fff;
+}
+.postlist li.product .postimage img.adjust-h, .woocommerce ul.products .postlist-item .postimage img.adjust-h, .woocommerce ul.products li.product .postimage img.adjust-h {
   height: 100%;
   width: auto;
+  max-width: none;
+}
+.postlist .postlist-item .postimage img.adjust-h {
+  height: 100%;
+  width: 100%;
   max-width: none;
 }
 .postlist .postlist-item .status, .postlist li.product .status, .woocommerce ul.products .postlist-item .status, .woocommerce ul.products li.product .status {
