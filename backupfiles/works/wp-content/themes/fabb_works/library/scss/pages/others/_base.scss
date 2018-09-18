@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+
+
+.hentry header {
+  padding: 50px 15px 0;
+}
+
+.article-header {
+  h1 {
+    margin: 0 0 5px;
+    img {
+      max-width: 760px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.entry-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+.guide_item {
+  margin-top: 60px;
+  ol {
+    list-style-type: decimal;
+    padding-left: 2.2em;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+  .list_dot {
+    list-style-type: disc;
+    padding-left: 1.5em;
+  }
+
+
+  .item_title {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .judge_name {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  .judge_profile {
+    font-size: 13px;
+    margin-bottom: 30px;
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .btn {
+    display: inline-block;
+    border: 1px solid;
+    padding: 5px;
+    font-size: 12px;
+    @include transition(color 0.3s ease, border 0.3s ease);
+
+    &:hover {
+      color: $basic-red;
+      border-color: $basic-red;
+    }
+  }
+
+  .small {
+    font-size: 13px;
+  }
+}
+

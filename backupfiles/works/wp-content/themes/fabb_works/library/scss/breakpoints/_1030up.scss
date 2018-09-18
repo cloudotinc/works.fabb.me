@@ -1,0 +1,224 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+
+#logo {
+  width: 319px;
+  margin: 20px auto 0;
+}
+.site-description {
+  font-size: 15px;
+}
+
+#inner-header {
+}
+
+#header-fixed {
+
+  .wrap {
+    padding-right: 90px;
+  }
+
+  .snslinks {
+    display: block;
+  }
+
+}
+
+.header-toolbar {
+  .std-btn {
+    margin-left: 15px;
+  }
+  a.std-btn {
+    width: 100px;
+    font-size: 16px;
+  }
+}
+
+
+#base {
+}
+
+
+/* COMMON */
+
+
+.postlist-s {
+  .postlist-item {
+    clear: both;
+    margin-bottom: 5%;
+    border: 0;
+    padding: 0;
+    .postimage {
+      width: 38%;
+      float: left;
+      display: block;
+    }
+    .postinfo {
+      width: 58%;
+      float: right;
+    }
+    .date {
+      margin-top: 0;
+    }
+  }
+}
+
+
+.prof-card {
+  .area {
+    bottom: -18px;
+  }
+}
+
+
+
+.page-links {
+  padding: 20px 0;
+}
+
+
+.footer {
+  #inner-footer {
+    padding-bottom: 0;
+  }
+  .snslinks {
+    position: absolute;
+    bottom: 25px;
+    right: 0;
+    margin: 0;
+  }
+  .copyright {
+
+  }
+}
+
+
+
+
+
+/* TOP */
+
+.top-content-wrapper {
+  &.col2 {
+    width: 64%;
+  }
+  &.col1 {
+    width: 32%;
+  }
+  &.left {
+    float: left;
+  }
+  &.right {
+    float: right;
+  }
+}
+
+.top-content {
+  &.col2 {
+    width: 64%;
+  }
+  &.col1 {
+    width: 32%;
+  }
+  &.col1-slim {
+    width: 31%;
+  }
+}
+
+
+
+
+/* SINGLE */
+body.single {
+
+  #sidebar {
+    .postlist-s {
+      .postlist-item {
+        .postimage {
+          width: 30%;
+        }
+        .postinfo {
+          width: 66%;
+        }
+      }
+    }
+    .postlist-m {
+      .postlist-item {
+        .postimage {
+          width: 30%;
+        }
+        .postinfo {
+          width: 66%;
+        }
+      }
+    }
+  }
+
+}
+
+
+
+/* PRODUCT */
+.single-product #main .product {
+  .fabb-product-title {
+    .price {
+      padding: 23px 0;
+      margin: 20px 0 0;
+
+      .label {
+        font-size: 20px;
+        line-height: 41px;
+        padding: 0 12%;
+        &:after {
+          height: 60px;
+          top: 50%;
+          margin-top: -30px;
+        }
+      }
+      .amount-wrapper {
+        padding-right: 5%;
+      }
+      .amount {
+        font-size: 41px;
+        line-height: 41px;
+      }
+      .taxlabel {
+        line-height: 20px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+
+
+/* ARCHIVE */
+.archive, #search {
+  .postlist-m {
+    .postlist-item {
+      margin: 0 2% 4% 0;
+      &.right2 {
+        float: left;
+        margin-right: 2%;
+      }
+      &.right3 {
+        margin-right: 0;
+      }
+      &.left2 {
+        clear: none;
+      }
+      &.left3 {
+        clear: both;
+      }
+    }
+  }
+}
+

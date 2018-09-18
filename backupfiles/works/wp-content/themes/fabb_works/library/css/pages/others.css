@@ -1,0 +1,96 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+/*
+The following is based of Typebase:
+https://github.com/devinhunt/typebase.css
+I've edited it a bit, but it's a nice starting point.
+*/
+/*
+ i imported this one in the functions file so bones would look sweet.
+ don't forget to remove it for your site.
+*/
+.hentry header {
+  padding: 50px 15px 0;
+}
+
+.article-header h1 {
+  margin: 0 0 5px;
+}
+.article-header h1 img {
+  max-width: 760px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.entry-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.guide_item {
+  margin-top: 60px;
+}
+.guide_item ol {
+  list-style-type: decimal;
+  padding-left: 2.2em;
+}
+.guide_item li {
+  margin-bottom: 10px;
+}
+.guide_item .list_dot {
+  list-style-type: disc;
+  padding-left: 1.5em;
+}
+.guide_item .item_title {
+  font-weight: bold;
+  font-size: 16px;
+}
+.guide_item .judge_name {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.guide_item .judge_profile {
+  font-size: 13px;
+  margin-bottom: 30px;
+}
+.guide_item .judge_profile span {
+  font-weight: bold;
+}
+.guide_item .btn {
+  display: inline-block;
+  border: 1px solid;
+  padding: 5px;
+  font-size: 12px;
+  -moz-transition: color 0.3s ease, border 0.3s ease;
+  -o-transition: color 0.3s ease, border 0.3s ease;
+  -webkit-transition: color 0.3s ease, border 0.3s ease;
+  transition: color 0.3s ease, border 0.3s ease;
+}
+.guide_item .btn:hover {
+  color: #dd3000;
+  border-color: #dd3000;
+}
+.guide_item .small {
+  font-size: 13px;
+}

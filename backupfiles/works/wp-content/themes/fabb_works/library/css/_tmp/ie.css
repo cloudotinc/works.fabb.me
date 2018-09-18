@@ -1,0 +1,1397 @@
+@charset "UTF-8";
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: IE Stylesheet
+
+So instead of using the respond.js file to add media query support
+to IE, we're going to use SASS to create an easily readable css file.
+Here, we import all the styles the standard stylesheet gets, only
+without the media queries. No need to worry about editing anything!
+
+******************************************************************/
+/******************************************************************
+IMPORTS & DEPENDENCIES
+Remember, all the BASE styles are called already since IE can
+read those. Below, we need to import only the stuff IE can't
+understand (what's inside the media queries). We also need to
+import the mixins file so SASS can understand the variables.
+******************************************************************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+/*
+The following is based of Typebase:
+https://github.com/devinhunt/typebase.css
+I've edited it a bit, but it's a nice starting point.
+*/
+/*
+ i imported this one in the functions file so bones would look sweet.
+ don't forget to remove it for your site.
+*/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Typography
+
+Need to import a font or set of icons for your site? Drop them in
+here or just use this to establish your typographical grid. Or not.
+Do whatever you want to...GOSH!
+
+Helpful Articles:
+http://trentwalton.com/2012/06/19/fluid-type/
+http://ia.net/blog/responsive-typography-the-basics/
+http://alistapart.com/column/responsive-typography-is-a-physical-discipline
+
+******************************************************************/
+/*********************
+FONT FACE (IN YOUR FACE)
+*********************/
+/*  To embed your own fonts, use this syntax
+  and place your fonts inside the
+  library/fonts folder. For more information
+  on embedding fonts, go to:
+  http://www.fontsquirrel.com/
+  Be sure to remove the comment brackets.
+*/
+/*  @font-face {
+      font-family: 'Font Name';
+      src: url('library/fonts/font-name.eot');
+      src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('library/fonts/font-name.woff') format('woff'),
+             url('library/fonts/font-name.ttf') format('truetype'),
+             url('library/fonts/font-name.svg#font-name') format('svg');
+      font-weight: normal;
+      font-style: normal;
+  }
+*/
+@font-face {
+  font-family: 'koushiki_sansr';
+  src: url("../fonts/KoushikiSans-Regular-webfont.eot");
+  src: url("../fonts/KoushikiSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/KoushikiSans-Regular-webfont.woff2") format("woff2"), url("../fonts/KoushikiSans-Regular-webfont.woff") format("woff"), url("../fonts/KoushikiSans-Regular-webfont.ttf") format("truetype"), url("../fonts/KoushikiSans-Regular-webfont.svg#koushiki_sansr") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'courier_newregular';
+  src: url("../fonts/courier_new-webfont.eot");
+  src: url("../fonts/courier_new-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/courier_new-webfont.woff2") format("woff2"), url("../fonts/courier_new-webfont.woff") format("woff"), url("../fonts/courier_new-webfont.ttf") format("truetype"), url("../fonts/courier_new-webfont.svg#courier_newregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'chevron_aeregular';
+  src: url("../fonts/ChevronAE-Regular-webfont.eot");
+  src: url("../fonts/ChevronAE-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ChevronAE-Regular-webfont.woff2") format("woff2"), url("../fonts/ChevronAE-Regular-webfont.woff") format("woff"), url("../fonts/ChevronAE-Regular-webfont.ttf") format("truetype"), url("../fonts/ChevronAE-Regular-webfont.svg#chevron_aeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'columnfont';
+  src: url("../fonts/columnfont.eot?-1hs6dr");
+  src: url("../fonts/columnfont.eot?#iefix-1hs6dr") format("embedded-opentype"), url("../fonts/columnfont.woff?-1hs6dr") format("woff"), url("../fonts/columnfont.ttf?-1hs6dr") format("truetype"), url("../fonts/columnfont.svg?-1hs6dr#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'columnfont';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrowdown:before {
+  content: "\f602";
+}
+
+.icon-arrowright:before {
+  content: "\f603";
+}
+
+.icon-hexagon:before {
+  content: "\f600";
+}
+
+.icon-dot:before {
+  content: "\f601";
+}
+
+.icon-search:before {
+  content: "\f604";
+}
+
+/*
+some nice typographical defaults
+more here: http://www.newnet-soft.com/blog/csstypography
+*/
+p {
+  -ms-word-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  -webkit-hyphenate-before: 2;
+  -webkit-hyphenate-after: 3;
+  hyphenate-lines: 3;
+  /*
+  -webkit-font-feature-settings: "liga", "dlig";
+   -moz-font-feature-settings: "liga=1, dlig=1";
+      -ms-font-feature-settings: "liga", "dlig";
+       -o-font-feature-settings: "liga", "dlig";
+          font-feature-settings: "liga", "dlig";
+          */
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins Stylesheet
+
+This is where you can take advantage of Sass' great features: Mixins.
+I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+Helpful:
+http://sachagreif.com/useful-sass-mixins/
+http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+
+******************************************************************/
+/*********************
+TRANSITION
+*********************/
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* @include box-sizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: IE Grid Styles
+
+Since the example grid is based on media queries, so rather than
+setup some js library that would make IE8 and below understand
+media queries, let's just add some styles that serves a fixed grid.
+
+Again, if you want to roll your own, just remove this junk and put
+whatever you use in here.
+
+******************************************************************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection.
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.scss styles.
+
+******************************************************************/
+/*
+IMPORTANT NOTE ABOUT SASS 3.3 & UP
+You can't use @extend within media queries
+anymore, so just be aware that if you drop
+them in here, they won't work.
+*/
+/*********************
+NAVIGATION STYLES
+*********************/
+/* .menu is clearfixed inside mixins.scss */
+.menu {
+  /* end .menu ul */
+}
+.menu ul {
+  /* end .menu ul li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+.menu ul li {
+  /*
+  plan your menus and drop-downs wisely.
+  */
+}
+.menu ul li a {
+  /*
+  you can use hover styles here even though this size
+  has the possibility of being a mobile device.
+  */
+}
+
+/* end .menu */
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+/* entry content */
+.entry-content {
+  /* at this larger size, we can start to align images */
+}
+.entry-content .alignleft, .entry-content img.alignleft {
+  margin-right: 3%;
+  display: inline;
+  float: left;
+}
+.entry-content .alignright, .entry-content img.alignright {
+  margin-left: 3%;
+  display: inline;
+  float: right;
+}
+.entry-content .aligncenter, .entry-content img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both;
+}
+.entry-content .image50 {
+  width: 48.5%;
+}
+
+/* end .entry-content */
+/*********************
+FOOTER STYLES
+*********************/
+/*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+/* end .footer-links */
+/* COMMON */
+.std_title_block .description {
+  font-size: 14px;
+}
+
+.postlist_m .postlist_item {
+  clear: none;
+  float: left;
+  width: 48%;
+  padding: 0;
+  margin-bottom: 4%;
+}
+.postlist_m .postlist_item .postimage {
+  width: 100%;
+  float: none;
+}
+.postlist_m .postlist_item .postinfo {
+  width: 100%;
+  float: none;
+  padding: 0 15px;
+}
+.postlist_m .postlist_item.right3 {
+  float: left;
+  margin-right: 4%;
+}
+.postlist_m .postlist_item.right2 {
+  float: right;
+  margin-right: 0;
+}
+.postlist_m .postlist_item.left3 {
+  clear: none;
+}
+.postlist_m .postlist_item.left2 {
+  clear: both;
+}
+
+.postlist_columnlist .postlist_item .date {
+  display: inline-block;
+  padding: 11px 0 5px;
+  height: 32px;
+}
+
+/* TOP */
+.postlist_top .postlist_item {
+  float: none;
+}
+.postlist_top .postlist_item.size1 {
+  width: 48%;
+  float: left;
+}
+.postlist_top .postlist_item.size2 {
+  width: 100%;
+}
+.postlist_top .postlist_item.right3 {
+  float: left;
+  margin-right: 4%;
+}
+.postlist_top .postlist_item.right2 {
+  float: right;
+  margin-right: 0;
+}
+.postlist_top .postlist_item.left3 {
+  clear: none;
+}
+.postlist_top .postlist_item.left2 {
+  clear: both;
+}
+
+.top_content .btn_viewall {
+  bottom: 0;
+}
+
+#topnews .block_inner_magazine .magcontent, #topfeature .block_inner_magazine .magcontent {
+  padding: 40px 20px;
+  font-size: 13px;
+}
+#topnews .block_inner_magazine .magcontent .mag_img, #topfeature .block_inner_magazine .magcontent .mag_img {
+  width: 38%;
+  float: left;
+}
+#topnews .block_inner_magazine .magcontent .mag_info, #topfeature .block_inner_magazine .magcontent .mag_info {
+  width: 58%;
+  float: right;
+  font-size: 15px;
+}
+#topnews .block_inner_magazine .magcontent .mag_info .mag_title, #topfeature .block_inner_magazine .magcontent .mag_info .mag_title {
+  font-size: 17px;
+  line-height: 1.4;
+}
+#topnews .block_inner_magazine .magcontent .mag_info .mag_state, #topfeature .block_inner_magazine .magcontent .mag_info .mag_state {
+  font-size: 14px;
+}
+#topnews .block_inner_magazine .magcontent .mag_info_bottom, #topfeature .block_inner_magazine .magcontent .mag_info_bottom {
+  padding-top: 20px;
+}
+
+.postlist .postlist_item_cover .date {
+  display: block;
+}
+
+/* SINGLE */
+body.single .profile_wrapper .profileimg {
+  width: 48%;
+  float: left;
+}
+body.single .profile_wrapper .profileinfo {
+  float: right;
+  width: 48%;
+}
+body.single .profile_wrapper .authorname {
+  margin: 0;
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+/* SINGLE */
+body.single #main .col2 .col_item {
+  width: 49%;
+}
+body.single #main .col2 .col_l {
+  float: left;
+}
+body.single #main .col2 .col_r {
+  float: right;
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+.wrap {
+  width: 96%;
+}
+
+.wrap_thin {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.pc {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+#base {
+  position: relative;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+.header {
+  background-color: #fff;
+  position: fixed;
+}
+
+#logo {
+  display: block;
+  width: 250px;
+  padding: 0 38px;
+  background-color: #b70404;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+.nav {
+  border: 0;
+  /* end .menu ul li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+.nav ul {
+  background: #000;
+  margin-top: 0;
+}
+.nav li {
+  float: left;
+  position: relative;
+  /*
+  plan your menus and drop-downs wisely.
+  */
+  /* showing sub-menus */
+}
+.nav li a {
+  border-bottom: 0;
+  /*
+  you can use hover styles here even though this size
+  has the possibility of being a mobile device.
+  */
+}
+.nav li a:hover, .nav li a:focus {
+  color: #fff;
+  text-decoration: underline;
+}
+.nav li ul.sub-menu,
+.nav li ul.children {
+  margin-top: 0;
+  border: 1px solid #ccc;
+  border-top: 0;
+  position: absolute;
+  visibility: hidden;
+  z-index: 8999;
+  /* highlight sub-menu current page */
+}
+.nav li ul.sub-menu li,
+.nav li ul.children li {
+  /*
+  if you need to go deeper, go nuts
+  just remember deeper menus suck
+  for usability. k, bai.
+  */
+}
+.nav li ul.sub-menu li a,
+.nav li ul.children li a {
+  padding-left: 10px;
+  border-right: 0;
+  display: block;
+  width: 180px;
+  border-bottom: 1px solid #ccc;
+}
+.nav li ul.sub-menu li:last-child a,
+.nav li ul.children li:last-child a {
+  border-bottom: 0;
+}
+.nav li ul.sub-menu li ul,
+.nav li ul.children li ul {
+  top: 0;
+  left: 100%;
+}
+.nav li:hover > ul {
+  top: auto;
+  visibility: visible;
+}
+
+/* end .nav */
+#inner-header {
+  height: 130px;
+}
+#inner-header .togglebutton {
+  display: none;
+}
+
+.header_info {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 250px;
+  /* 174 */
+  padding: 15px;
+  height: auto;
+  font-size: 13px;
+  color: #000;
+}
+.header_info p {
+  padding: 0;
+  margin: 0;
+}
+.header_info .latestdate {
+  float: none;
+}
+.header_info .volume {
+  padding: 10px 0 0 0;
+  float: none;
+}
+
+.hentry {
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+.hentry header {
+  padding: 20px 20px 0;
+}
+.hentry footer {
+  padding: 20px;
+}
+.hentry footer p {
+  margin: 0;
+}
+
+/* end .hentry */
+.entry-content {
+  padding: 30px 20px 0;
+  font-size: 14px;
+}
+.entry-content.fontsize_large {
+  font-size: 18px;
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+.sidebar {
+  margin-top: 2.2em;
+}
+
+.widgettitle {
+  border-bottom: 2px solid #444;
+  margin-bottom: 0.75em;
+}
+
+.widget {
+  padding: 0 10px;
+  margin: 2.2em 0;
+}
+.widget ul li {
+  margin-bottom: 0.75em;
+  /* deep nesting */
+}
+.widget ul li ul {
+  margin-top: 0.75em;
+  padding-left: 1em;
+}
+
+/* links widget */
+/* meta widget */
+/* pages widget */
+/* recent-posts widget */
+/* archives widget */
+/* tag-cloud widget */
+/* calendar widget */
+/* category widget */
+/* recent-comments widget */
+/* search widget */
+/* text widget */
+/*********************
+FOOTER STYLES
+*********************/
+.footer {
+  padding: 100px 0;
+  position: relative;
+}
+.footer .footer_logo {
+  width: 100px;
+}
+.footer .footer_logo img {
+  width: 100%;
+}
+.footer .footer_nav {
+  width: 25%;
+  float: left;
+  padding: 0 20px 20px 0;
+}
+.footer .footer_nav .label {
+  margin: 0 0 30px;
+}
+.footer .footer_nav ul li {
+  font-size: 13px;
+  margin: 0 0 5px;
+}
+.footer .footer_bottom {
+  clear: both;
+}
+.footer .footer_bottom ul {
+  font-size: 12px;
+}
+.footer .footer_bottom ul li {
+  display: inline-block;
+}
+
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+.footer-links ul li {
+  /*
+  be careful with the depth of your menus.
+  it's very rare to have multi-depth menus in
+  the footer.
+  */
+}
+
+/* end .footer-links */
+.content {
+  padding-top: 130px;
+  padding-left: 250px;
+}
+
+/* COMMOM ITEMS */
+.postlist_ss {
+  padding: 0;
+}
+.postlist_ss .postlist_item {
+  clear: both;
+  margin-bottom: 30px;
+  border: 0;
+  padding: 0;
+}
+.postlist_ss .postlist_item .postimage {
+  width: 23%;
+  float: left;
+  display: block;
+}
+.postlist_ss .postlist_item .postinfo {
+  width: 73%;
+  float: right;
+}
+.postlist_ss .postlist_item .date {
+  margin-top: 0;
+}
+
+.std_related_products h3 {
+  font-size: 18px;
+}
+.std_related_products .product_item {
+  margin-bottom: 20px;
+}
+.std_related_products .product_item .product_left {
+  width: 22%;
+  float: left;
+}
+.std_related_products .product_item .product_right {
+  width: 74%;
+  float: right;
+}
+.std_related_products .product_item .product_right .name {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.std_related_products .product_item .product_right a {
+  font-size: 15px;
+}
+
+.gototop {
+  width: 60px;
+  bottom: 50px;
+  right: 20px;
+}
+
+/* TOP */
+#cover {
+  display: none;
+}
+
+.top_content .postlist {
+  padding-bottom: 40px;
+}
+.top_content .btn_viewall {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#topnews .block_inner_news .std_ibl_button, #topnews .block_inner_feature .std_ibl_button, #topfeature .block_inner_news .std_ibl_button, #topfeature .block_inner_feature .std_ibl_button {
+  margin-right: 0;
+}
+
+/* SINGLE */
+body.single .noHeaderImg #main, body.single .noHeaderImg #sidebar {
+  margin-top: 1%;
+}
+body.single .std_title {
+  position: static;
+  margin-top: 10px;
+}
+body.single .content_header {
+  margin-bottom: 1%;
+}
+body.single .content_header .column_headerimg a {
+  display: block;
+}
+body.single .content_header .column_headerimg a.pc {
+  display: block;
+}
+body.single .content_header .column_headerimg a.mobile {
+  display: none;
+}
+
+.postlist_related {
+  padding: 2% 2% 0;
+}
+.postlist_related .no_related_post {
+  margin: 0 0 20px;
+}
+
+/* SIDE */
+.side_content {
+  padding-bottom: 30px;
+}
+.side_content .side_content_inner {
+  padding: 20px 15px;
+}
+
+.side_content_featurelist .postlist_m {
+  padding-top: 0;
+}
+.side_content_featurelist .postlist_m .postlist_item {
+  clear: both;
+  width: 100%;
+  margin-bottom: 5%;
+  border: 0;
+  padding: 0;
+}
+.side_content_featurelist .postlist_m .postlist_item .postimage {
+  width: 40%;
+  float: left;
+  display: block;
+}
+.side_content_featurelist .postlist_m .postlist_item .postinfo {
+  width: 56%;
+  float: right;
+}
+.side_content_featurelist .postlist_m .postlist_item .date {
+  margin-top: 0;
+}
+
+#column .page-title {
+  margin: 30px 0 10px;
+}
+
+#genre .page-title {
+  margin: 30px 0 10px;
+}
+
+#searchpage .page-title {
+  margin: 30px 0 10px;
+}
+
+#search .search-title {
+  margin: 50px 0 10px;
+}
+
+/* PRIVACY */
+#privacy .privacy_link {
+  font-size: 14px;
+}
+#privacy .privacy_link a {
+  display: inline;
+}
+#privacy .page_content {
+  font-size: 13px;
+  padding-top: 86px;
+}
+#privacy .page_content h3 {
+  font-size: 18px;
+}
+#privacy .content_pmark p {
+  padding-left: 0;
+}
+#privacy .privacymark {
+  width: 100px;
+  float: left;
+  margin: 0 30px 30px 0;
+  position: static;
+}
+
+/* contact form 7 */
+.wpcf7-form {
+  padding-top: 20px;
+}
+
+.step_confirm {
+  padding-top: 130px;
+}
+
+/* SIDEMENU PC */
+#sidemenu_pc {
+  background-color: #fff;
+  display: block;
+  width: 251px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 130px;
+  border-right: 1px solid #ccc;
+}
+#sidemenu_pc.fixed {
+  position: fixed;
+  height: auto;
+}
+#sidemenu_pc.clearfixed {
+  position: absolute;
+  height: auto;
+  min-height: 0 !important;
+}
+#sidemenu_pc ul {
+  margin: 0;
+  border-top: 1px solid #fff;
+}
+#sidemenu_pc ul li {
+  height: 57px;
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+  line-height: 1.4;
+}
+#sidemenu_pc ul li .menutext_en {
+  font-family: "courier_newregular", "AxisStd-Regular", "Helvetica Neue", Helvetica, Arial, "ヒラギノ角ゴ ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  text-transform: uppercase;
+  display: block;
+}
+#sidemenu_pc ul li a {
+  padding: 12px 15px;
+  display: block;
+  height: 100%;
+  color: #000;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+#sidemenu_pc ul li a:hover {
+  background-color: #f7f7f7;
+  color: #000;
+}
+#sidemenu_pc ul li.menu_search {
+  border-color: #fff;
+}
+#sidemenu_pc ul li.menu_search a {
+  background-color: #d93c3c;
+  color: #fff;
+}
+#sidemenu_pc ul li.menu_search a:hover {
+  background-color: #e16767;
+}
+#sidemenu_pc ul li.menu_columns {
+  border-color: #fff;
+}
+#sidemenu_pc ul li.menu_columns a {
+  background-color: #b92525;
+  color: #fff;
+}
+#sidemenu_pc ul li.menu_columns a:hover {
+  background-color: #d83a3a;
+}
+#sidemenu_pc ul li.menu_esmagazines {
+  border-color: #fff;
+}
+#sidemenu_pc ul li.menu_esmagazines a {
+  background-color: #951414;
+  color: #fff;
+}
+#sidemenu_pc ul li.menu_esmagazines a:hover {
+  background-color: #c21a1a;
+}
+#sidemenu_pc ul li.menu_special {
+  border-color: #fff;
+}
+#sidemenu_pc ul li.menu_special a {
+  background-color: #7c1212;
+  color: #fff;
+}
+#sidemenu_pc ul li.menu_special a:hover {
+  background-color: #a91818;
+}
+#sidemenu_pc ul li.menu_genres a {
+  background-color: #630b0b;
+  color: #fff;
+}
+#sidemenu_pc ul li.menu_genres a:hover {
+  background-color: #911010;
+}
+#sidemenu_pc ul li.menu_posts {
+  background-color: #420404;
+  color: #fff;
+}
+#sidemenu_pc ul li.menu_posts a {
+  background-color: #420404;
+  color: #fff;
+}
+#sidemenu_pc ul li.menu_posts a:hover {
+  background-color: #911010;
+}
+#sidemenu_pc ul li.menulabel {
+  padding: 12px 15px;
+}
+#sidemenu_pc ul li.menu_genre a {
+  border-left: 8px solid;
+  -webkit-transition: border 0.3s ease, background-color 0.3s ease, padding 0.3s ease;
+  transition: border 0.3s ease, background-color 0.3s ease, padding 0.3s ease;
+  padding-left: 7px;
+}
+#sidemenu_pc ul li.menu_genre a:hover {
+  border-left: 16px solid;
+  padding-right: 7px;
+}
+#sidemenu_pc ul li.menu_post a {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  padding: 0;
+}
+#sidemenu_pc ul li.menu_post a img {
+  width: 68px;
+  height: 54px;
+  padding: 7px;
+  display: table-cell;
+  vertical-align: middle;
+}
+#sidemenu_pc ul li.menu_post a p {
+  width: 182px;
+  padding-right: 7px;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 11px;
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+.header_search {
+  margin: 15px 40px;
+  width: 200px;
+}
+
+#headermenu li {
+  margin-right: 40px;
+}
+#headermenu li a {
+  font-size: 18px;
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+/* COMMON */
+.postlist .postlist_item .postinfo {
+  padding: 0;
+}
+.postlist .postlist_item .postimage img {
+  border: 1px solid #dddddd;
+}
+
+.postlist_s .postlist_item {
+  clear: both;
+  margin-bottom: 5%;
+  border: 0;
+  padding: 0;
+}
+.postlist_s .postlist_item .postimage {
+  width: 40%;
+  float: left;
+  display: block;
+}
+.postlist_s .postlist_item .postinfo {
+  width: 56%;
+  float: right;
+}
+.postlist_s .postlist_item .date {
+  margin-top: 0;
+}
+
+.postlist_m {
+  padding-top: 2%;
+}
+.postlist_m .postlist_item {
+  float: left;
+  width: 32%;
+  margin: 0 2% 4% 0;
+}
+.postlist_m .postlist_item.right2 {
+  float: left;
+  margin-right: 2%;
+}
+.postlist_m .postlist_item.right3 {
+  margin-right: 0;
+}
+.postlist_m .postlist_item.left2 {
+  clear: none;
+}
+.postlist_m .postlist_item.left3 {
+  clear: both;
+}
+
+/* TOP */
+.postlist_top {
+  padding-top: 2%;
+}
+.postlist_top .postlist_item {
+  float: left;
+  margin: 0 2% 4% 0;
+}
+.postlist_top .postlist_item.size1 {
+  width: 32%;
+}
+.postlist_top .postlist_item.size2 {
+  width: 32%;
+}
+.postlist_top .postlist_item.right2 {
+  float: left;
+  margin-right: 2%;
+}
+.postlist_top .postlist_item.right3 {
+  margin-right: 0;
+}
+.postlist_top .postlist_item.left2 {
+  clear: none;
+}
+.postlist_top .postlist_item.left3 {
+  clear: both;
+}
+
+#topnews .std_title, #topfeature .std_title {
+  margin-top: 0;
+  margin-bottom: 4%;
+}
+#topnews .block_inner_news, #topfeature .block_inner_news {
+  width: 49%;
+  float: left;
+  margin-bottom: 0;
+}
+#topnews .block_inner_special, #topfeature .block_inner_special {
+  width: 49%;
+  float: right;
+  margin: 0;
+}
+#topnews .block_inner_magazine, #topfeature .block_inner_magazine {
+  width: 49%;
+  float: right;
+  margin: 0;
+}
+
+/* SINGLE */
+body.single #sidebar .postlist_s .postlist_item .postimage {
+  width: 30%;
+}
+body.single #sidebar .postlist_s .postlist_item .postinfo {
+  width: 66%;
+}
+body.single #sidebar .postlist_m .postlist_item .postimage {
+  width: 30%;
+}
+body.single #sidebar .postlist_m .postlist_item .postinfo {
+  width: 66%;
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+.side_content .post_genre a {
+  width: 80px;
+  letter-spacing: 2px;
+  padding-left: 2px;
+}
+.side_content .post_genre .second {
+  display: inline;
+}
+
+/* SINGLE */
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Super Large Monitor Stylesheet
+
+You can add some advanced styles here if you like. This kicks in
+on larger screens.
+
+******************************************************************/
+.wrap {
+  max-width: 1200px;
+}
+
+.postlist_ss .postlist_item {
+  margin-bottom: 15px;
+}
+
+.postlist_m {
+  padding-top: 2%;
+}
+.postlist_m .postlist_item {
+  float: left;
+  width: 23.5%;
+  margin: 0 2% 4% 0;
+}
+.postlist_m .postlist_item.right2 {
+  float: left;
+  margin-right: 2%;
+}
+.postlist_m .postlist_item.right3 {
+  float: left;
+  margin-right: 2%;
+}
+.postlist_m .postlist_item.right4 {
+  margin-right: 0;
+}
+.postlist_m .postlist_item.left2 {
+  clear: none;
+}
+.postlist_m .postlist_item.left3 {
+  clear: none;
+}
+.postlist_m .postlist_item.left4 {
+  clear: both;
+}
+
+.postlist_max3 {
+  padding-top: 2%;
+}
+.postlist_max3 .postlist_item {
+  float: left;
+  width: 32%;
+  margin: 0 2% 4% 0;
+}
+.postlist_max3 .postlist_item.right4 {
+  margin-right: 2%;
+}
+.postlist_max3 .postlist_item.right2 {
+  float: left;
+  margin-right: 2%;
+}
+.postlist_max3 .postlist_item.right3 {
+  margin-right: 0;
+}
+.postlist_max3 .postlist_item.left4 {
+  clear: none;
+}
+.postlist_max3 .postlist_item.left2 {
+  clear: none;
+}
+.postlist_max3 .postlist_item.left3 {
+  clear: both;
+}
+
+/* TOP */
+.postlist_top {
+  padding-top: 2%;
+}
+.postlist_top .postlist_item {
+  float: left;
+  margin: 0 2% 4% 0;
+}
+.postlist_top .postlist_item.size1 {
+  width: 23.5%;
+}
+.postlist_top .postlist_item.size2 {
+  width: 49%;
+}
+.postlist_top .postlist_item.size2 .excerpt {
+  display: none;
+}
+.postlist_top .postlist_item.size2 .excerpt_long {
+  display: block;
+}
+.postlist_top .postlist_item.right2 {
+  float: left;
+  margin-right: 2%;
+}
+.postlist_top .postlist_item.right3 {
+  float: left;
+  margin-right: 2%;
+}
+.postlist_top .postlist_item.right4 {
+  margin-right: 0;
+}
+.postlist_top .postlist_item.left2 {
+  clear: none;
+}
+.postlist_top .postlist_item.left3 {
+  clear: none;
+}
+.postlist_top .postlist_item.left4 {
+  clear: both;
+}
+
+/* SINGLE */
+body.single #main {
+  width: 65%;
+  margin: 0 1% 1% 0;
+  padding-bottom: 0;
+  float: left;
+}
+body.single #main .entry-header .title_wrapper {
+  padding: 15px 0 0;
+}
+body.single #main .entry-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 70px 0 40px;
+}
+body.single #sidebar {
+  width: 34%;
+  margin-bottom: 1%;
+  float: right;
+}
+body.single #sidebar .postlist_s .postlist_item, body.single #sidebar .postlist_m .postlist_item {
+  margin-bottom: 25px;
+}
+body.single #sidebar .postlist_s .postlist_item .postimage, body.single #sidebar .postlist_m .postlist_item .postimage {
+  width: 34%;
+}
+body.single #sidebar .postlist_s .postlist_item .postinfo, body.single #sidebar .postlist_m .postlist_item .postinfo {
+  width: 63%;
+}
+body.single #sidebar .postlist_s .postlist_item .title, body.single #sidebar .postlist_m .postlist_item .title {
+  font-size: 14px;
+  margin: 0 !important;
+}
+body.single #sidebar .postlist_s .postlist_item .posttitle, body.single #sidebar .postlist_m .postlist_item .posttitle {
+  font-size: 12px;
+}
+body.single #main_bottom {
+  margin-bottom: 2%;
+}
+body.single .link_backnumber {
+  max-width: 270px;
+}
+
+/*
+you can call the larger styles if you want, but there's really no need
+*/
+/******************************************************************
+ADDITIONAL IE FIXES
+These fixes are now ONLY seen by IE, so you don't have to worry
+about using prefixes, although it's best practice. For more info
+on using Modernizr classes, check out this link:
+http://www.modernizr.com/docs/
+******************************************************************/
+/*
+For example, you can use something like:
+
+.no-textshadow .class { ... }
+
+You can also target specific versions by using the classes applied to
+the html element. These can sometimes change, so take a look inside the
+header.php file to see what they are:
+
+
+.lt-ie8 .class { ... }
+
+*/
+.content {
+  min-width: 840px;
+}
+
+.entry-content img {
+  width: inherit;
+  max-width: 100%;
+  height: auto;
+}

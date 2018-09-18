@@ -1,0 +1,38 @@
+v1.0.8  - Moved upsell link to trt-customizer-pro
+
+v1.0.7  - Fixed subpage/post banner size
+        - Fixed meta-box variable issue
+        - Fixed banner margin if no plugin installed
+
+v1.0.6 	- Added User Guide section in customizer
+
+v1.0.5 	- Added TGM plugin recommendation for Juniper Companion
+        - Fixed banner css margin issue
+
+v1.0.4 	- Removed prefix on styleeet in functions.php
+        - Escaped translation in search form in functions.php
+        - Fixed incorrect default background color for WP-core background setting
+
+v1.0.3 	- Fixed wrong text domain in header-banner.php
+
+v1.0.2 	- Removed extra /dir/s from /inc/kirki/
+        - Added sanitize functions in meta_boxes.php
+        - Fixed missing translation functions in meta_boxes.php
+        - Fixed missing translation functions in content-single.php
+        - Removed all demo content in header-banner.php
+        - Added new post/page banner option as default in header-banner.php and /inc/options.php
+        - Fixed some escaping issue in juniper_modify_search_form and addded translation function
+
+v1.0.1 	- Migrated all settings to Kirki
+        - Moved all assets into an /assets/ dir
+        - Escaped all saved data
+        - Moved all landing page features into page template with plugin req.
+        - Added support for title-tag
+        - Updated tags
+        - Removed all custom widgets
+        - Prefixed functions and calls
+        - Fixed licensing info
+        - Added text-domain
+        - Made all strings translatable
+
+v1.0.0 	- Initial Launch

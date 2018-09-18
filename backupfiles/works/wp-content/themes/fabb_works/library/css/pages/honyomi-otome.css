@@ -1,0 +1,1860 @@
+@charset "UTF-8";
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+/*
+The following is based of Typebase:
+https://github.com/devinhunt/typebase.css
+I've edited it a bit, but it's a nice starting point.
+*/
+/*
+ i imported this one in the functions file so bones would look sweet.
+ don't forget to remove it for your site.
+*/
+.pc {
+  display: none;
+}
+
+.mobile {
+  display: block;
+}
+
+body {
+  font-size: 13px;
+}
+
+a img {
+  position: relative;
+  -moz-transition: opacity 0.4s ease;
+  -o-transition: opacity 0.4s ease;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+}
+
+a:focus img,
+a:hover img {
+  filter: alpha(opacity=70);
+  /*IE*/
+  -moz-opacity: 0.7;
+  /*Older Firefox*/
+  opacity: 0.7;
+  /* Modern Browsers*/
+  -ms-filter: "alpha(opacity=70)";
+  /*IE 8*/
+}
+
+/* common */
+.std_internal_button_arrow {
+  font-size: 14px;
+}
+
+.feature_content_wrapper {
+  margin-bottom: 40px;
+}
+.feature_content_wrapper h3 {
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.3;
+  margin: 0 15px 40px;
+  padding-top: 40px;
+  letter-spacing: 2px;
+}
+.feature_content_wrapper h3 span {
+  display: inline-block;
+  padding: 26px 0px;
+  position: relative;
+}
+.feature_content_wrapper h3 span .subtitle {
+  padding: 0;
+  font-size: 18px;
+  display: block;
+}
+.feature_content_wrapper h3 span .subtitle:after {
+  content: none;
+}
+.feature_content_wrapper h3 span .coop {
+  padding: 5px 0 0;
+  font-size: 13px;
+  display: block;
+  text-align: right;
+}
+.feature_content_wrapper h3 span .coop:after {
+  content: none;
+}
+
+.booklist .book_item img {
+  width: 100%;
+  display: block;
+}
+.booklist .book_item .book_cover {
+  position: relative;
+  height: 200px;
+  /* initialize */
+}
+.booklist .book_item .book_cover .book_cover_links {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  display: none;
+}
+.booklist .book_item .book_cover .book_cover_links .storelinks {
+  position: absolute;
+  top: 50%;
+  margin: -40px 0px;
+  width: 100%;
+  padding: 0 15px;
+}
+.booklist .book_item .book_cover .book_cover_links .storelinks .std-obl-button-fixedw {
+  width: 100%;
+}
+.booklist .book_item .book_cover .book_cover_links .storelinks .std-obl-button-fixedw a {
+  color: #fff;
+  border-color: #fff;
+}
+.booklist .book_item .book_cover .book_cover_links .storelinks .std-obl-button-fixedw a:hover {
+  color: #dd3000;
+  border-color: #dd3000;
+}
+.booklist .book_item .book_cover .book_cover_links .store_reader {
+  margin-bottom: 20px;
+}
+.booklist .book_item .catch {
+  line-height: 1.4;
+  font-size: 12px;
+  padding: 5px 0 0;
+}
+.booklist .book_item_large {
+  clear: both;
+}
+.booklist .book_item_large img {
+  display: block;
+  width: 100%;
+}
+.booklist .book_item_large .book_cover {
+  width: 100%;
+  margin: 0 auto 15px;
+}
+.booklist .book_item_large .book_cover img {
+  width: 40%;
+  margin: 0 auto 10px;
+}
+.booklist .book_item_large .book_info p {
+  margin: 0;
+}
+.booklist .book_item_large .book_info .title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 5px;
+}
+.booklist .book_item_large .book_info .author {
+  font-size: 14px;
+}
+.booklist .book_item_large .book_info .publisher {
+  font-size: 13px;
+}
+.booklist .book_item_large .book_info .summary {
+  padding: 15px 0;
+}
+.booklist .book_item_large .book_links {
+  display: block;
+  padding-top: 10px;
+  clear: both;
+}
+.booklist .book_item_large .book_links .storelinks .title {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.booklist .book_item_large .book_links .storelinks .std-obl-button-fixedw {
+  width: 130px;
+}
+.booklist .book_item_large .book_links .storelinks .store_reader {
+  margin-bottom: 2px;
+}
+.booklist .book_item_series .book_info {
+  overflow: hidden;
+  padding: 10px;
+  background-color: #fffe03;
+}
+.booklist .book_item_series .book_info .title {
+  display: block;
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+.booklist .book_item_series .book_info .book_links {
+  display: inline-block;
+  float: left;
+  clear: none;
+  padding: 0;
+}
+.booklist .book_item_series .book_info .book_links .storelinks .store_reader {
+  margin-bottom: 0;
+}
+
+.pagetitle {
+  font-size: 22px;
+  text-align: center;
+  line-height: 1.4;
+  margin: 20px 0 0;
+  padding: 40px 0;
+  letter-spacing: 2px;
+}
+.pagetitle span {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+}
+.pagetitle img {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+.pagetitle .pc {
+  display: none;
+}
+
+.lede {
+  text-align: justify;
+  text-justify: inter-ideograph;
+  font-size: 14px;
+}
+
+.link_external {
+  border: 2px solid #dd3000;
+  display: block;
+  text-align: center;
+  line-height: 1.4;
+  color: #dd3000;
+  font-size: 18px;
+  margin: 0 15px 0;
+  padding: 5px 10px;
+  position: relative;
+  clear: both;
+  -moz-transition: color 0.5s ease, border 0.5s ease;
+  -o-transition: color 0.5s ease, border 0.5s ease;
+  -webkit-transition: color 0.5s ease, border 0.5s ease;
+  transition: color 0.5s ease, border 0.5s ease;
+}
+.link_external span {
+  white-space: nowrap;
+}
+.link_external .icon {
+  position: relative;
+  top: 1px;
+}
+.link_external:hover, .link_external:focus {
+  color: #000;
+  border-color: #000;
+}
+
+#writer {
+  clear: both;
+  padding: 0 15px 20px;
+}
+#writer .title {
+  padding: 10px 50px 0 0;
+  border-top: 1px solid #7a7a7a;
+  display: inline-block;
+}
+#writer .name {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.mainvisual {
+  width: 100%;
+}
+
+.mainvisual_contain .std_mvblock h2, .mainvisual_contain .std_mvblock p {
+  display: none;
+}
+.mainvisual_contain .std_mvblock h2 span, .mainvisual_contain .std_mvblock p span {
+  background-color: #fffe03;
+}
+
+.covertitle_ss {
+  margin-bottom: 40px;
+}
+.covertitle_ss h2 {
+  color: #000;
+  background-color: #fffe03;
+  font-size: 20px;
+  display: inline-block;
+  padding: 2px 5px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.covertitle_ss p {
+  display: inline-block;
+  background-color: #fffe03;
+  color: #000;
+  font-size: 15px;
+  padding: 2px 5px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.content_narrow {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container_inner .copyright {
+  text-align: center;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.mfp-close-btn-in .mfp-close {
+  color: #c70001;
+}
+
+.btn_pagedown {
+  width: 80px;
+  display: block;
+  margin: 40px auto 0;
+  text-align: center;
+  font-size: 12px;
+}
+.btn_pagedown img {
+  width: 100%;
+  display: block;
+  background-color: #000;
+  border-radius: 40px;
+  padding: 18px 15px 12px;
+}
+
+.btn_pagetop {
+  width: 80px;
+  display: block;
+  margin: 40px auto 20px;
+  text-align: center;
+  font-size: 12px;
+}
+.btn_pagetop img {
+  width: 100%;
+  display: block;
+  background-color: #000;
+  border-radius: 40px;
+  padding: 12px 15px 18px;
+}
+
+.subcontent {
+  padding: 0 0 30px;
+}
+.subcontent a {
+  text-decoration: underline;
+}
+
+.block_img_2col {
+  margin-bottom: 40px;
+}
+.block_img_2col img {
+  width: 100%;
+  max-width: 200px;
+  display: block;
+  margin: 0 auto 10px;
+}
+.block_img_2col > div {
+  width: 100%;
+}
+.block_img_2col .subblock {
+  padding: 15px 15px 0;
+  background-color: #f7f7f7;
+}
+.block_img_2col .maintext {
+  font-size: 16px;
+}
+
+.block_img_1col {
+  margin-bottom: 40px;
+}
+.block_img_1col img {
+  width: 100%;
+  max-width: 200px;
+  display: block;
+  margin: 0 auto 10px;
+}
+.block_img_1col > div {
+  width: 100%;
+}
+.block_img_1col .subblock {
+  padding: 15px 15px 0;
+  background-color: #f7f7f7;
+}
+.block_img_1col .maintext {
+  font-size: 16px;
+}
+
+/* intro */
+#intro {
+  padding: 15px 15px 0;
+}
+#intro .lede {
+  padding: 15px 0 30px;
+  font-size: 14px;
+}
+
+.interview #intro .lede {
+  padding-top: 30px;
+}
+.interview #interview_menu {
+  margin-bottom: 40px;
+  padding: 0;
+}
+.interview #content_interview {
+  margin-bottom: 0;
+}
+.interview #content_interview .mainimage {
+  width: 100%;
+  display: block;
+}
+.interview #content_interview .mainimage.pc {
+  display: none;
+}
+.interview #content_interview .mainimage.mobile {
+  display: block;
+}
+.interview #content_interview .mainimage_text {
+  max-width: 480px;
+  width: 100%;
+  display: block;
+  margin: 40px 0 80px;
+}
+.interview #content_interview .fullimage {
+  position: relative;
+}
+.interview #content_interview .fullimage .btn_pagedown {
+  display: none;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -40px;
+}
+.interview #content_interview .fullimage .btn_pagedown.pos_under {
+  bottom: -40px;
+}
+.interview #content_interview .itv_page {
+  display: none;
+}
+.interview #content_interview .itv_page.active {
+  display: block;
+}
+.interview #content_interview .itv_block {
+  position: relative;
+}
+.interview #content_interview .itv_block .itv_img img {
+  width: 100%;
+  display: block;
+}
+.interview #content_interview .itv_block .itv_content_wrapper {
+  font-size: 14px;
+  line-height: 1.8;
+  padding: 30px 15px 15px;
+}
+.interview #content_interview .itv_block .itv_content_wrapper .itv_content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.interview #content_interview .itv_block .itv_content_wrapper p {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+.interview #content_interview .itv_block .itv_content_wrapper .interview_a {
+  color: #7895a0;
+}
+.interview #content_interview .itv_block .itv_content_wrapper .interview_b span {
+  padding-right: 15px;
+  color: #0684a4;
+  font-weight: bold;
+}
+.interview #content_interview .itv_block .itv_content_wrapper .interview_c span {
+  padding-right: 15px;
+  color: #e15a00;
+}
+.interview #content_interview .itv_block .itv_content_wrapper .interview_d span {
+  padding-right: 15px;
+  color: #555;
+}
+.interview #content_interview .itv_block .itv_content_wrapper .interview_e span {
+  padding-right: 15px;
+  color: #555;
+}
+.interview #content_interview .itv_block .itv_content_wrapper .interview_two span {
+  padding-right: 15px;
+}
+.interview #content_interview .itv_block .itv_content_wrapper .interview_two span span {
+  padding-right: 0;
+}
+.interview #content_interview .itv_block .itv_content_wrapper .interview_three span {
+  padding-right: 15px;
+}
+.interview #content_interview .itv_block .itv_content_wrapper .interview_three span span {
+  padding-right: 0;
+}
+.interview #content_interview .itv_block .itv_content_wrapper .writer {
+  font-size: 13px;
+  text-align: right;
+}
+.interview #content_interview .itv_block .itv_content_wrapper .itv_title {
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 25px;
+}
+.interview #content_interview .itv_block_h .itv_img {
+  display: none;
+}
+.interview #content_interview .itv_block_h .itv_img_mobile {
+  display: block;
+}
+.interview #content_interview .itv_block_h .itv_img_mobile img {
+  width: 100%;
+}
+.interview #content_interview .itv_block_h .itv_content_wrapper {
+  width: 100%;
+  padding: 30px 15px 15px;
+}
+.interview #content_interview .itv_block_h .itv_content_wrapper .itv_content {
+  max-width: 600px;
+}
+.interview #content_interview .itv_block_img_l .itv_img {
+  right: 50%;
+}
+.interview #content_interview .itv_block_img_l .itv_content_wrapper {
+  float: right;
+}
+.interview #content_interview .itv_block_img_l .itv_content {
+  float: left;
+}
+.interview #content_interview .itv_block_img_r .itv_img {
+  left: 50%;
+}
+.interview #content_interview .itv_block_img_r .itv_content_wrapper {
+  float: left;
+}
+.interview #content_interview .itv_block_img_r .itv_content {
+  float: right;
+}
+.interview #content_interview .profile_block_wrapper {
+  padding: 50px 15px;
+  background-color: #f7f7f7;
+}
+.interview #content_interview .profile_block {
+  margin: 0;
+}
+.interview #content_interview .profile_block p.content_title {
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 16px;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #999;
+  font-family: "Gotham SSm A", "Gotham SSm B", "YakuHanJPs", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.interview #content_interview .profile_block .profile_item {
+  padding: 15px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+.interview #content_interview .profile_block .profile_item p {
+  margin: 0;
+}
+.interview #content_interview .profile_block .profile_item .name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+.interview #content_interview .profile_block .profile_item a {
+  text-decoration: underline;
+}
+.interview #content_interview .profile_block .profile_one img {
+  width: 30%;
+  float: left;
+}
+.interview #content_interview .profile_block .profile_one .txt_block {
+  width: 66%;
+  float: right;
+}
+.interview #content_interview .relatedbooks_item {
+  max-width: 800px;
+  margin: 30px auto 30px;
+  background-color: #f7f7f7;
+  padding: 15px 15px 30px;
+}
+.interview #content_interview .relatedbooks_item .content_title {
+  padding: 15px 0;
+  margin: 0 0 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.4;
+}
+.interview #content_interview .relatedbooks_item .book_item_large {
+  margin-bottom: 40px;
+}
+.interview #content_interview .relatedbooks_item .btn_page {
+  height: 40px;
+  line-height: 40px;
+  width: 240px;
+  display: block;
+  margin: 0 auto;
+  background-color: #000;
+  color: #fffe03;
+  font-size: 15px;
+  text-align: center;
+}
+.interview #content_interview .relatedbooks_item .btn_page:hover {
+  background-color: #333333;
+}
+.interview #content_interview .relatedbooks_item .note {
+  color: #777;
+}
+.interview #content_interview .cp_wrapper {
+  max-width: 500px;
+  margin: 50px auto 50px;
+  padding: 0 15px;
+}
+.interview #content_interview .cp_wrapper p {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.interview #content_interview .cp_wrapper a {
+  display: block;
+}
+.interview #content_interview .cp_wrapper img {
+  width: 100%;
+  display: block;
+}
+.interview #content_interview .cp_wrapper .cp_item {
+  padding-top: 15px;
+}
+.interview #content_interview .cp_wrapper .cp_item .store {
+  font-size: 16px;
+}
+.interview #content_interview .cp_wrapper .cp_item p {
+  font-size: 14px;
+}
+.interview #content_interview .cp_wrapper .cp_item p span {
+  font-size: 12px;
+}
+.interview #content_interview .cp_wrapper .cp_item .banner {
+  max-width: 480px;
+}
+.interview #content_interview .book_links .cp_wrapper {
+  margin: 0 0 20px;
+  padding: 0;
+}
+.interview #content_interview .book_links .cp_wrapper p {
+  text-align: left;
+}
+.interview #content_interview .present {
+  max-width: 800px;
+  text-align: center;
+  margin: 50px 15px 50px;
+  padding: 15px;
+  border: 4px solid;
+}
+.interview #content_interview .present .content_title {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 25px 0 20px;
+}
+.interview #content_interview .present .image_wrapper {
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+.interview #content_interview .present .image_wrapper img {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+.interview #content_interview .present .date {
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+.interview #content_interview .present .std-obl-button-fixedw {
+  width: 220px;
+  margin-bottom: 20px;
+}
+.interview #content_interview .present .std-obl-button-fixedw a {
+  height: 40px;
+  line-height: 40px;
+  border: 0;
+  display: block;
+  padding: 0 7px 0 15px;
+  font-size: 17px;
+  background-color: #000;
+  color: #fff;
+  -moz-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+.interview #content_interview .present .std-obl-button-fixedw a:hover {
+  background-color: #333;
+  color: #fff;
+}
+.interview #content_interview .present .std-obl-button-fixedw a .icon {
+  margin: 12px 0 0;
+}
+.interview #content_interview .present .txt_cp_end {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.interview #content_interview .pagenation {
+  text-align: center;
+  font-weight: bold;
+}
+.interview #content_interview .pagenation ul li {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #c3c5c4;
+  font-size: 16px;
+  -moz-transition: background 0.4s ease;
+  -o-transition: background 0.4s ease;
+  -webkit-transition: background 0.4s ease;
+  transition: background 0.4s ease;
+}
+.interview #content_interview .pagenation ul li a {
+  display: block;
+}
+.interview #content_interview .pagenation ul li:hover {
+  background-color: #979797;
+}
+.interview #content_interview .pagenation ul li.active {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}
+.interview #content_interview .pagenation ul li.prev {
+  width: 80px;
+}
+.interview #content_interview .pagenation ul li.next {
+  width: 80px;
+}
+.interview #content_interview .pagenation ul li.disable {
+  color: #979797;
+}
+.interview #content_interview .pagenation ul li.disable:hover {
+  background-color: #fff;
+}
+.interview .interview_intro {
+  max-width: 800px;
+  margin: 100px auto 40px;
+}
+.interview .interview_intro .movieimage {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
+.interview .interview_intro .pagetitle {
+  padding: 40px 15px;
+}
+.interview .interview_intro .lede {
+  padding: 0 15px;
+}
+.interview .interview_intro .title {
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+.interview .interview_intro .txtblock a {
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.relatedbooks_item {
+  padding: 0 15px 40px;
+}
+.relatedbooks_item .lede {
+  max-width: 720px;
+  margin: 0 auto 70px;
+}
+.relatedbooks_item .booklist .book_item {
+  width: 46%;
+  margin: 0 2% 40px;
+  float: left;
+}
+.relatedbooks_item .booklist .book_item img {
+  width: auto;
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+  border: 1px solid #c3c5c4;
+}
+.relatedbooks_item .booklist .book_item .year {
+  text-align: center;
+  padding-top: 5px;
+}
+.relatedbooks_item .booklist .book_item .book_links {
+  display: block;
+  padding-top: 5px;
+  clear: both;
+}
+.relatedbooks_item .booklist .book_item .book_links .storelinks .std-obl-button-fixedw {
+  width: 100%;
+}
+.relatedbooks_item .booklist .book_item .book_links .storelinks .store_reader {
+  margin-bottom: 2px;
+}
+.relatedbooks_item .booklist .book_item_large {
+  margin-bottom: 60px;
+}
+.relatedbooks_item .booklist .book_item_large .subtitle {
+  padding: 15px 0 5px;
+}
+.relatedbooks_item .booklist .book_item_large .summary {
+  padding: 15px 0;
+}
+.relatedbooks_item .booklist .book_item_large .year {
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 15px;
+}
+.relatedbooks_item .booklist .book_item_large .bookcomment {
+  background: #f7f7f7;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.copyright.bottom {
+  padding-top: 20px;
+}
+
+/* footer */
+.feature_footer_pagelinks {
+  margin: 0px 15px 10px;
+  background-color: #fff;
+  padding: 0;
+  text-align: center;
+}
+.feature_footer_pagelinks .backlink {
+  border: 2px solid;
+  padding: 5px 10px;
+  display: inline-block;
+}
+.feature_footer_pagelinks .copyright {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.footer_menu {
+  padding: 15px 0 0;
+}
+.footer_menu .title {
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 40px 15px 20px;
+}
+
+.interview_footer {
+  margin: 50px auto 60px;
+  padding: 15px;
+  background-color: #f7f7f7;
+}
+.interview_footer .text {
+  display: block;
+  width: 100%;
+}
+.interview_footer .title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.interview_footer .description {
+  font-size: 12px;
+}
+.interview_footer img {
+  display: block;
+  width: 150px;
+  margin: 0 auto 10px;
+}
+
+.pagetop {
+  margin-bottom: 0;
+  width: 200px;
+  float: right;
+}
+
+.pagetop a {
+  margin: 0;
+}
+
+.copyright_wrapper {
+  clear: both;
+  padding-top: 0;
+  margin-bottom: 20px;
+}
+
+#intro {
+  padding: 15px;
+}
+
+.pagetitle {
+  color: #005530;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.pagetitle p {
+  border-bottom: 3px solid #005530;
+  padding-bottom: 10px;
+  margin: 0 15px;
+}
+
+.fullimage img {
+  width: 100%;
+  height: auto;
+}
+
+.interview #content_interview .itv_block .itv_content_wrapper .interview_b span {
+  color: #005530;
+}
+.interview #content_interview .itv_block_img_r .itv_img {
+  background-position: 50% top !important;
+}
+.interview #content_interview .itv_block_img_l .itv_img {
+  background-position: 50% top !important;
+}
+.interview #content_interview .profile_block {
+  background: url(../../images/special/honyomi-otome/bg_profile01.png);
+  background-size: 14px auto;
+  padding: 30px 15px 25px;
+  margin-bottom: 25px;
+}
+.interview #content_interview .profile_block img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+.interview #content_interview .profile_block p.content_title {
+  color: #000;
+  font-size: 15px;
+  /*font-weight: bold;*/
+  margin-bottom: 25px;
+}
+.interview #content_interview .profile_block .profile_image {
+  width: 40%;
+  margin: 0 auto 20px;
+}
+.interview #content_interview .profile_block .profile_item {
+  font-size: 12px;
+  background: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.interview #content_interview .profile_block .profile_item .event_item {
+  border-top: 2px solid #000;
+  padding: 15px 0 30px;
+}
+.interview #content_interview .profile_block .profile_item .event_item .event_title {
+  font-size: 16px;
+}
+.interview #content_interview .profile_block .profile_item .event_item p {
+  margin-bottom: 20px;
+}
+.interview #content_interview .profile_block .profile_item .name {
+  font-size: 17px;
+}
+.interview #content_interview .profile_block .btn_official_site {
+  clear: both;
+  margin-top: 20px;
+}
+.interview #content_interview .profile_block .btn_official_site.btn2 {
+  margin-top: 10px;
+}
+.interview #content_interview .profile_block .btn_official_site a {
+  display: block;
+  width: 225px;
+  color: #eaecc4;
+  font-weight: normal;
+  line-height: 35px;
+  text-decoration: none;
+  background: #000;
+  padding: 0 7px 0 10px;
+  margin: 0 auto;
+}
+.interview #content_interview .profile_block .btn_official_site a span {
+  margin: 11px 0 0;
+  float: right;
+}
+.interview #content_interview .profile_second {
+  margin: 40px 0 0;
+  position: relative;
+}
+.interview #content_interview .profile_second .content_title {
+  font-weight: bold;
+}
+.interview #content_interview .profile_second .block {
+  padding-bottom: 30px;
+}
+.interview #content_interview .profile_second .block.last {
+  padding-bottom: 0;
+}
+.interview #content_interview .profile_second .title {
+  font-size: 17px;
+  margin: 0 0 15px;
+  position: relative;
+  font-weight: bold;
+}
+.interview #content_interview .profile_second .subtitle {
+  font-size: 15px;
+  margin: 15px 0 10px;
+}
+.interview #content_interview .profile_col1 {
+  margin: 30px 0 0;
+  position: relative;
+}
+.interview #content_interview .profile_col1 .profile_item {
+  width: 100%;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+.interview #content_interview .profile_col1 .profile_item dt {
+  width: 95px;
+  clear: both;
+  float: left;
+  font-size: 12px;
+}
+.interview #content_interview .profile_col1 .profile_item dd {
+  padding: 0 0 5px 105px;
+  font-size: 12px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.fs-s {
+  font-size: 12px;
+}
+
+.interview #content_interview .profile_block .present_block {
+  background: #fff;
+  border: 1px solid #000;
+  padding: 20px 15px 30px;
+  margin-top: 25px;
+}
+.interview #content_interview .profile_block .present_block .present_image {
+  text-align: center;
+  padding: 0 25%;
+  margin-bottom: 20px;
+}
+.interview #content_interview .profile_block .present_block .present_item {
+  font-size: 12px;
+  text-align: center;
+}
+.interview #content_interview .profile_block .present_block .present_item p {
+  margin: 0;
+}
+.interview #content_interview .profile_block .present_block .present_item .present_title {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+.interview #content_interview .profile_block .present_block .present_item .btn_present {
+  text-align: left;
+  margin-top: 20px;
+  font-weight: bold;
+}
+.interview #content_interview .profile_block .present_block .present_item .btn_present a {
+  display: block;
+  width: 225px;
+  color: #fffe03;
+  font-size: 15px;
+  line-height: 35px;
+  text-decoration: none;
+  background: #c66dbb;
+  padding: 0 7px 0 13px;
+  margin: 0 auto;
+}
+.interview #content_interview .profile_block .present_block .present_item .btn_present a span {
+  margin: 10px 0 0;
+  float: right;
+}
+.interview #content_interview .profile_block .present_block .present_item .btn_present p {
+  text-align: center;
+}
+.interview #content_interview .profile_block .prof-prd-item {
+  padding-bottom: 30px;
+}
+.interview #content_interview .profile_block .prof-prd-item .prof-prd-img {
+  width: 25%;
+  float: left;
+}
+.interview #content_interview .profile_block .prof-prd-item .prof-prd-info {
+  width: 71%;
+  float: right;
+}
+
+.interview #content_interview .relatedbooks_item {
+  margin-top: 40px;
+}
+
+.interview #content_interview .pagenation p {
+  display: inline-block;
+  color: #0ab7bd;
+  font-size: 12px;
+  text-decoration: underline;
+  margin: 20px 15px;
+  cursor: pointer;
+}
+.interview #content_interview .pagenation .page_text a {
+  color: #0ab7bd;
+}
+
+.booklist .book_item_large .book_links {
+  padding-bottom: 15px;
+}
+
+#page02 .btn_pagetop {
+  margin: 20px auto 40px;
+}
+
+.btn_pagetop img {
+  background-color: #387e37;
+}
+
+.related {
+  max-width: 830px;
+  margin: 0 auto 30px;
+  padding: 0 15px;
+}
+
+.related h3 {
+  text-align: center;
+  font-size: 18px;
+  margin: 0 0 20px;
+  color: #387e37;
+}
+
+.related .related_item {
+  width: 49%;
+  float: left;
+  border: 1px solid #387e37;
+  margin: 0 2% 2% 0;
+}
+
+.related .related_item.right2 {
+  margin-right: 0;
+}
+
+.related .related_item.left2 {
+  clear: both;
+}
+
+.related_item a {
+  text-align: center;
+  display: block;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.4;
+  padding: 0;
+  color: #387e37;
+}
+
+.related_item a img {
+  width: 100%;
+  display: block;
+  background-color: #fff;
+}
+
+.related_item .title {
+  padding: 5px;
+}
+
+.show_p {
+  display: none;
+}
+
+.page-1 .show_p1 {
+  display: block;
+}
+
+.page-2 .show_p2 {
+  display: block;
+}
+
+.std_socialbuttons {
+  max-width: 800px;
+  margin: 40px auto 0;
+  padding: 0 15px;
+}
+
+@media only screen and (min-width: 481px) {
+  .booklist .book_item_large .book_cover {
+    width: 30%;
+    float: left;
+  }
+  .booklist .book_item_large .book_cover img {
+    width: 100%;
+    margin: 0;
+    float: none;
+  }
+  .booklist .book_item_large .book_cover img.first {
+    margin-bottom: 10px;
+  }
+  .booklist .book_item_large .book_info {
+    width: 67%;
+    float: right;
+  }
+
+  .block_img_2col {
+    margin-bottom: 40px;
+  }
+  .block_img_2col img {
+    width: 40%;
+    max-width: 100%;
+    float: left;
+    margin-bottom: 0;
+  }
+  .block_img_2col > div {
+    width: 56%;
+    float: right;
+  }
+
+  .copyright_wrapper {
+    width: 50%;
+    float: right;
+    clear: both;
+    padding-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .footer_menu .title {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin: 40px 15px 20px;
+  }
+
+  .pagetitle {
+    font-size: 22px;
+  }
+
+  .interview #content_interview .profile_block .profile_image {
+    width: 37%;
+    margin-bottom: 20px;
+    float: left;
+  }
+
+  .interview #content_interview .profile_block .profile_item {
+    width: 60%;
+    padding: 0 0 0 10px;
+    margin-bottom: 20px;
+    float: right;
+  }
+
+  .interview #content_interview .profile_block .btn_official_site a {
+    margin: 0;
+  }
+
+  .interview #content_interview .profile_col1 .profile_item {
+    width: 100%;
+    float: none;
+    clear: both;
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .pc {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .mainvisual_contain .std_mvblock h2, .mainvisual_contain .std_mvblock p {
+    display: block;
+  }
+  .mainvisual_contain .std_mvblock h2 {
+    margin-bottom: 10px;
+  }
+
+  .covertitle_ss {
+    display: none;
+  }
+
+  .topicpath_wrapper {
+    padding: 0 30px;
+  }
+
+  .feature_content_wrapper {
+    margin-bottom: 80px;
+  }
+  .feature_content_wrapper h3 {
+    text-align: center;
+    font-size: 26px;
+    line-height: 1.3;
+    margin: 0 0 40px;
+    padding-top: 40px;
+    letter-spacing: 2px;
+  }
+
+  .booklist .book_item .catch {
+    font-size: 13px;
+  }
+  .booklist .book_item_large .book_cover {
+    width: 25%;
+  }
+  .booklist .book_item_large .book_info {
+    width: 71%;
+  }
+  .booklist .book_item_large .book_info .title {
+    font-size: 22px;
+  }
+  .booklist .book_item_large .book_info .author {
+    font-size: 15px;
+  }
+  .booklist .book_item_large .book_info .publisher {
+    font-size: 13px;
+  }
+  .booklist .book_item_large .book_links {
+    padding-top: 10px;
+  }
+  .booklist .book_item_large .book_links .storelinks .title {
+    font-size: 15px;
+  }
+  .booklist .book_item_large .book_links .storelinks .std-obl-button-fixedw {
+    width: 140px;
+  }
+  .booklist .book_item_large.book_item_large_s .book_cover {
+    width: 16%;
+    margin-left: 9%;
+  }
+  .booklist .book_item_large.book_item_large_s .book_info .title {
+    font-size: 18px;
+  }
+  .booklist .book_item_large.book_item_large_s .book_info .author {
+    font-size: 14px;
+  }
+  .booklist .book_item_large.book_item_large_s .book_info .publisher {
+    font-size: 13px;
+  }
+  .booklist .book_item_series .book_info {
+    padding: 15px;
+  }
+  .booklist .book_item_series .book_info .title {
+    display: inline-block;
+    float: left;
+    font-size: 16px;
+    padding: 6px 0 0;
+    margin: 0;
+  }
+  .booklist .book_item_series .book_info .book_links {
+    display: inline-block;
+    float: right;
+    clear: none;
+    padding: 0;
+  }
+
+  .pagetitle {
+    font-size: 26px;
+  }
+  .pagetitle span {
+    font-size: 20px;
+  }
+  .pagetitle .pc {
+    display: block;
+  }
+  .pagetitle .mobile {
+    display: none;
+  }
+
+  .link_external {
+    max-width: 720px;
+    height: 50px;
+    line-height: 46px;
+    font-size: 20px;
+    margin: 0 auto 0;
+    padding: 0 24px;
+  }
+  .link_external .icon {
+    position: absolute;
+    right: 0;
+    top: 12px;
+    font-size: 24px;
+  }
+
+  #writer {
+    padding: 0;
+  }
+
+  p.copyright {
+    font-size: 12px;
+  }
+
+  /* intro */
+  #intro {
+    padding: 15px 0 0;
+  }
+  #intro .lede {
+    font-size: 15px;
+    padding: 15px 30px 0;
+  }
+
+  .interview .container_inner {
+    max-width: 100%;
+    margin: 0 auto 0;
+    padding: 30px 0 20px;
+  }
+  .interview #interview_menu {
+    padding: 0 15px;
+  }
+  .interview #content_interview .mainimage.mobile {
+    display: none;
+  }
+  .interview #content_interview .mainimage.pc {
+    display: block;
+  }
+  .interview #content_interview .mainimage_text.mobile {
+    display: none;
+  }
+  .interview #content_interview .fullimage .btn_pagedown {
+    display: block;
+  }
+  .interview #content_interview .itv_block .itv_content_wrapper {
+    font-size: 15px;
+    line-height: 1.8;
+    padding: 40px 60px 10px;
+  }
+  .interview #content_interview .itv_block .itv_content_wrapper .itv_content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .interview #content_interview .itv_block .itv_content_wrapper p {
+    margin-bottom: 30px;
+  }
+  .interview #content_interview .itv_block .itv_content_wrapper .itv_title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  .interview #content_interview .itv_block_h .itv_img {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+  }
+  .interview #content_interview .itv_block_h .itv_img_mobile {
+    display: none;
+  }
+  .interview #content_interview .itv_block_h .itv_content_wrapper {
+    width: 50%;
+    padding: 40px 60px 25px;
+  }
+  .interview #content_interview .itv_block_h .itv_content_wrapper .itv_content {
+    max-width: 600px;
+  }
+  .interview #content_interview .itv_block_img_l .itv_img {
+    right: 50%;
+  }
+  .interview #content_interview .itv_block_img_l .itv_content_wrapper {
+    float: right;
+  }
+  .interview #content_interview .itv_block_img_l .itv_content {
+    float: left;
+  }
+  .interview #content_interview .itv_block_img_r .itv_img {
+    left: 50%;
+  }
+  .interview #content_interview .itv_block_img_r .itv_content_wrapper {
+    float: left;
+  }
+  .interview #content_interview .itv_block_img_r .itv_content {
+    float: right;
+  }
+  .interview #content_interview .profile_block_wrapper {
+    padding: 100px 15px;
+  }
+  .interview #content_interview .profile_block {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .interview #content_interview .profile_block .profile_right {
+    float: right;
+  }
+  .interview #content_interview .profile_block .profile_one {
+    float: none;
+    width: 100%;
+    max-width: 545px;
+    margin: 0 auto;
+  }
+  .interview #content_interview .profile_block_3 .profile_item {
+    margin-bottom: 4%;
+  }
+  .interview #content_interview .profile_block_3 .profile_3_2 {
+    float: right;
+  }
+  .interview #content_interview .profile_block_3 .profile_3_3 {
+    margin-bottom: 2%;
+  }
+  .interview #content_interview .relatedbooks_item .content_title {
+    padding: 30px 15px;
+    font-size: 22px;
+  }
+  .interview #content_interview .relatedbooks_item .book_item_large {
+    margin-bottom: 20px;
+  }
+  .interview #content_interview .relatedbooks_item .note {
+    padding: 0 15px;
+  }
+  .interview #content_interview .present {
+    margin: 50px auto 50px;
+  }
+  .interview #content_interview .present .content_title {
+    font-size: 22px;
+    line-height: 1.6;
+    margin: 25px 0 20px;
+  }
+  .interview #content_interview .present .image_wrapper {
+    margin: 0 auto 20px;
+  }
+  .interview #content_interview .present .date {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  .interview .interview_intro .lede {
+    padding: 0 50px;
+  }
+  .interview .interview_intro .movieimage {
+    width: 40%;
+  }
+
+  .relatedbooks_item {
+    padding: 0 0 40px;
+  }
+  .relatedbooks_item .booklist .book_item {
+    width: 21%;
+    margin: 0 2% 5%;
+  }
+  .relatedbooks_item .booklist .book_item .book_links {
+    display: none;
+  }
+  .relatedbooks_item .booklist .book_item_large {
+    padding: 0 15px;
+    margin-bottom: 50px;
+  }
+  .relatedbooks_item .booklist .book_item_large .year {
+    text-align: left;
+  }
+
+  .interview_archive {
+    margin-top: 80px;
+  }
+  .interview_archive .archive_item .link_archive {
+    width: 30%;
+    float: left;
+    border: 1px solid #ddd;
+  }
+  .interview_archive .archive_item .link_archive img {
+    width: 100%;
+    display: block;
+  }
+  .interview_archive .archive_item .info {
+    width: 66%;
+    float: right;
+  }
+  .interview_archive .archive_item .info .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .interview_footer {
+    margin: 50px auto 60px;
+    padding: 20px;
+  }
+  .interview_footer .text {
+    display: inline-block;
+    width: 75%;
+    vertical-align: middle;
+    margin-left: 2%;
+  }
+  .interview_footer .title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .interview_footer .description {
+    font-size: 13px;
+  }
+  .interview_footer img {
+    display: inline-block;
+    margin: 0;
+    width: 22%;
+    vertical-align: middle;
+  }
+
+  .footer_menu {
+    padding: 0 15px;
+  }
+
+  .feature_footer_pagelinks {
+    padding: 0 0;
+  }
+
+  .topicpath_wrapper {
+    padding: 0;
+  }
+
+  #intro {
+    padding: 15px 0 0;
+    margin-bottom: 20px;
+  }
+
+  .pagetitle {
+    font-size: 28px;
+  }
+
+  .pagetitle p {
+    display: inline-block;
+    border-bottom-width: 5px;
+  }
+
+  .interview #content_interview .profile_block {
+    background-size: 28px auto;
+    padding: 45px 30px 40px;
+    margin-bottom: 50px;
+  }
+
+  .interview #content_interview .profile_block p.content_title {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .interview #content_interview .profile_block .profile_top {
+    position: relative;
+  }
+
+  .interview #content_interview .profile_block .profile_image {
+    width: 37%;
+    margin-bottom: 0;
+  }
+
+  .interview #content_interview .profile_block .profile_item {
+    width: 60%;
+    font-size: 14px;
+    padding: 0 0 90px;
+    margin-bottom: 0;
+  }
+
+  .interview #content_interview .profile_block .profile_item .name {
+    font-size: 20px;
+  }
+
+  .interview #content_interview .profile_block .btn_official_site {
+    margin-top: 20px;
+  }
+
+  .interview #content_interview .profile_block .btn_official_site.btn2 {
+    bottom: 30px;
+  }
+
+  .interview #content_interview .profile_block .btn_official_site a {
+    width: 240px;
+    line-height: 30px;
+    margin: 0;
+  }
+
+  .interview #content_interview .profile_block .btn_official_site a span {
+    margin: 8px 0 0;
+  }
+
+  .interview #content_interview .profile_second .title {
+    font-size: 20px;
+  }
+
+  .interview #content_interview .profile_second .subtitle {
+    font-size: 17px;
+  }
+
+  .interview #content_interview .profile_col1 .profile_item {
+    width: 100%;
+    padding-bottom: 0;
+  }
+
+  .interview #content_interview .event_item {
+    width: 48%;
+    float: left;
+    clear: both;
+  }
+
+  .interview #content_interview .event_item.col2_right {
+    float: right;
+    clear: none;
+  }
+
+  .interview #content_interview .profile_block .present_block {
+    width: 100%;
+    border-width: 2px;
+    padding: 25px;
+    margin-top: 40px;
+    display: table;
+  }
+
+  .interview #content_interview .profile_block .present_block .present_image {
+    width: 32%;
+    display: table-cell;
+    vertical-align: top;
+    padding: 0;
+  }
+
+  .interview #content_interview .profile_block .present_block .present_item {
+    font-size: 16px;
+    text-align: left;
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 40px;
+    position: relative;
+  }
+
+  .interview #content_interview .profile_block .present_block .present_item .present_title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .interview #content_interview .profile_block .present_block .present_item .btn_present {
+    position: absolute;
+    left: 40px;
+    bottom: 0;
+  }
+
+  .interview #content_interview .profile_block .present_block .present_item .btn_present a {
+    width: 240px;
+    font-size: 16px;
+    line-height: 40px;
+  }
+
+  .interview #content_interview .profile_block .present_block .present_item .btn_present a span {
+    margin: 12px 0 0;
+  }
+
+  .interview #content_interview .profile_block .present_block .present_item .btn_present p {
+    text-align: left;
+  }
+
+  .interview #content_interview .pagenation p {
+    font-size: 14px;
+    margin: 20px 0;
+  }
+  .interview #content_interview .pagenation .smt {
+    display: none;
+  }
+
+  .interview #content_interview .profile_col1 .event_item {
+    width: 100%;
+    float: none;
+    clear: both;
+  }
+
+  .related .related_item {
+    width: 32%;
+    float: left;
+    border: 1px solid #387e37;
+    margin: 0 2% 2% 0;
+  }
+
+  .related .related_item.right2 {
+    margin-right: 2%;
+  }
+
+  .related .related_item.left2 {
+    clear: none;
+  }
+
+  .related .related_item.right3 {
+    margin-right: 0;
+  }
+
+  .related .related_item.left3 {
+    clear: both;
+  }
+
+  .related h3 {
+    font-size: 20px;
+  }
+
+  .related_item a {
+    font-size: 16px;
+  }
+
+  .std_socialbuttons {
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .interview #content_interview {
+    margin-bottom: 60px;
+  }
+
+  .pagetitle {
+    font-size: 30px;
+  }
+  .pagetitle span {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 1030px) {
+  .interview #content_interview .profile_block_3 {
+    max-width: 1200px;
+  }
+  .interview #content_interview .profile_block_3 .profile_item {
+    width: 32%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    padding: 25px;
+  }
+  .interview #content_interview .profile_block_3 .profile_3_2 {
+    float: left;
+  }
+  .interview #content_interview .profile_block_3 .profile_3_3 {
+    margin-right: 0;
+  }
+
+  .pagetitle .smt {
+    display: none;
+  }
+}

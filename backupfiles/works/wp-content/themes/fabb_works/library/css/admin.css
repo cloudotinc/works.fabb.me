@@ -1,0 +1,80 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Admin Stylesheet
+
+If you like living on the edge, you can add some styles here to
+customize the dashboard and WordPress admin area. This stylesheet
+is empty, but you can just start dropping your styles here to
+start customizing. All admin functions are located in lib/admin/
+
+******************************************************************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+/*
+The following is based of Typebase:
+https://github.com/devinhunt/typebase.css
+I've edited it a bit, but it's a nice starting point.
+*/
+/*
+ i imported this one in the functions file so bones would look sweet.
+ don't forget to remove it for your site.
+*/
+.user-edit-php form h3 {
+  padding: 7px 10px;
+  background-color: #979797;
+  border-left: 5px solid #000;
+  font-size: 15px;
+}
+
+.user-new-php #createuser tr:nth-child(3) {
+  display: none;
+}
+.user-new-php #createuser tr:nth-child(4) {
+  display: none;
+}
+
+.profile-php form h3 {
+  padding: 7px 10px;
+  background-color: #979797;
+  border-left: 5px solid #000;
+  font-size: 15px;
+}
+.profile-php #your-profile .user-first-name-wrap, .profile-php #your-profile .user-last-name-wrap {
+  display: none;
+}
+
+.post-php .poststg_tags li, .post-php .poststg_lines li, .post-php .poststg_stations li {
+  display: inline-block;
+  padding: 0 20px 0 0;
+}
+
+.post-new-php .poststg_tags li, .post-new-php .poststg_lines li, .post-new-php .poststg_stations li {
+  display: inline-block;
+  padding: 0 20px 0 0;
+}
+
+.acf-repeater .acf-table {
+  table-layout: fixed;
+}

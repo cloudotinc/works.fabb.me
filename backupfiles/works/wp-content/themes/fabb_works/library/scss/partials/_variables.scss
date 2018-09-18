@@ -1,0 +1,104 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+
+$alert-yellow:      #ebe16f;
+$alert-red:         #fbe3e4;
+$alert-green:       #e6efc2;
+$alert-blue:        #d5edf8;
+
+$black:             #000;
+$white:             #fff;
+
+$lightest-gray:     #f7f7f7;
+$light-gray:        #c3c5c4;
+$tag-gray:          #848484; //b7b7b7
+$gray:              #979797;
+$gray2:             #a0a0a0;
+$bg-gray:           #6a7072;
+$bg-lightgray:      #efefef;
+$button-gray:       #848484;
+$dark-gray:         #7a7a7a;
+$darker-gray:       #333333;
+$text-color:        #373d3b;
+$meta-gray:         $gray;
+$red-gray:          #9a8780;
+
+$default-bg:        #494949;
+
+$tan:               #eceee5;
+
+$green:             #7dd667;
+
+$bones-pink:        #f01d4f;
+$blue:              #2980b9;
+
+$basic-red:         #dd3000;
+$basic-orange:      #f55748;
+$basic-brown:       #4e2e04;
+$basic-blue:        #036e80;
+
+$theme-color:       $basic-orange;
+
+$link-color:        $theme-color;
+$link-hover:        $dark-gray;
+
+$border-color:      #ccc;
+$border-color2:     #939393;
+$disabled-gray:     #cfcfcf;
+
+
+
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+
+
+
+/*
+The following is based of Typebase:
+https://github.com/devinhunt/typebase.css
+I've edited it a bit, but it's a nice starting point.
+*/
+
+
+// font stacks
+$sans-serif:        "YakuHanJPs", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+//$sans-serif:        "YakuHanJPs", "メイリオ","Meiryo","ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro","ＭＳ ゴシック","MS Gothic","Osaka－等幅",Verdana,Arial,Helvetica,sans-serif;
+$serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+$sans-serif-bold:        "YakuHanJPs", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+$sans-serif-ie:     "YakuHanJPs", "ヒラギノ角ゴ ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/*
+ i imported this one in the functions file so bones would look sweet.
+ don't forget to remove it for your site.
+*/
+$lato:              'Lato', $sans-serif;
+
+$alphabetfont:      'koushiki_sansr', $sans-serif;
+$alphabetfont2:     "Gotham SSm A", "Gotham SSm B", $sans-serif;
+$titlefont:         'chevron_aeregular', $sans-serif;
+
+@mixin sanserif-bold() {
+  font-weight: bold;
+  //font-family: $sans-serif;
+}

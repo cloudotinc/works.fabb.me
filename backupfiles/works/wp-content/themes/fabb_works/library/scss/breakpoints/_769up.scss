@@ -1,0 +1,1428 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+//@import "compass";
+$base-font-size: 16px;
+$base-line-height: 28.8px;
+$rhythm-unit: "rem";
+$rem-with-px-fallback: false;
+
+/*********************
+GENERAL STYLES
+*********************/
+
+html {
+
+}
+
+body {
+  padding-top: 0;
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.pc {
+  display: block;
+}
+.mobile {
+  display: none;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1040px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+.wrap_thin {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.wrap-single {
+  max-width: 880px;
+  margin: 0 auto;
+}
+.wrap-page {
+  max-width: 800px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+
+
+
+#container {
+	background-color: $white;
+}
+
+#base {
+  min-height: calc(100vh - 408px);
+}
+
+.header {
+  position: static;
+}
+#inner-header {
+  text-align: center;
+  height: 160px;
+  .togglebutton {
+    display: none;
+  }
+}
+#logo {
+  position: static;
+  margin: 12px auto 0;
+  width: 200px;
+}
+.site-description {
+  text-align: center;
+  font-size: 14px;
+  margin: 0;
+  display: block;
+  padding: 0;
+  margin-top: 6px;
+}
+
+.header-toolbar {
+  position: absolute;
+  top: 18px;
+  right: 21px;
+  display: inline-block;
+
+  .std-btn {
+    margin-left: 5px;
+  }
+  a.std-btn {
+    width: 80px;
+    font-size: 14px;
+  }
+  a.btn-mypage {
+    width: 88px;
+  }
+
+  .welcome {
+    display: none;
+  }
+}
+
+#header-fixed {
+  display: block;
+
+
+  .menulist {
+
+  }
+
+  .btn-mypage {
+    width: 80px;
+  }
+}
+
+
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.nav {
+	border: 0;
+	ul {
+		background:$black;
+		margin-top:0;
+	}
+	li {
+		float: left;
+		position: relative;
+
+		a {
+			border-bottom: 0;
+
+			/*
+			you can use hover styles here even though this size
+			has the possibility of being a mobile device.
+			*/
+			&:hover, &:focus {
+				color: $white;
+				text-decoration: underline;
+			}
+		}
+
+		&:first-child {}
+		&:last-child {}
+
+		/*
+		plan your menus and drop-downs wisely.
+		*/
+		ul.sub-menu,
+		ul.children {
+			margin-top: 0;
+			border: 1px solid #ccc;
+			border-top: 0;
+			position: absolute;
+			visibility: hidden;
+			z-index: 8999;
+
+			li {
+
+				a {
+					padding-left: 10px;
+					border-right: 0;
+					display: block;
+					width: 180px;
+					border-bottom: 1px solid #ccc;
+
+					&:hover,
+					&:focus {}
+
+					&:link {}
+				}
+
+				&:first-child {}
+
+				&:last-child {
+
+					a {
+						border-bottom: 0;
+					}
+				}
+
+				/*
+				if you need to go deeper, go nuts
+				just remember deeper menus suck
+				for usability. k, bai.
+				*/
+				ul {
+					top:0;
+					left:100%;
+				}
+			}
+
+			/* highlight sub-menu current page */
+			li.current-menu-item,
+			li.current_page_item,
+			li.current_page_ancestor {
+				a {}
+			}
+		}
+
+		/* showing sub-menus */
+		&:hover > ul {
+			top: auto;
+			visibility:visible;
+		}
+
+	} /* end .menu ul li */
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current_page_ancestor {
+		a {}
+	}  /* end current highlighters */
+
+} /* end .nav */
+
+
+
+
+
+.hentry {
+  background-color: $white;
+  margin-bottom: 20px;
+
+  header {
+	padding: 0 30px 0;
+  }
+
+  footer {
+	padding: 20px 30px;
+
+	p {
+	  margin: 0;
+	}
+  }
+
+} /* end .hentry */
+
+
+.entry-content, .prof-content {
+  padding: 30px 30px 0;
+  //font-size: 15px; /* 14 */
+  &.fontsize_large {
+	//font-size: 18px;
+  }
+  @include adjust-font-size-to(16px,1);
+  p {
+    margin: 0;
+    @include trailer(1,16px);
+  }
+  h2 {
+    margin: 0;
+    @include adjust-font-size-to(26px,1);
+    @include trailer(1,26px);
+  }
+  h3 {
+    margin: 0;
+    @include adjust-font-size-to(22px,1);
+    @include trailer(1,22px);
+  }
+  h4 {
+    margin: 0;
+    @include adjust-font-size-to(18px,1);
+    @include trailer(1,18px);
+  }
+  h5 {
+    margin: 0;
+    @include adjust-font-size-to(16px,1);
+    @include trailer(1,16px);
+  }
+
+	.gallery-columns-1 {
+		dl {
+			width: 100%;
+		}
+	}
+	.gallery-columns-2 {
+		dl {
+			width: 50%;
+		}
+	}
+	.gallery-columns-3 {
+		dl {
+			width: 33.333%;
+		}
+	}
+	.gallery-columns-4 {
+		dl {
+			width: 25%;
+		}
+	}
+	.gallery-columns-5 {
+		dl {
+			width: 20%;
+		}
+	}
+	.gallery-columns-6 {
+		dl {
+			width: 16.666%;
+		}
+	}
+	.gallery-columns-7 {
+		dl {
+			width: 14.285%;
+		}
+	}
+	.gallery-columns-8 {
+		dl {
+			width: 12.5%;
+		}
+	}
+	.gallery-columns-9 {
+		dl {
+			width: 11.111%;
+		}
+	}
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.sidebar {
+	margin-top: 2.2em;
+}
+
+	.widgettitle {
+		border-bottom: 2px solid #444;
+		margin-bottom: 0.75em;
+	}
+
+	.widget {
+		padding: 0 10px;
+		margin: 2.2em 0;
+
+		ul {
+			li {
+				margin-bottom: 0.75em;
+
+				&:first-child {}
+				&:last-child {}
+				a {}
+				/* deep nesting */
+
+				ul {
+					margin-top: 0.75em;
+					padding-left: 1em;
+				}
+			}
+		}
+	}
+
+
+	/* links widget */
+	.widget_links {}
+	.widget_links ul {}
+	.widget_links ul li {}
+	.widget_links ul li a {}
+
+	/* meta widget */
+	.widget_meta {}
+	.widget_meta ul {}
+	.widget_meta ul li {}
+	.widget_meta ul li a {}
+
+	/* pages widget */
+	.widget_pages {}
+	.widget_pages ul {}
+	.widget_pages ul li {}
+	.widget_pages ul li a {}
+
+	/* recent-posts widget */
+	.widget_recent_entries {}
+	.widget_recent_entries ul {}
+	.widget_recent_entries ul li {}
+	.widget_recent_entries ul li a {}
+
+	/* archives widget */
+	.widget_archive {}
+	.widget_archive ul {}
+	.widget_archive ul li {}
+	.widget_archive ul li a {}
+	.widget_archive select {}
+	.widget_archive option {}
+
+	/* tag-cloud widget */
+	.widget_links {}
+	.widget_links li:after {}
+	.widget_links li:before {}
+	.widget_tag_cloud {}
+	.widget_tag_cloud a {}
+	.widget_tag_cloud a:after {}
+	.widget_tag_cloud a:before {}
+
+	/* calendar widget */
+	.widget_calendar {}
+	#calendar_wrap {}
+	#calendar_wrap th {}
+	#calendar_wrap td {}
+	#wp-calendar tr td {}
+	#wp-calendar caption {}
+	#wp-calendar a {}
+	#wp-calendar #today {}
+	#wp-calendar #prev {}
+	#wp-calendar #next {}
+	#wp-calendar #next a {}
+	#wp-calendar #prev a {}
+
+	/* category widget */
+	.widget_categories {}
+	.widget_categories ul {}
+	.widget_categories ul li {}
+	.widget_categories ul ul.children {}
+	.widget_categories a {}
+	.widget_categories select{}
+	.widget_categories select#cat {}
+	.widget_categories select.postform {}
+	.widget_categories option {}
+	.widget_categories .level-0 {}
+	.widget_categories .level-1 {}
+	.widget_categories .level-2 {}
+	.widget_categories .level-3 {}
+
+	/* recent-comments widget */
+	.recentcomments {}
+	#recentcomments {}
+	#recentcomments li {}
+	#recentcomments li a {}
+	.widget_recent_comments {}
+
+	/* search widget */
+	#searchform {}
+	.widget_search {}
+	.screen-reader-text {}
+
+	/* text widget */
+	.textwidget {}
+	.widget_text {}
+	.textwidget p {}
+
+
+/*********************
+FOOTER STYLES
+*********************/
+
+
+.footer {
+  position: relative;
+  height: 240px;
+
+  .footer-logo {
+    width: 232px;
+    margin: 0;
+	img {
+	  width: 100%;
+	}
+  }
+
+  .footer-nav {
+	width: 100%;
+    padding: 10px 0 0;
+    float: none;
+    max-width: 100%;
+	ul {
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+	  li {
+		font-size: 14px;
+		margin: 0;
+        text-align: left;
+        border-left: 1px solid;
+        border-bottom: 0;
+        padding: 0 18px;
+        letter-spacing: 0.1em;
+        float: left;
+        color: $white;
+        font-weight: 500;
+        width: auto;
+
+        &:first-child {
+          padding-left: 0;
+          border-left: 0;
+        }
+
+        a {
+          color: $white;
+        }
+	  }
+	}
+  }
+  .footer-nav1 {
+    padding: 30px 0 0;
+    ul {
+      li {
+        font-size: 18px;
+        letter-spacing: 0.04em;
+        font-weight: bold;
+      }
+    }
+
+  }
+
+  .exlinks {
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 0;
+    padding: 0;
+    li {
+      float: left;
+      margin: 0 10px 0 0;
+      a {
+        text-align: center;
+        display: block;
+        font-size: 22px;
+        height: 45px;
+        width: 45px;
+        line-height: 45px;
+        position: relative;
+        background: $white;
+        border-radius: 23px;
+        color: $gray2;
+      }
+
+      &.exbtn-fabb {
+        margin: 7px 0 0 4px;
+        width: 90px;
+        a {
+          width: 100%;
+          height: auto;
+          background: 0;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    text-align: left;
+    margin-top: 30px;
+  }
+}
+
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+.footer-links {
+	ul {
+		li {
+			a {
+				&:hover {}
+			}
+			/*
+			be careful with the depth of your menus.
+			it's very rare to have multi-depth menus in
+			the footer.
+			*/
+			ul {}
+		}
+	}
+} /* end .footer-links */
+
+
+
+.content {
+
+}
+
+
+
+
+/* COMMOM ITEMS */
+
+
+.postlist-ss {
+  padding: 0;
+  .postlist-item {
+	clear: both;
+	margin-bottom: 30px;
+	border: 0;
+	padding: 0;
+	.postimage {
+	  width: 23%;
+	  float: left;
+	  display: block;
+	}
+	.postinfo {
+	  width: 73%;
+	  float: right;
+	}
+	.date {
+	  margin-top: 0;
+	}
+  }
+}
+
+
+.postlist-m, .woocommerce ul.products {
+  .postlist-item, li.product {
+    float: left;
+    width: 30%;
+    margin: 0 5% 5% 0;
+
+    &:nth-child(2n) {
+      float: left;
+    }
+    &:nth-child(2n - 1) {
+      clear: none;
+    }
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    &:nth-child(3n - 2) {
+      clear: both;
+    }
+  }
+}
+
+
+.postlist-text {
+  .postlist-item {
+    .postinfo {
+      display: table;
+    }
+    .date, .cat, .title {
+      display: table-cell;
+      padding-top: 0;
+    }
+    .date {
+      width: 150px;
+      padding-right: 20px;
+    }
+    .cat {
+      width: 120px;
+      padding-right: 20px;
+    }
+  }
+}
+
+
+.std-title {
+  margin: 0 auto 10px;
+  font-size: 26px;
+}
+.std-title-wsub {
+  margin-bottom: 5px;
+}
+.std-subtitle {
+  margin: 0 0 30px;
+  font-size: 14px;
+}
+.std-title-block-wline {
+  margin: 0 0 30px;
+  .std-subtitle {
+    margin: 0;
+  }
+}
+.std-title-block-wline-smt {
+  display: block;
+  padding: 0;
+  margin: 0;
+  &:before, &:after {
+    display: none;
+  }
+  .std-subtitle {
+    margin-bottom: 30px;
+  }
+}
+
+.std-related-products {
+  h3 {
+	font-size: 19px; /* 18 */
+  }
+  .product_item {
+	margin-bottom: 20px;
+	.product_left {
+	  width: 22%;
+	  float: left;
+	}
+	.product_right {
+	  width: 74%;
+	  float: right;
+	  .name {
+		font-size: 20px;
+		margin-bottom: 10px;
+	  }
+	  a {
+		font-size: 15px;
+	  }
+	}
+  }
+}
+
+
+.gototop {
+  width: 60px;
+  bottom: 50px;
+  right: 20px;
+}
+
+
+.page-links {
+	padding: 40px 0 20px;
+	.link_text {
+		position: absolute;
+	}
+}
+
+
+.taglist {
+  li {
+    margin: 5px 10px 0 0;
+  }
+}
+
+
+
+.arealist {
+  ul {
+    li {
+      a {
+        width: 142px;
+        height: 47px;
+        font-size: 17px;
+        line-height: 43px;
+      }
+    }
+  }
+}
+
+.catlist {
+  max-width: 1040px;
+  padding: 0 30px;
+  margin: 0 auto;
+
+  ul li {
+    float: left;
+    width: 30%;
+    margin: 0 5% 5% 0;
+
+    &:nth-child(2n) {
+      float: left;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    a, p {
+      font-size: 17px;
+    }
+
+	  .std-btn-arrow {
+		  font-size: 15px;
+	  }
+  }
+}
+
+
+.content-bottom {
+  margin: 70px auto;
+}
+
+
+
+
+/* TOP */
+#topslider {
+  .topslider-info {
+    padding: 0 15px;
+
+    .date {
+      .icon {
+        display: none;
+        padding-right: 2px;
+      }
+    }
+    .date_new {
+      color: $basic-red;
+      .icon {
+        display: inline-block;
+      }
+    }
+    .title {
+      margin: 5px 0 0;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+  }
+
+  .rsBullets {
+    display: none;
+  }
+
+  .rsArrow {
+    width: 60px;
+  }
+  .rsArrowIcn {
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    margin-left: -10px;
+    border-radius: 20px;
+    &:after {
+      font-size: 22px;
+      line-height: 40px;
+    }
+  }
+  .rsArrowRight .rsArrowIcn {
+    margin-left: -30px;
+  }
+  .rsArrowLeft .rsArrowIcn {
+  }
+}
+
+
+
+.top-content {
+  margin: 0 auto 60px;
+
+}
+
+.top-content-wrapper {
+  &.col2 {
+    width: 50%;
+  }
+  &.col1 {
+    width: 50%;
+  }
+  &.left {
+    float: left;
+  }
+  &.right {
+    float: right;
+  }
+}
+
+#topposts {
+  margin-bottom: 40px;
+}
+
+
+#topvisual {
+  height: 374px;
+
+  .intro {
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    left: auto;
+  }
+  p {
+    left: auto;
+    font-size: 42px;
+    letter-spacing: 0.1em;
+    padding: 0;
+    margin: 0;
+    line-height: 1.4;
+
+    span {
+      font-size: 26px;
+      letter-spacing: 0.075em;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+  }
+
+  .btn-wrapper {
+    margin-top: 40px;
+  }
+}
+
+
+#toparea {
+  margin-top: 70px;
+  min-height: 174px;
+  .std-title {
+    margin-bottom: 15px;
+  }
+}
+
+#topcat {
+  margin-bottom: 20px;
+}
+
+.prof-card-list {
+  max-width: 100%;
+
+  &:before, &:after {
+    content:"";
+    display: block;
+    width:23.5%;
+  }
+  &:before {
+    order:1;
+  }
+
+  .prof-card {
+    width: 23.5%;
+    //margin: 0 2% 0 0;
+    margin-bottom: 0;
+    &:nth-child(2n) {
+      float: left;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+
+.footer-instructor {
+  margin-top: 70px;
+  .btn-wrapper {
+    margin-top: 50px;
+  }
+}
+
+.footer-news {
+  margin-top: 70px;
+}
+
+
+
+
+
+/* SINGLE */
+#single #inner-content {
+  margin-top: 20px;
+}
+body.single {
+
+  .noHeaderImg {
+	  margin-top: 1%;
+    //#main,#sidebar {
+    //  margin-top: 1%;
+    //}
+  }
+
+  .std-title {
+	position: static;
+  }
+
+  .content_header {
+	margin-bottom: 1%;
+	.column_headerimg {
+
+	  a {
+		display: block;
+		&.pc {
+		  display: block;
+		}
+		&.mobile {
+		  display: none;
+		}
+	  }
+	}
+  }
+
+  #main {
+    .entry-header {
+      padding: 0 30px;
+
+      .infoheader {
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 3px;
+        padding: 0;
+      }
+      .title_wrapper {
+        position: relative;
+        padding: 0 0 0;
+      }
+      .taglist {
+        padding: 0;
+      }
+    }
+
+    .std-content {
+      padding: 0 30px;
+    }
+  }
+
+	.profile-wrapper, .writer-wrapper {
+		margin: 60px 30px 0;
+	}
+	.store-wrapper {
+		margin: 60px 30px 0;
+	}
+}
+
+
+
+.postlist_related {
+  padding: 2% 2% 0;
+  margin: 0;
+  .no_related_post {
+    margin: 0 0 20px;
+  }
+}
+
+
+
+
+
+
+/* SIDE */
+.side-content {
+  padding: 0 30px 60px;
+  .side-content-inner {
+	padding: 0 0 20px;
+  }
+}
+
+.side-content-area {
+  .side-content-inner {
+    padding-bottom: 0;
+  }
+}
+
+
+
+
+/* PRODUCT */
+#product #inner-content {
+  margin-top: 20px;
+}
+.prof-content {
+  padding: 0;
+}
+.single-product #main .product {
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  .fabb-product-image {
+    width: 100%;
+  }
+
+  .fabb-product-title {
+    width: 48%;
+    float: left;
+    margin-top: 35px;
+    padding: 0 0 107px;
+    position: relative;
+
+    h1 {
+      font-size: 30px;
+    }
+    .description {
+      font-size: 16px;
+    }
+
+    .price {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      .label {
+        font-size: 16px;
+        line-height: 32px;
+        padding: 0 5%;
+        &:after {
+          height: 50px;
+          margin-top: -25px;
+        }
+      }
+      .amount-wrapper {
+        padding-right: 4%;
+      }
+      .amount {
+        font-size: 32px;
+        line-height: 32px;
+      }
+      .taxlabel {
+        line-height: 16px;
+        font-size: 16px;
+      }
+    }
+  }
+  .entry-summary {
+    margin: 35px 0 0;
+    padding-bottom: 3px;
+    width: 48%;
+  }
+  .fabb-product-basicinfo {
+    border: 1px solid;
+    padding: 30px;
+    font-size: 18px;
+  }
+
+  form.cart {
+    margin-bottom: 0;
+  }
+
+  .fabb-product-author {
+    clear: both;
+    padding-top: 60px;
+    width: 100%;
+
+    .prof-wrapper {
+      padding-left: 265px;
+    }
+
+    .prof-card-wrapper {
+      width: 230px;
+      float: left;
+      padding-bottom: 5px;
+      margin: 0 0 0 -265px;
+
+      .std-btn-arrow {
+        width: 100%;
+      }
+    }
+    .prof-content {
+      width: 100%;
+      float: right;
+    }
+  }
+}
+
+
+.woocommerce-error, .woocommerce-info, .woocommerce-message {
+  padding: 1em 2em 1em 3.5em !important;
+  &:before {
+    left: 1.5em;
+  }
+  li {
+    font-size: 15px;
+    a.button {
+    }
+  }
+}
+
+
+
+
+
+/* PRODUCT ARCHIVE */
+.archive #product #main {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+
+/* AUTHOR */
+#author {
+  padding: 0;
+
+  #inner-content {
+    margin-top: 20px;
+    padding-left: 260px;
+  }
+
+  #sidebar {
+    width: 230px;
+    float: left;
+    margin-top: 0;
+    margin-left: -230px;
+  }
+  #main {
+    float: right;
+    padding-left: 40px;
+  }
+}
+
+
+
+/* INSTRUCTOR */
+.instructor-wrapper {
+  margin: 15px 0 0;
+}
+
+
+
+#searchpage {
+  .page-title {
+	margin: 30px 0 10px;
+  }
+}
+
+
+
+/* FAQ */
+
+#faq #fa_main {
+  //width: 1022px;
+  margin:0 auto;
+  padding: 0;
+
+  p, img, h3 {
+    margin: 0;
+    line-height: 16px;
+  }
+  img {
+    padding: 0;
+  }
+}
+
+#faq #fa_main .faq_question {
+  display: flex;
+  flex-direction: row;
+}
+
+#faq #fa_main .faq_qcapital {
+  float: left;
+  padding: 16px 30px 11px 22px;
+}
+
+#faq #fa_main .faq_qtitle {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 45px;
+  padding: 7px 0px;
+  width: 95%;
+  p {
+    line-height: 45px;
+  }
+}
+
+#faq #fa_main .faq_triangle {
+  font-size: 26px;
+  float: left;
+  padding-top: 23px;
+  padding-right: 18px;
+  padding-bottom: 15px;
+}
+
+#faq #fa_main .faq_triangle:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+#faq #fa_main .faq_anser {
+  display: flex;
+  flex-direction: row;
+  padding-right: 52px;
+  padding-bottom: 10px;
+}
+
+#faq #fa_main .faq_acapital {
+  float: left;
+  padding: 17px 47px 0px 26px;
+}
+
+#faq #fa_main .faq_atext {
+  float: left;
+  font-size: 14px;
+  line-height: 27px;
+  padding-top: 18px;
+  width: 85%;
+}
+
+input[type="checkbox"].on-off{
+  display: none;
+}
+
+#faq #fa_main .faq_anser {
+  transition: all 0.5s;
+}
+
+input[type="checkbox"].on-off + section.faq_anser{
+  height: 0;
+  overflow: hidden;
+}
+
+input[type="checkbox"].on-off:checked + section.faq_anser{
+  height: 140px;
+}
+
+
+
+/* PRIVACY */
+#privacy {
+  .privacy_link {
+	font-size: 14px;
+	a {
+	  display: inline;
+	}
+  }
+  .page_content {
+	font-size: 13px;
+	padding-top: 86px;
+	h3 {
+	  font-size: 18px;
+	}
+  }
+
+  .content_pmark {
+	p {
+	  padding-left: 0;
+	}
+  }
+  .privacymark {
+	width: 100px;
+	float: left;
+	margin: 0 30px 30px 0;
+	position: static;
+  }
+}
+
+
+/* contact form 7 */
+.wpcf7-form {
+  padding-top: 20px;
+}
+.step_confirm {
+  padding-top: 130px;
+}
+
+
+
+/* MW WP Form*/
+.mw_wp_form {
+  .form_label {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .form_item {
+    clear: both;
+  }
+  .form_left {
+    width: 24%;
+    float: left;
+  }
+  .form_right {
+    padding-left: 28%;
+  }
+
+
+}
+
+
+
+/* ARCHIVE */
+.archive {
+
+  .postlist-m {
+    padding: 0 2% 200px;
+    .postlist-item {
+      margin: 0 2% 4% 0;
+
+      &.right2 {
+        float: left;
+        margin-right: 2%;
+      }
+      &.right3 {
+        margin-right: 0;
+      }
+      &.left2 {
+        clear: none;
+      }
+      &.left3 {
+        clear: both;
+      }
+
+    }
+  }
+
+}
+
+
+
+.searchform {
+	margin: 0 auto 40px;
+}
+#search {
+  .search-title {
+    margin: 0 0 5px;
+  }
+  .postlist-m {
+    padding: 0 2% 200px;
+    .postlist-item {
+      margin: 0 2% 4% 0;
+
+      &.right2 {
+        float: left;
+        margin-right: 2%;
+      }
+      &.right3 {
+        margin-right: 0;
+      }
+      &.left2 {
+        clear: none;
+      }
+      &.left3 {
+        clear: both;
+      }
+
+    }
+  }
+}
+

@@ -1,0 +1,598 @@
+//@import "compass";
+
+.pc {
+  display: block;
+}
+.mobile {
+  display: none;
+}
+
+.mainvisual_contain {
+  .std_mvblock {
+    h2, p {
+      display: block;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.covertitle_ss {
+  display: none;
+}
+
+.topicpath_wrapper {
+  padding: 0 30px;
+}
+
+.feature_content_wrapper {
+  margin-bottom: 80px;
+  h3 {
+    text-align: center;
+    font-size: 26px;
+    line-height: 1.3;
+    margin: 0 0 40px;
+    padding-top: 40px;
+    letter-spacing: 2px;
+    span {
+      //padding: 26px 0px;
+    }
+  }
+}
+
+
+.booklist {
+  .book_item {
+    .catch {
+      font-size: 13px;
+    }
+  }
+
+  .book_item_large {
+
+    .book_cover {
+      width: 25%;
+    }
+    .book_info {
+      width: 71%;
+      .title {
+        font-size: 22px;
+      }
+      .author {
+        font-size: 15px;
+      }
+      .publisher {
+        font-size: 13px;
+      }
+    }
+
+    .book_links {
+      padding-top: 10px;
+      .storelinks {
+        .title {
+          font-size: 15px;
+        }
+        .std-obl-button-fixedw {
+          width: 140px;
+        }
+      }
+    }
+
+    &.book_item_large_s {
+      .book_cover {
+        width: 16%;
+        margin-left: 9%;
+      }
+      .book_info {
+        .title {
+          font-size: 18px;
+        }
+        .author {
+          font-size: 14px;
+        }
+        .publisher {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  .book_item_series {
+
+    .book_info {
+      padding: 15px;
+      .title {
+        display: inline-block;
+        float: left;
+        font-size: 16px;
+        padding: 6px 0 0;
+        margin: 0;
+      }
+      .book_links {
+        display: inline-block;
+        float: right;
+        clear: none;
+        padding: 0;
+      }
+    }
+  }
+
+}
+
+
+.pagetitle {
+  font-size: 26px;
+  span {
+    font-size: 20px;
+  }
+  .pc {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
+}
+
+
+
+.link_external {
+  max-width: 720px;
+  height: 50px;
+  line-height: 46px;
+  font-size: 20px;
+  margin: 0 auto 0;
+  padding: 0 24px;
+  .icon {
+    position: absolute;
+    right: 0;
+    top: 12px;
+    font-size: 24px;
+  }
+}
+
+#writer {
+  padding: 0;
+}
+
+
+
+p.copyright {
+  font-size: 12px;
+}
+
+
+/* intro */
+#intro {
+  padding: 15px 0 0;
+  .lede {
+    font-size: 15px;
+    padding: 15px 30px 0;
+  }
+}
+
+
+.interview {
+
+  .container_inner {
+    max-width: 100%;
+    margin: 0 auto 0;
+    padding: 30px 0 20px;
+  }
+
+  #interview_menu {
+    padding: 0 15px;
+  }
+
+  #content_interview {
+    .mainimage.mobile {
+      display: none;
+    }
+    .mainimage.pc {
+      display: block;
+    }
+    .mainimage_text.mobile {
+      display: none;
+    }
+
+    .fullimage {
+      .btn_pagedown {
+        display: block;
+      }
+    }
+
+    .itv_block {
+      .itv_content_wrapper {
+        font-size: 15px;
+        line-height: 1.8;
+        padding: 40px 60px 10px;
+        .itv_content {
+          max-width: 800px;
+          margin: 0 auto;
+        }
+        p {
+          margin-bottom: 30px;
+        }
+        .itv_title {
+          font-size: 24px;
+          margin-bottom: 30px;
+        }
+      }
+
+    }
+    .itv_block_h {
+      .itv_img {
+        width: 50%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+      }
+      .itv_img_mobile {
+        display: none;
+      }
+      .itv_content_wrapper {
+        width: 50%;
+        padding: 40px 60px 25px;
+        .itv_content {
+          max-width: 600px;
+        }
+      }
+    }
+    .itv_block_img_l {
+      .itv_img {
+        right: 50%;
+      }
+      .itv_content_wrapper {
+        float: right;
+      }
+      .itv_content {
+        float: left;
+      }
+    }
+    .itv_block_img_r {
+      .itv_img {
+        left: 50%;
+      }
+      .itv_content_wrapper {
+        float: left;
+      }
+      .itv_content {
+        float: right;
+      }
+    }
+
+    .profile_block_wrapper {
+      padding: 100px 15px;
+    }
+    .profile_block {
+      max-width: 800px;
+      margin: 0 auto;
+      .profile_item {
+        //padding: 30px;
+        //float: left;
+        //width: 48%;
+      }
+      .profile_right {
+        float: right;
+      }
+      .profile_one {
+        float: none;
+        width: 100%;
+        max-width: 545px;
+        margin: 0 auto;
+      }
+    }
+    .profile_block_3 {
+      .profile_item {
+        margin-bottom: 4%;
+      }
+      .profile_3_2 {
+        float: right;
+      }
+      .profile_3_3 {
+        margin-bottom: 2%;
+      }
+    }
+
+    .relatedbooks_item {
+      .content_title {
+        padding: 30px 15px;
+        font-size: 22px;
+      }
+      .book_item_large {
+        margin-bottom: 20px;
+      }
+      .note {
+        padding: 0 15px;
+      }
+    }
+
+    .present {
+      margin: 50px auto 50px;
+      .content_title {
+        font-size: 22px;
+        line-height: 1.6;
+        margin: 25px 0 20px;
+      }
+      .image_wrapper {
+        margin: 0 auto 20px;
+      }
+
+      .date {
+        font-size: 15px;
+        margin-bottom: 15px;
+      }
+    }
+
+  }
+
+  .interview_intro {
+    .lede {
+      padding: 0 50px;
+    }
+    .movieimage {
+      width: 40%;
+    }
+  }
+}
+
+
+
+
+.relatedbooks_item {
+  padding:0 0 40px;
+  .booklist {
+    .book_item {
+      width: 21%;
+      margin: 0 2% 5%;
+      .book_links {
+        display: none;
+      }
+    }
+
+    .book_item_large {
+      padding: 0 15px;
+      margin-bottom: 50px;
+      .year {
+        text-align: left;
+      }
+    }
+  }
+}
+
+
+
+
+
+.interview_archive {
+  margin-top: 80px;
+  .archive_item {
+    .link_archive {
+      width: 30%;
+      float: left;
+      border: 1px solid #ddd;
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+    .info {
+      width: 66%;
+      float: right;
+      .title {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+
+
+.interview_footer {
+  margin: 50px auto 60px;
+  padding: 20px;
+  .text {
+    display: inline-block;
+    width: 75%;
+    vertical-align: middle;
+    margin-left: 2%;
+  }
+  .title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .description {
+    font-size: 13px;
+  }
+  img {
+    display: inline-block;
+    margin: 0;
+    width: 22%;
+    vertical-align: middle;
+  }
+}
+
+
+.footer_menu {
+  padding: 0 15px;
+}
+
+.feature_footer_pagelinks {
+  padding: 0 0;
+}
+
+
+
+
+
+.topicpath_wrapper {
+  padding: 0;
+}
+#intro {
+  padding: 15px 0 0;
+  margin-bottom: 20px;
+}
+.pagetitle {
+  font-size: 28px;
+}
+.pagetitle p {
+  display: inline-block;
+  border-bottom-width: 5px;
+}
+
+.interview #content_interview .profile_block {
+  background-size: 28px auto;
+  padding: 45px 30px 40px;
+  margin-bottom: 50px;
+}
+.interview #content_interview .profile_block p.content_title {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.interview #content_interview .profile_block .profile_top {
+  position: relative;
+}
+.interview #content_interview .profile_block .profile_image {
+  width: 37%;
+  margin-bottom: 0;
+}
+.interview #content_interview .profile_block .profile_item {
+  width: 60%;
+  font-size: 14px;
+  padding: 0 0 90px;
+  margin-bottom: 0;
+}
+.interview #content_interview .profile_block .profile_item .name {
+  font-size: 20px;
+}
+.interview #content_interview .profile_block .btn_official_site {
+  margin-top: 20px;
+}
+.interview #content_interview .profile_block .btn_official_site.btn2 {
+  bottom: 30px;
+}
+.interview #content_interview .profile_block .btn_official_site a {
+  width: 240px;
+  line-height: 30px;
+  margin: 0;
+}
+.interview #content_interview .profile_block .btn_official_site a span {
+  margin: 8px 0 0;
+}
+
+.interview #content_interview .profile_second .title {
+  font-size: 20px;
+}
+.interview #content_interview .profile_second .subtitle {
+  font-size: 17px;
+}
+.interview #content_interview .profile_col1 .profile_item {
+  width: 100%;
+  padding-bottom: 0;
+}
+.interview #content_interview .event_item {
+  width: 48%;
+  float: left;
+  clear: both;
+}
+.interview #content_interview .event_item.col2_right {
+  float: right;
+  clear: none;
+}
+
+.interview #content_interview .profile_block .present_block {
+  width: 100%;
+  border-width: 2px;
+  padding: 25px;
+  margin-top: 40px;
+  display: table;
+}
+.interview #content_interview .profile_block .present_block .present_image {
+  width: 32%;
+  display: table-cell;
+  vertical-align: top;
+  padding: 0;
+}
+.interview #content_interview .profile_block .present_block .present_item {
+  font-size: 16px;
+  text-align: left;
+  display: table-cell;
+  vertical-align: top;
+  padding-left: 40px;
+  position: relative;
+}
+.interview #content_interview .profile_block .present_block .present_item .present_title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.interview #content_interview .profile_block .present_block .present_item .btn_present {
+  position: absolute;
+  left: 40px;
+  bottom: 0;
+}
+.interview #content_interview .profile_block .present_block .present_item .btn_present a {
+  width: 240px;
+  font-size: 16px;
+  line-height: 40px;
+}
+.interview #content_interview .profile_block .present_block .present_item .btn_present a span {
+  margin: 12px 0 0;
+}
+.interview #content_interview .profile_block .present_block .present_item .btn_present p {
+  text-align: left;
+}
+
+.interview #content_interview .pagenation {
+  p {
+    font-size: 14px;
+    margin: 20px 0;
+  }
+  .smt {
+    display: none;
+  }
+}
+
+
+.interview #content_interview .profile_col1 {
+  .event_item {
+    width: 100%;
+    float: none;
+    clear: both;
+  }
+}
+
+
+.related .related_item {
+  width: 32%;
+  float: left;
+  border: 1px solid #387e37;
+  margin: 0 2% 2% 0;
+}
+.related .related_item.right2 {
+  margin-right: 2%;
+}
+.related .related_item.left2 {
+  clear: none;
+}
+.related .related_item.right3 {
+  margin-right: 0;
+}
+.related .related_item.left3 {
+  clear: both;
+}
+
+.related h3 {
+  font-size: 20px;
+}
+.related_item a {
+  font-size: 16px;
+}
+
+
+.std_socialbuttons {
+  padding: 0;
+}

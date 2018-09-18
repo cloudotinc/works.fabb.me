@@ -1,0 +1,20 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+
+
+#main .product {
+  .fabb-product-title {
+    .description {
+      max-height: 114px;
+      overflow: hidden;
+    }
+  }
+}

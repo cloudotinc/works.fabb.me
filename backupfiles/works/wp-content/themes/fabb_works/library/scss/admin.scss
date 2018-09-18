@@ -1,0 +1,76 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Admin Stylesheet
+
+If you like living on the edge, you can add some styles here to
+customize the dashboard and WordPress admin area. This stylesheet
+is empty, but you can just start dropping your styles here to
+start customizing. All admin functions are located in lib/admin/
+
+******************************************************************/
+
+@import "partials/variables";
+
+.user-edit-php {
+  form {
+    h3 {
+      padding: 7px 10px;
+      background-color: $gray;
+      border-left: 5px solid $black;
+      font-size: 15px;
+    }
+  }
+}
+
+.user-new-php {
+  #createuser {
+    tr:nth-child(3){
+      display: none;
+    }
+    tr:nth-child(4){
+      display: none;
+    }
+  }
+}
+
+
+.profile-php {
+  form {
+    h3 {
+      padding: 7px 10px;
+      background-color: $gray;
+      border-left: 5px solid $black;
+      font-size: 15px;
+    }
+  }
+  #your-profile {
+    .user-first-name-wrap, .user-last-name-wrap {
+      display: none;
+    }
+  }
+}
+
+.post-php {
+  .poststg_tags, .poststg_lines, .poststg_stations {
+    li {
+      display: inline-block;
+      padding: 0 20px 0 0;
+    }
+  }
+}
+.post-new-php {
+  .poststg_tags, .poststg_lines, .poststg_stations {
+    li {
+      display: inline-block;
+      padding: 0 20px 0 0;
+    }
+  }
+}
+
+.acf-repeater {
+  .acf-table {
+    table-layout: fixed;
+  }
+}

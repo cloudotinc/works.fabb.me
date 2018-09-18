@@ -1,0 +1,2155 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: IE Stylesheet
+
+So instead of using the respond.js file to add media query support
+to IE, we're going to use SASS to create an easily readable css file.
+Here, we import all the styles the standard stylesheet gets, only
+without the media queries. No need to worry about editing anything!
+
+******************************************************************/
+/******************************************************************
+IMPORTS & DEPENDENCIES
+Remember, all the BASE styles are called already since IE can
+read those. Below, we need to import only the stuff IE can't
+understand (what's inside the media queries). We also need to
+import the mixins file so SASS can understand the variables.
+******************************************************************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+/*
+The following is based of Typebase:
+https://github.com/devinhunt/typebase.css
+I've edited it a bit, but it's a nice starting point.
+*/
+/*
+ i imported this one in the functions file so bones would look sweet.
+ don't forget to remove it for your site.
+*/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Typography
+
+Need to import a font or set of icons for your site? Drop them in
+here or just use this to establish your typographical grid. Or not.
+Do whatever you want to...GOSH!
+
+Helpful Articles:
+http://trentwalton.com/2012/06/19/fluid-type/
+http://ia.net/blog/responsive-typography-the-basics/
+http://alistapart.com/column/responsive-typography-is-a-physical-discipline
+
+******************************************************************/
+/*********************
+FONT FACE (IN YOUR FACE)
+*********************/
+/*  To embed your own fonts, use this syntax
+  and place your fonts inside the
+  library/fonts folder. For more information
+  on embedding fonts, go to:
+  http://www.fontsquirrel.com/
+  Be sure to remove the comment brackets.
+*/
+/*  @font-face {
+      font-family: 'Font Name';
+      src: url('library/fonts/font-name.eot');
+      src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('library/fonts/font-name.woff') format('woff'),
+             url('library/fonts/font-name.ttf') format('truetype'),
+             url('library/fonts/font-name.svg#font-name') format('svg');
+      font-weight: normal;
+      font-style: normal;
+  }
+*/
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?5jdokn");
+  src: url("../fonts/icomoon.eot?5jdokn#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?5jdokn") format("truetype"), url("../fonts/icomoon.woff?5jdokn") format("woff"), url("../fonts/icomoon.svg?5jdokn#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrowleftthin:before {
+  content: "\e900";
+}
+
+.icon-arrowrightthin:before {
+  content: "\e901";
+}
+
+.icon-facebook2:before {
+  content: "\e902";
+}
+
+.icon-line:before {
+  content: "\e903";
+}
+
+.icon-facebook:before {
+  content: "\e904";
+}
+
+.icon-area:before {
+  content: "\e905";
+}
+
+.icon-tile:before {
+  content: "\e906";
+}
+
+.icon-category:before {
+  content: "\e907";
+}
+
+.icon-calendar:before {
+  content: "\e908";
+}
+
+.icon-home:before {
+  content: "\e909";
+}
+
+.icon-blog:before {
+  content: "\e90a";
+}
+
+.icon-arrowleftthin2:before {
+  content: "\e90b";
+}
+
+.icon-arrowrightthin2:before {
+  content: "\e90c";
+}
+
+.icon-email:before {
+  content: "\e90d";
+}
+
+/* ===================================================
+*
+*  Webfonts Title: Yaku Han JP ver.Small Amount
+*  Author: Qrac
+*  URL: https://twitter.com/Qrac_jp
+*  "Noto Sans CJK JP" licensed under the SIL Open Font License
+*  https://www.google.com/get/noto/#/
+*
+=================================================== */
+@font-face {
+  font-family: 'YakuHanJPs';
+  font-style: normal;
+  font-weight: 100;
+  src: url(../fonts/YakuHanJPs/YakuHanJPs-Thin.woff2) format("woff2"), url(../fonts/YakuHanJPs/YakuHanJPs-Thin.woff) format("woff"), url(../fonts/YakuHanJPs/YakuHanJPs-Thin.eot);
+}
+@font-face {
+  font-family: 'YakuHanJPs';
+  font-style: normal;
+  font-weight: 200;
+  src: url(../fonts/YakuHanJPs/YakuHanJPs-Light.woff2) format("woff2"), url(../fonts/YakuHanJPs/YakuHanJPs-Light.woff) format("woff"), url(../fonts/YakuHanJPs/YakuHanJPs-Light.eot);
+}
+@font-face {
+  font-family: 'YakuHanJPs';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/YakuHanJPs/YakuHanJPs-DemiLight.woff2) format("woff2"), url(../fonts/YakuHanJPs/YakuHanJPs-DemiLight.woff) format("woff"), url(../fonts/YakuHanJPs/YakuHanJPs-DemiLight.eot);
+}
+@font-face {
+  font-family: 'YakuHanJPs';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/YakuHanJPs/YakuHanJPs-Regular.woff2) format("woff2"), url(../fonts/YakuHanJPs/YakuHanJPs-Regular.woff) format("woff"), url(../fonts/YakuHanJPs/YakuHanJPs-Regular.eot);
+}
+@font-face {
+  font-family: 'YakuHanJPs';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/YakuHanJPs/YakuHanJPs-Medium.woff2) format("woff2"), url(../fonts/YakuHanJPs/YakuHanJPs-Medium.woff) format("woff"), url(../fonts/YakuHanJPs/YakuHanJPs-Medium.eot);
+}
+@font-face {
+  font-family: 'YakuHanJPs';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/YakuHanJPs/YakuHanJPs-Bold.woff2) format("woff2"), url(../fonts/YakuHanJPs/YakuHanJPs-Bold.woff) format("woff"), url(../fonts/YakuHanJPs/YakuHanJPs-Bold.eot);
+}
+@font-face {
+  font-family: 'YakuHanJPs';
+  font-style: normal;
+  font-weight: 900;
+  src: url(../fonts/YakuHanJPs/YakuHanJPs-Black.woff2) format("woff2"), url(../fonts/YakuHanJPs/YakuHanJPs-Black.woff) format("woff"), url(../fonts/YakuHanJPs/YakuHanJPs-Black.eot);
+}
+/*
+some nice typographical defaults
+more here: http://www.newnet-soft.com/blog/csstypography
+*/
+p {
+  -ms-word-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  -webkit-hyphenate-before: 2;
+  -webkit-hyphenate-after: 3;
+  hyphenate-lines: 3;
+  /*
+  -webkit-font-feature-settings: "liga", "dlig";
+   -moz-font-feature-settings: "liga=1, dlig=1";
+      -ms-font-feature-settings: "liga", "dlig";
+       -o-font-feature-settings: "liga", "dlig";
+          font-feature-settings: "liga", "dlig";
+          */
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins Stylesheet
+
+This is where you can take advantage of Sass' great features: Mixins.
+I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+Helpful:
+http://sachagreif.com/useful-sass-mixins/
+http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+
+******************************************************************/
+/*********************
+TRANSITION
+*********************/
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* @include box-sizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: IE Grid Styles
+
+Since the example grid is based on media queries, so rather than
+setup some js library that would make IE8 and below understand
+media queries, let's just add some styles that serves a fixed grid.
+
+Again, if you want to roll your own, just remove this junk and put
+whatever you use in here.
+
+******************************************************************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection.
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.scss styles.
+
+******************************************************************/
+/*
+IMPORTANT NOTE ABOUT SASS 3.3 & UP
+You can't use @extend within media queries
+anymore, so just be aware that if you drop
+them in here, they won't work.
+*/
+/*********************
+NAVIGATION STYLES
+*********************/
+/* .menu is clearfixed inside mixins.scss */
+.menu {
+  /* end .menu ul */
+}
+.menu ul {
+  /* end .menu ul li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+.menu ul li {
+  /*
+  plan your menus and drop-downs wisely.
+  */
+}
+.menu ul li a {
+  /*
+  you can use hover styles here even though this size
+  has the possibility of being a mobile device.
+  */
+}
+
+/* end .menu */
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+/* entry content */
+.entry-content {
+  /* at this larger size, we can start to align images */
+}
+.entry-content .alignleft, .entry-content img.alignleft {
+  margin-right: 3%;
+  margin-bottom: 1rem;
+  float: left;
+}
+.entry-content .alignright, .entry-content img.alignright {
+  margin-left: 3%;
+  margin-bottom: 1rem;
+  float: right;
+}
+.entry-content .aligncenter, .entry-content img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both;
+}
+.entry-content .image50 {
+  width: 48.5%;
+}
+
+/* end .entry-content */
+/*********************
+FOOTER STYLES
+*********************/
+/*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+/* end .footer-links */
+/* COMMON */
+.std-title-block .description {
+  font-size: 15px;
+  /* 14 */
+}
+
+.postlist-s .postlist-item .cat {
+  padding-top: 5px;
+}
+.postlist-s .postlist-item .title {
+  padding-top: 5px;
+}
+
+.postlist-m .postlist-item, .postlist-m li.product, .woocommerce ul.products .postlist-item, .woocommerce ul.products li.product {
+  clear: none;
+  float: left;
+  width: 48%;
+  padding: 0;
+  margin-bottom: 5%;
+}
+.postlist-m .postlist-item .postimage, .postlist-m li.product .postimage, .woocommerce ul.products .postlist-item .postimage, .woocommerce ul.products li.product .postimage {
+  width: 100%;
+  float: none;
+}
+.postlist-m .postlist-item .postinfo, .postlist-m li.product .postinfo, .woocommerce ul.products .postlist-item .postinfo, .woocommerce ul.products li.product .postinfo {
+  width: 100%;
+  float: none;
+}
+.postlist-m .postlist-item:nth-child(2n), .postlist-m li.product:nth-child(2n), .woocommerce ul.products .postlist-item:nth-child(2n), .woocommerce ul.products li.product:nth-child(2n) {
+  float: right;
+}
+.postlist-m .postlist-item:nth-child(2n - 1), .postlist-m li.product:nth-child(2n - 1), .woocommerce ul.products .postlist-item:nth-child(2n - 1), .woocommerce ul.products li.product:nth-child(2n - 1) {
+  clear: both;
+}
+
+.prof-card .mainimg {
+  padding-top: 20%;
+  width: 20%;
+}
+.prof-card .name {
+  padding: 0 5px 5px 23%;
+}
+.prof-card .prof-short {
+  padding: 0 0 0 23%;
+}
+
+.page-links {
+  padding: 20px 0;
+}
+.page-links .link_text {
+  position: static;
+}
+
+/* TOP */
+#topslider {
+  margin: 0 0 15px;
+  padding: 0;
+}
+#topslider .topslider-img {
+  margin: 0 1px;
+}
+#topslider .topslider-img:before {
+  content: " ";
+  display: block;
+  padding-top: 160%;
+}
+
+.postlist .postlist-item_cover .date {
+  display: block;
+}
+
+.page-links .page-links-inner {
+  padding: 0 52px 0;
+}
+.page-links .page-links-inner > a > span, .page-links .page-links-inner > span {
+  margin: 2px 5px;
+}
+
+/* SINGLE */
+body.single #main .entry-title {
+  font-size: 25px;
+}
+
+.postlist_related {
+  margin: 25px 15px 15px;
+}
+
+/* PRODUCT */
+#main .product .fabb-product-title .price {
+  padding: 20px 0;
+  margin: 20px 0 0;
+}
+#main .product .fabb-product-title .price .label {
+  font-size: 20px;
+  line-height: 41px;
+  padding: 0 12%;
+}
+#main .product .fabb-product-title .price .label:after {
+  height: 60px;
+  top: 50%;
+  margin-top: -30px;
+}
+#main .product .fabb-product-title .price .amount-wrapper {
+  padding-right: 5%;
+}
+#main .product .fabb-product-title .price .amount {
+  font-size: 41px;
+  line-height: 41px;
+}
+#main .product .fabb-product-title .price .taxlabel {
+  line-height: 20px;
+  font-size: 20px;
+}
+
+/* ARCHIVE */
+.archive-title {
+  margin: 0 15px 40px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.archive #container {
+  background-color: #fff;
+}
+.archive .postlist-m {
+  padding: 0 4% 200px;
+}
+.archive .postlist-m .postlist-item {
+  margin: 0 0 5%;
+}
+
+.searchform {
+  margin: 0 auto 40px;
+}
+
+.search #container {
+  background-color: #fff;
+}
+
+#search .postlist-m {
+  padding: 0 4% 200px;
+}
+#search .postlist-m .postlist-item {
+  margin: 0 0 5%;
+}
+
+.page-template-allposts #container {
+  background-color: #fff;
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+.prof-card .mainimg {
+  padding-top: 100%;
+  width: 100%;
+  float: none;
+  position: relative;
+}
+.prof-card .mainimg img {
+  display: none;
+}
+.prof-card .area {
+  position: absolute;
+  right: 10px;
+  bottom: -8px;
+  top: auto;
+  border-radius: 4px;
+  width: 72px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 14px;
+}
+.prof-card .name {
+  font-size: 16px;
+  margin: 5px 10px 0;
+  padding: 0 0 5px;
+}
+.prof-card .prof-short {
+  font-size: 13px;
+  margin: 0 10px 2px;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.prof-card-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 540px;
+  margin: 0 auto;
+}
+.prof-card-list .prof-card {
+  width: 48%;
+  margin-bottom: 2%;
+  float: none;
+}
+.prof-card-list .prof-card a {
+  height: 100%;
+}
+
+.std-postnav .pl-btn {
+  width: 150px;
+}
+.std-postnav .pl-btn .pl-text {
+  display: inline-block;
+  letter-spacing: 0;
+}
+.std-postnav .pl-btn.pl-prev .pl-text {
+  margin-left: -8px;
+}
+.std-postnav .pl-btn.pl-next .pl-text {
+  margin-right: -8px;
+}
+.std-postnav .pl-archive {
+  margin: 0 150px;
+  font-size: 16px;
+}
+
+/* SINGLE */
+body.single #main .col2 .col_item {
+  width: 49%;
+}
+body.single #main .col2 .col_l {
+  float: left;
+}
+body.single #main .col2 .col_r {
+  float: right;
+}
+
+/* PRODUCT */
+#main .product .fabb-product-author .prof-card-wrapper {
+  width: 230px;
+  margin: 0 auto;
+}
+#main .product .fabb-product-author .prof-card-wrapper .std-btn-arrow {
+  width: 100%;
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+body {
+  padding-top: 0;
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+.pc {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1040px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.wrap_thin {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.wrap-single {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.wrap-page {
+  max-width: 800px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+#container {
+  background-color: #fff;
+}
+
+#base {
+  min-height: calc(100vh - 408px);
+}
+
+.header {
+  position: static;
+}
+
+#inner-header {
+  text-align: center;
+  height: 170px;
+}
+#inner-header .togglebutton {
+  display: none;
+}
+
+#logo {
+  position: static;
+  margin: 12px auto 0;
+  width: 200px;
+}
+
+.site-description {
+  text-align: center;
+  font-size: 14px;
+  margin: 0;
+  display: block;
+  padding: 0;
+  margin-top: 6px;
+}
+
+.header-toolbar {
+  position: absolute;
+  top: 18px;
+  right: 21px;
+  display: inline-block;
+}
+.header-toolbar .std-btn {
+  margin-left: 5px;
+}
+.header-toolbar a.std-btn {
+  width: 80px;
+  font-size: 14px;
+}
+.header-toolbar a.btn-mypage {
+  width: 88px;
+}
+.header-toolbar .welcome {
+  display: none;
+}
+
+#header-fixed {
+  display: block;
+}
+#header-fixed .btn-mypage {
+  width: 80px;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+.nav {
+  border: 0;
+  /* end .menu ul li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+.nav ul {
+  background: #000;
+  margin-top: 0;
+}
+.nav li {
+  float: left;
+  position: relative;
+  /*
+  plan your menus and drop-downs wisely.
+  */
+  /* showing sub-menus */
+}
+.nav li a {
+  border-bottom: 0;
+  /*
+  you can use hover styles here even though this size
+  has the possibility of being a mobile device.
+  */
+}
+.nav li a:hover, .nav li a:focus {
+  color: #fff;
+  text-decoration: underline;
+}
+.nav li ul.sub-menu,
+.nav li ul.children {
+  margin-top: 0;
+  border: 1px solid #ccc;
+  border-top: 0;
+  position: absolute;
+  visibility: hidden;
+  z-index: 8999;
+  /* highlight sub-menu current page */
+}
+.nav li ul.sub-menu li,
+.nav li ul.children li {
+  /*
+  if you need to go deeper, go nuts
+  just remember deeper menus suck
+  for usability. k, bai.
+  */
+}
+.nav li ul.sub-menu li a,
+.nav li ul.children li a {
+  padding-left: 10px;
+  border-right: 0;
+  display: block;
+  width: 180px;
+  border-bottom: 1px solid #ccc;
+}
+.nav li ul.sub-menu li:last-child a,
+.nav li ul.children li:last-child a {
+  border-bottom: 0;
+}
+.nav li ul.sub-menu li ul,
+.nav li ul.children li ul {
+  top: 0;
+  left: 100%;
+}
+.nav li:hover > ul {
+  top: auto;
+  visibility: visible;
+}
+
+/* end .nav */
+.hentry {
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+.hentry header {
+  padding: 0 30px 0;
+}
+.hentry footer {
+  padding: 20px 30px;
+}
+.hentry footer p {
+  margin: 0;
+}
+
+/* end .hentry */
+.entry-content, .prof-content {
+  padding: 30px 30px 0;
+  font-size: 1rem;
+  line-height: 1.8rem;
+}
+.entry-content p, .prof-content p {
+  margin: 0;
+  margin-bottom: 1.8rem;
+}
+.entry-content h2, .prof-content h2 {
+  margin: 0;
+  font-size: 1.625rem;
+  line-height: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+.entry-content h3, .prof-content h3 {
+  margin: 0;
+  font-size: 1.375rem;
+  line-height: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+.entry-content h4, .prof-content h4 {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+.entry-content h5, .prof-content h5 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+.entry-content .gallery-columns-1 dl, .prof-content .gallery-columns-1 dl {
+  width: 100%;
+}
+.entry-content .gallery-columns-2 dl, .prof-content .gallery-columns-2 dl {
+  width: 50%;
+}
+.entry-content .gallery-columns-3 dl, .prof-content .gallery-columns-3 dl {
+  width: 33.333%;
+}
+.entry-content .gallery-columns-4 dl, .prof-content .gallery-columns-4 dl {
+  width: 25%;
+}
+.entry-content .gallery-columns-5 dl, .prof-content .gallery-columns-5 dl {
+  width: 20%;
+}
+.entry-content .gallery-columns-6 dl, .prof-content .gallery-columns-6 dl {
+  width: 16.666%;
+}
+.entry-content .gallery-columns-7 dl, .prof-content .gallery-columns-7 dl {
+  width: 14.285%;
+}
+.entry-content .gallery-columns-8 dl, .prof-content .gallery-columns-8 dl {
+  width: 12.5%;
+}
+.entry-content .gallery-columns-9 dl, .prof-content .gallery-columns-9 dl {
+  width: 11.111%;
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+.sidebar {
+  margin-top: 2.2em;
+}
+
+.widgettitle {
+  border-bottom: 2px solid #444;
+  margin-bottom: 0.75em;
+}
+
+.widget {
+  padding: 0 10px;
+  margin: 2.2em 0;
+}
+.widget ul li {
+  margin-bottom: 0.75em;
+  /* deep nesting */
+}
+.widget ul li ul {
+  margin-top: 0.75em;
+  padding-left: 1em;
+}
+
+/* links widget */
+/* meta widget */
+/* pages widget */
+/* recent-posts widget */
+/* archives widget */
+/* tag-cloud widget */
+/* calendar widget */
+/* category widget */
+/* recent-comments widget */
+/* search widget */
+/* text widget */
+/*********************
+FOOTER STYLES
+*********************/
+.footer {
+  position: relative;
+  height: 240px;
+}
+.footer .footer-logo {
+  width: 232px;
+  margin: 0;
+}
+.footer .footer-logo img {
+  width: 100%;
+}
+.footer .footer-nav {
+  width: 100%;
+  padding: 10px 0 0;
+  float: none;
+  max-width: 100%;
+}
+.footer .footer-nav ul {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.footer .footer-nav ul li {
+  font-size: 14px;
+  margin: 0;
+  text-align: left;
+  border-left: 1px solid;
+  border-bottom: 0;
+  padding: 0 18px;
+  letter-spacing: 0.1em;
+  float: left;
+  color: #fff;
+  font-weight: 500;
+  width: auto;
+}
+.footer .footer-nav ul li:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+.footer .footer-nav ul li a {
+  color: #fff;
+}
+.footer .footer-nav1 {
+  padding: 30px 0 0;
+}
+.footer .footer-nav1 ul li {
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  font-weight: bold;
+}
+.footer .exlinks {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 0;
+  padding: 0;
+}
+.footer .exlinks li {
+  float: left;
+  margin: 0 10px 0 0;
+}
+.footer .exlinks li a {
+  text-align: center;
+  display: block;
+  font-size: 22px;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  position: relative;
+  background: #fff;
+  border-radius: 23px;
+  color: #a0a0a0;
+}
+.footer .exlinks li.exbtn-fabb {
+  margin: 7px 0 0 4px;
+  width: 90px;
+}
+.footer .exlinks li.exbtn-fabb a {
+  width: 100%;
+  height: auto;
+  background: 0;
+  border-radius: 0;
+}
+.footer .copyright {
+  text-align: left;
+  margin-top: 30px;
+}
+
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+.footer-links ul li {
+  /*
+  be careful with the depth of your menus.
+  it's very rare to have multi-depth menus in
+  the footer.
+  */
+}
+
+/* end .footer-links */
+/* COMMOM ITEMS */
+.postlist-ss {
+  padding: 0;
+}
+.postlist-ss .postlist-item {
+  clear: both;
+  margin-bottom: 30px;
+  border: 0;
+  padding: 0;
+}
+.postlist-ss .postlist-item .postimage {
+  width: 23%;
+  float: left;
+  display: block;
+}
+.postlist-ss .postlist-item .postinfo {
+  width: 73%;
+  float: right;
+}
+.postlist-ss .postlist-item .date {
+  margin-top: 0;
+}
+
+.postlist-m .postlist-item, .postlist-m li.product, .woocommerce ul.products .postlist-item, .woocommerce ul.products li.product {
+  float: left;
+  width: 30%;
+  margin: 0 5% 5% 0;
+}
+.postlist-m .postlist-item:nth-child(2n), .postlist-m li.product:nth-child(2n), .woocommerce ul.products .postlist-item:nth-child(2n), .woocommerce ul.products li.product:nth-child(2n) {
+  float: left;
+}
+.postlist-m .postlist-item:nth-child(2n - 1), .postlist-m li.product:nth-child(2n - 1), .woocommerce ul.products .postlist-item:nth-child(2n - 1), .woocommerce ul.products li.product:nth-child(2n - 1) {
+  clear: none;
+}
+.postlist-m .postlist-item:nth-child(3n), .postlist-m li.product:nth-child(3n), .woocommerce ul.products .postlist-item:nth-child(3n), .woocommerce ul.products li.product:nth-child(3n) {
+  margin-right: 0;
+}
+.postlist-m .postlist-item:nth-child(3n - 2), .postlist-m li.product:nth-child(3n - 2), .woocommerce ul.products .postlist-item:nth-child(3n - 2), .woocommerce ul.products li.product:nth-child(3n - 2) {
+  clear: both;
+}
+
+.postlist-text .postlist-item .postinfo {
+  display: table;
+}
+.postlist-text .postlist-item .date, .postlist-text .postlist-item .cat, .postlist-text .postlist-item .title {
+  display: table-cell;
+  padding-top: 0;
+}
+.postlist-text .postlist-item .date {
+  width: 150px;
+  padding-right: 20px;
+}
+.postlist-text .postlist-item .cat {
+  width: 120px;
+  padding-right: 20px;
+}
+
+.std-title {
+  margin: 0 auto 10px;
+  font-size: 26px;
+}
+
+.std-title-wsub {
+  margin-bottom: 5px;
+}
+
+.std-subtitle {
+  margin: 0 0 30px;
+  font-size: 14px;
+}
+
+.std-title-block-wline {
+  margin: 0 0 30px;
+}
+.std-title-block-wline .std-subtitle {
+  margin: 0;
+}
+
+.std-title-block-wline-smt {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.std-title-block-wline-smt:before, .std-title-block-wline-smt:after {
+  display: none;
+}
+.std-title-block-wline-smt .std-subtitle {
+  margin-bottom: 30px;
+}
+
+.std-related-products h3 {
+  font-size: 19px;
+  /* 18 */
+}
+.std-related-products .product_item {
+  margin-bottom: 20px;
+}
+.std-related-products .product_item .product_left {
+  width: 22%;
+  float: left;
+}
+.std-related-products .product_item .product_right {
+  width: 74%;
+  float: right;
+}
+.std-related-products .product_item .product_right .name {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.std-related-products .product_item .product_right a {
+  font-size: 15px;
+}
+
+.gototop {
+  width: 60px;
+  bottom: 50px;
+  right: 20px;
+}
+
+.page-links {
+  padding: 40px 0 20px;
+}
+.page-links .link_text {
+  position: absolute;
+}
+
+.taglist li {
+  margin: 5px 10px 0 0;
+}
+
+.arealist ul li a {
+  width: 142px;
+  height: 47px;
+  font-size: 17px;
+  line-height: 43px;
+}
+
+.catlist {
+  max-width: 1040px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+.catlist ul li {
+  float: left;
+  width: 30%;
+  margin: 0 5% 5% 0;
+}
+.catlist ul li:nth-child(2n) {
+  float: left;
+}
+.catlist ul li:nth-child(3n) {
+  margin-right: 0;
+}
+.catlist ul li a, .catlist ul li p {
+  font-size: 17px;
+}
+
+.content-bottom {
+  margin: 70px auto;
+}
+
+/* TOP */
+#topslider .topslider-info {
+  padding: 0 15px;
+}
+#topslider .topslider-info .date .icon {
+  display: none;
+  padding-right: 2px;
+}
+#topslider .topslider-info .date_new {
+  color: #dd3000;
+}
+#topslider .topslider-info .date_new .icon {
+  display: inline-block;
+}
+#topslider .topslider-info .title {
+  margin: 5px 0 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+#topslider .rsBullets {
+  display: none;
+}
+#topslider .rsArrow {
+  width: 60px;
+}
+#topslider .rsArrowIcn {
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  margin-left: -10px;
+  border-radius: 20px;
+}
+#topslider .rsArrowIcn:after {
+  font-size: 22px;
+  line-height: 40px;
+}
+#topslider .rsArrowRight .rsArrowIcn {
+  margin-left: -30px;
+}
+
+.top-content {
+  margin: 0 auto 60px;
+}
+
+.top-content-wrapper.col2 {
+  width: 50%;
+}
+.top-content-wrapper.col1 {
+  width: 50%;
+}
+.top-content-wrapper.left {
+  float: left;
+}
+.top-content-wrapper.right {
+  float: right;
+}
+
+#topposts {
+  margin-bottom: 40px;
+}
+
+#topvisual {
+  height: 374px;
+}
+#topvisual p {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  left: auto;
+  font-size: 42px;
+  letter-spacing: 0.1em;
+  padding: 0;
+  margin: 0;
+  line-height: 1.4;
+}
+#topvisual p span {
+  font-size: 26px;
+  letter-spacing: 0.075em;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+#toparea {
+  margin-top: 70px;
+  min-height: 174px;
+}
+#toparea .std-title {
+  margin-bottom: 15px;
+}
+
+#topcat {
+  margin-bottom: 20px;
+}
+
+.prof-card-list {
+  max-width: 100%;
+}
+.prof-card-list:before, .prof-card-list:after {
+  content: "";
+  display: block;
+  width: 23.5%;
+}
+.prof-card-list:before {
+  order: 1;
+}
+.prof-card-list .prof-card {
+  width: 23.5%;
+  margin-bottom: 0;
+}
+.prof-card-list .prof-card:nth-child(2n) {
+  float: left;
+}
+.prof-card-list .prof-card:last-child {
+  margin-right: 0;
+}
+
+.footer-instructor {
+  margin-top: 70px;
+}
+.footer-instructor .btn-wrapper {
+  margin-top: 50px;
+}
+
+.footer-news {
+  margin-top: 70px;
+}
+
+/* SINGLE */
+#single #inner-content {
+  margin-top: 20px;
+}
+
+body.single .noHeaderImg {
+  margin-top: 1%;
+}
+body.single .std-title {
+  position: static;
+}
+body.single .content_header {
+  margin-bottom: 1%;
+}
+body.single .content_header .column_headerimg a {
+  display: block;
+}
+body.single .content_header .column_headerimg a.pc {
+  display: block;
+}
+body.single .content_header .column_headerimg a.mobile {
+  display: none;
+}
+body.single #main .entry-header {
+  padding: 0 30px;
+}
+body.single #main .entry-header .infoheader {
+  margin-right: 0;
+  margin-left: 0;
+  margin-top: 3px;
+  padding: 0;
+}
+body.single #main .entry-header .title_wrapper {
+  position: relative;
+  padding: 0 0 0;
+}
+body.single #main .entry-header .taglist {
+  padding: 0;
+}
+body.single #main .std-content {
+  padding: 0 30px;
+}
+body.single .profile-wrapper, body.single .writer-wrapper {
+  margin: 60px 30px 0;
+}
+body.single .store-wrapper {
+  margin: 60px 30px 0;
+}
+
+.postlist_related {
+  padding: 2% 2% 0;
+  margin: 0;
+}
+.postlist_related .no_related_post {
+  margin: 0 0 20px;
+}
+
+/* SIDE */
+.side-content {
+  padding: 0 30px 60px;
+}
+.side-content .side-content-inner {
+  padding: 0 0 20px;
+}
+
+.side-content-area .side-content-inner {
+  padding-bottom: 0;
+}
+
+/* PRODUCT */
+#product #inner-content {
+  margin-top: 20px;
+}
+
+.prof-content {
+  padding: 0;
+}
+
+.single-product #main .product {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.single-product #main .product .fabb-product-image {
+  width: 100%;
+}
+.single-product #main .product .fabb-product-title {
+  width: 48%;
+  float: left;
+  margin-top: 35px;
+  padding: 0 0 107px;
+  position: relative;
+}
+.single-product #main .product .fabb-product-title h1 {
+  font-size: 30px;
+}
+.single-product #main .product .fabb-product-title .description {
+  font-size: 16px;
+}
+.single-product #main .product .fabb-product-title .price {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.single-product #main .product .fabb-product-title .price .label {
+  font-size: 16px;
+  line-height: 32px;
+  padding: 0 5%;
+}
+.single-product #main .product .fabb-product-title .price .label:after {
+  height: 50px;
+  margin-top: -25px;
+}
+.single-product #main .product .fabb-product-title .price .amount-wrapper {
+  padding-right: 4%;
+}
+.single-product #main .product .fabb-product-title .price .amount {
+  font-size: 32px;
+  line-height: 32px;
+}
+.single-product #main .product .fabb-product-title .price .taxlabel {
+  line-height: 16px;
+  font-size: 16px;
+}
+.single-product #main .product .entry-summary {
+  margin: 35px 0 0;
+  padding-bottom: 3px;
+  width: 48%;
+}
+.single-product #main .product .fabb-product-basicinfo {
+  border: 1px solid;
+  padding: 30px;
+  font-size: 18px;
+}
+.single-product #main .product form.cart {
+  margin-bottom: 0;
+}
+.single-product #main .product .fabb-product-author {
+  clear: both;
+  padding-top: 60px;
+  width: 100%;
+}
+.single-product #main .product .fabb-product-author .prof-wrapper {
+  padding-left: 265px;
+}
+.single-product #main .product .fabb-product-author .prof-card-wrapper {
+  width: 230px;
+  float: left;
+  padding-bottom: 5px;
+  margin: 0 0 0 -265px;
+}
+.single-product #main .product .fabb-product-author .prof-card-wrapper .std-btn-arrow {
+  width: 100%;
+}
+.single-product #main .product .fabb-product-author .prof-content {
+  width: 100%;
+  float: right;
+}
+
+.woocommerce-error, .woocommerce-info, .woocommerce-message {
+  padding: 1em 2em 1em 3.5em !important;
+}
+.woocommerce-error:before, .woocommerce-info:before, .woocommerce-message:before {
+  left: 1.5em;
+}
+.woocommerce-error li, .woocommerce-info li, .woocommerce-message li {
+  font-size: 15px;
+}
+
+/* PRODUCT ARCHIVE */
+.archive #product #main {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* AUTHOR */
+#author {
+  padding: 0;
+}
+#author #inner-content {
+  margin-top: 20px;
+  padding-left: 260px;
+}
+#author #sidebar {
+  width: 230px;
+  float: left;
+  margin-top: 0;
+  margin-left: -230px;
+}
+#author #main {
+  float: right;
+  padding-left: 40px;
+}
+
+/* INSTRUCTOR */
+.instructor-wrapper {
+  margin: 15px 0 0;
+}
+
+#searchpage .page-title {
+  margin: 30px 0 10px;
+}
+
+/* FAQ */
+#faq #fa_main {
+  margin: 0 auto;
+  padding: 0;
+}
+#faq #fa_main p, #faq #fa_main img, #faq #fa_main h3 {
+  margin: 0;
+  line-height: 16px;
+}
+#faq #fa_main img {
+  padding: 0;
+}
+
+#faq #fa_main .faq_question {
+  display: flex;
+  flex-direction: row;
+}
+
+#faq #fa_main .faq_qcapital {
+  float: left;
+  padding: 16px 30px 11px 22px;
+}
+
+#faq #fa_main .faq_qtitle {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 45px;
+  padding: 7px 0px;
+  width: 95%;
+}
+#faq #fa_main .faq_qtitle p {
+  line-height: 45px;
+}
+
+#faq #fa_main .faq_triangle {
+  font-size: 26px;
+  float: left;
+  padding-top: 23px;
+  padding-right: 18px;
+  padding-bottom: 15px;
+}
+
+#faq #fa_main .faq_triangle:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+#faq #fa_main .faq_anser {
+  display: flex;
+  flex-direction: row;
+  padding-right: 52px;
+  padding-bottom: 10px;
+}
+
+#faq #fa_main .faq_acapital {
+  float: left;
+  padding: 17px 47px 0px 26px;
+}
+
+#faq #fa_main .faq_atext {
+  float: left;
+  font-size: 14px;
+  line-height: 27px;
+  padding-top: 18px;
+  width: 85%;
+}
+
+input[type="checkbox"].on-off {
+  display: none;
+}
+
+#faq #fa_main .faq_anser {
+  transition: all 0.5s;
+}
+
+input[type="checkbox"].on-off + section.faq_anser {
+  height: 0;
+  overflow: hidden;
+}
+
+input[type="checkbox"].on-off:checked + section.faq_anser {
+  height: 140px;
+}
+
+/* PRIVACY */
+#privacy .privacy_link {
+  font-size: 14px;
+}
+#privacy .privacy_link a {
+  display: inline;
+}
+#privacy .page_content {
+  font-size: 13px;
+  padding-top: 86px;
+}
+#privacy .page_content h3 {
+  font-size: 18px;
+}
+#privacy .content_pmark p {
+  padding-left: 0;
+}
+#privacy .privacymark {
+  width: 100px;
+  float: left;
+  margin: 0 30px 30px 0;
+  position: static;
+}
+
+/* contact form 7 */
+.wpcf7-form {
+  padding-top: 20px;
+}
+
+.step_confirm {
+  padding-top: 130px;
+}
+
+/* MW WP Form*/
+.mw_wp_form .form_label {
+  font-weight: bold;
+  font-size: 14px;
+}
+.mw_wp_form .form_item {
+  clear: both;
+}
+.mw_wp_form .form_left {
+  width: 24%;
+  float: left;
+}
+.mw_wp_form .form_right {
+  padding-left: 28%;
+}
+
+/* ARCHIVE */
+.archive .postlist-m {
+  padding: 0 2% 200px;
+}
+.archive .postlist-m .postlist-item {
+  margin: 0 2% 4% 0;
+}
+.archive .postlist-m .postlist-item.right2 {
+  float: left;
+  margin-right: 2%;
+}
+.archive .postlist-m .postlist-item.right3 {
+  margin-right: 0;
+}
+.archive .postlist-m .postlist-item.left2 {
+  clear: none;
+}
+.archive .postlist-m .postlist-item.left3 {
+  clear: both;
+}
+
+.searchform {
+  margin: 0 auto 40px;
+}
+
+#search .search-title {
+  margin: 0 0 5px;
+}
+#search .postlist-m {
+  padding: 0 2% 200px;
+}
+#search .postlist-m .postlist-item {
+  margin: 0 2% 4% 0;
+}
+#search .postlist-m .postlist-item.right2 {
+  float: left;
+  margin-right: 2%;
+}
+#search .postlist-m .postlist-item.right3 {
+  margin-right: 0;
+}
+#search .postlist-m .postlist-item.left2 {
+  clear: none;
+}
+#search .postlist-m .postlist-item.left3 {
+  clear: both;
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+body {
+  padding-top: 0;
+}
+
+#base {
+  position: relative;
+}
+
+#inner-content {
+  margin-top: 0;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+#inner-header .togglebutton {
+  z-index: 1;
+  top: 6px;
+}
+
+#header-fixed .menu-wrapper {
+  margin-top: 3px;
+}
+#header-fixed .menulist {
+  margin: 0;
+}
+#header-fixed .menulist > li {
+  margin: 13px 7px;
+}
+#header-fixed .menulist > li > a {
+  font-size: 14px;
+  padding: 4px 0 4px 1px;
+}
+#header-fixed .std-btn-small, #header-fixed .std-btn-small-inv {
+  font-size: 14px;
+  width: 70px;
+  margin-left: 15px;
+}
+#header-fixed .btn-mypage {
+  width: 80px;
+}
+
+/* SINGLE */
+body.single #main {
+  padding-bottom: 0;
+  margin-bottom: 1%;
+}
+body.single #sidebar .postlist-s .postlist-item, body.single #sidebar .postlist-m .postlist-item {
+  margin-bottom: 25px;
+  padding: 0;
+}
+body.single .poststg-col1 #main {
+  max-width: 820px;
+  width: 100%;
+  float: none;
+  margin: 0 auto 1%;
+}
+body.single .poststg-col1-full {
+  max-width: 100%;
+  width: 100%;
+}
+body.single .poststg-col1-full #main {
+  width: 100%;
+  max-width: 100%;
+  float: none;
+}
+body.single .poststg-col1-full #main .entry-header, body.single .poststg-col1-full #main .entry-content {
+  padding-left: 0;
+  padding-right: 0;
+}
+body.single .poststg-col1-full .single-bookslider {
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+body.single .poststg-col1-full .single-bookslider .btn-viewall {
+  right: 20px;
+}
+body.single .poststg-col1-full #main_bottom {
+  max-width: 1100px;
+  margin: 0 auto 2%;
+}
+
+.archive #main {
+  padding-top: 0;
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+#logo {
+  width: 319px;
+  margin: 20px auto 0;
+}
+
+.site-description {
+  font-size: 15px;
+}
+
+#header-fixed .wrap {
+  padding-right: 90px;
+}
+#header-fixed .snslinks {
+  display: block;
+}
+
+.header-toolbar .std-btn {
+  margin-left: 15px;
+}
+.header-toolbar a.std-btn {
+  width: 100px;
+  font-size: 16px;
+}
+
+/* COMMON */
+.postlist-s .postlist-item {
+  clear: both;
+  margin-bottom: 5%;
+  border: 0;
+  padding: 0;
+}
+.postlist-s .postlist-item .postimage {
+  width: 38%;
+  float: left;
+  display: block;
+}
+.postlist-s .postlist-item .postinfo {
+  width: 58%;
+  float: right;
+}
+.postlist-s .postlist-item .date {
+  margin-top: 0;
+}
+
+.prof-card .area {
+  bottom: -18px;
+}
+
+.page-links {
+  padding: 20px 0;
+}
+
+.footer #inner-footer {
+  padding-bottom: 0;
+}
+.footer .snslinks {
+  position: absolute;
+  bottom: 25px;
+  right: 0;
+  margin: 0;
+}
+
+/* TOP */
+.top-content-wrapper.col2 {
+  width: 64%;
+}
+.top-content-wrapper.col1 {
+  width: 32%;
+}
+.top-content-wrapper.left {
+  float: left;
+}
+.top-content-wrapper.right {
+  float: right;
+}
+
+.top-content.col2 {
+  width: 64%;
+}
+.top-content.col1 {
+  width: 32%;
+}
+.top-content.col1-slim {
+  width: 31%;
+}
+
+/* SINGLE */
+body.single #sidebar .postlist-s .postlist-item .postimage {
+  width: 30%;
+}
+body.single #sidebar .postlist-s .postlist-item .postinfo {
+  width: 66%;
+}
+body.single #sidebar .postlist-m .postlist-item .postimage {
+  width: 30%;
+}
+body.single #sidebar .postlist-m .postlist-item .postinfo {
+  width: 66%;
+}
+
+/* PRODUCT */
+.single-product #main .product .fabb-product-title .price {
+  padding: 23px 0;
+  margin: 20px 0 0;
+}
+.single-product #main .product .fabb-product-title .price .label {
+  font-size: 20px;
+  line-height: 41px;
+  padding: 0 12%;
+}
+.single-product #main .product .fabb-product-title .price .label:after {
+  height: 60px;
+  top: 50%;
+  margin-top: -30px;
+}
+.single-product #main .product .fabb-product-title .price .amount-wrapper {
+  padding-right: 5%;
+}
+.single-product #main .product .fabb-product-title .price .amount {
+  font-size: 41px;
+  line-height: 41px;
+}
+.single-product #main .product .fabb-product-title .price .taxlabel {
+  line-height: 20px;
+  font-size: 20px;
+}
+
+/* ARCHIVE */
+.archive .postlist-m .postlist-item, #search .postlist-m .postlist-item {
+  margin: 0 2% 4% 0;
+}
+.archive .postlist-m .postlist-item.right2, #search .postlist-m .postlist-item.right2 {
+  float: left;
+  margin-right: 2%;
+}
+.archive .postlist-m .postlist-item.right3, #search .postlist-m .postlist-item.right3 {
+  margin-right: 0;
+}
+.archive .postlist-m .postlist-item.left2, #search .postlist-m .postlist-item.left2 {
+  clear: none;
+}
+.archive .postlist-m .postlist-item.left3, #search .postlist-m .postlist-item.left3 {
+  clear: both;
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+#main .product .fabb-product-title .description {
+  max-height: 114px;
+  overflow: hidden;
+}
+
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Super Large Monitor Stylesheet
+
+You can add some advanced styles here if you like. This kicks in
+on larger screens.
+
+******************************************************************/
+.header-toolbar .welcome {
+  display: inline-block;
+}
+
+#header-fixed .wrap {
+  padding: 0 30px;
+  max-width: 1040px;
+}
+#header-fixed .logo {
+  margin-top: 13px;
+}
+#header-fixed .logo img {
+  height: 28px;
+}
+#header-fixed .menu-wrapper {
+  margin-top: 3px;
+}
+#header-fixed .menulist {
+  margin: 0;
+}
+#header-fixed .menulist > li {
+  margin: 13px 14px;
+}
+#header-fixed .menulist > li > a {
+  font-size: 16px;
+  padding: 4px 0;
+}
+#header-fixed .std-btn-small, #header-fixed .std-btn-small-inv {
+  font-size: 16px;
+  width: 100px;
+}
+#header-fixed .snslinks {
+  display: block;
+}
+
+.postlist-ss .postlist-item {
+  margin-bottom: 15px;
+}
+
+.header-search {
+  margin: 20px 30px;
+}
+
+/* TOP */
+/* SINGLE */
+body.single #inner-content {
+  position: relative;
+}
+body.single #main {
+  margin: 0 0 1% 0;
+  padding-bottom: 0;
+}
+body.single #main .entry-header .title_wrapper {
+  padding: 10px 0 0;
+}
+body.single #sidebar {
+  margin-bottom: 1%;
+  right: 0;
+  top: 0;
+}
+body.single #sidebar .postlist-s .postlist-item, body.single #sidebar .postlist-m .postlist-item {
+  margin-bottom: 25px;
+}
+body.single #sidebar .postlist-s .postlist-item .postimage, body.single #sidebar .postlist-m .postlist-item .postimage {
+  width: 34%;
+}
+body.single #sidebar .postlist-s .postlist-item .postinfo, body.single #sidebar .postlist-m .postlist-item .postinfo {
+  width: 63%;
+}
+body.single #sidebar .postlist-s .postlist-item .title, body.single #sidebar .postlist-m .postlist-item .title {
+  margin: 0 !important;
+}
+body.single #sidebar.fixed {
+  position: fixed;
+  height: auto;
+}
+body.single #sidebar.clearfixed {
+  position: absolute;
+  height: auto;
+  min-height: 0 !important;
+}
+body.single #main_bottom {
+  margin-bottom: 2%;
+}
+body.single .link_backnumber {
+  max-width: 220px;
+}
+
+/* ARCHIVE */
+.archive .postlist-m .postlist-item.right2, #search .postlist-m .postlist-item.right2 {
+  float: left;
+  margin-right: 2%;
+}
+.archive .postlist-m .postlist-item.right3, #search .postlist-m .postlist-item.right3 {
+  float: left;
+  margin-right: 2%;
+}
+.archive .postlist-m .postlist-item.right4, #search .postlist-m .postlist-item.right4 {
+  margin-right: 0;
+}
+.archive .postlist-m .postlist-item.left2, #search .postlist-m .postlist-item.left2 {
+  clear: none;
+}
+.archive .postlist-m .postlist-item.left3, #search .postlist-m .postlist-item.left3 {
+  clear: none;
+}
+.archive .postlist-m .postlist-item.left4, #search .postlist-m .postlist-item.left4 {
+  clear: both;
+}
+
+/*
+you can call the larger styles if you want, but there's really no need
+*/
+/******************************************************************
+ADDITIONAL IE FIXES
+These fixes are now ONLY seen by IE, so you don't have to worry
+about using prefixes, although it's best practice. For more info
+on using Modernizr classes, check out this link:
+http://www.modernizr.com/docs/
+******************************************************************/
+/*
+For example, you can use something like:
+
+.no-textshadow .class { ... }
+
+You can also target specific versions by using the classes applied to
+the html element. These can sometimes change, so take a look inside the
+header.php file to see what they are:
+
+
+.lt-ie8 .class { ... }
+
+*/
+.content {
+  min-width: 840px;
+}
+
+.entry-content img {
+  width: inherit;
+  max-width: 100%;
+  height: auto;
+}
+
+.postlist .postlist-item .postimage:after {
+  display: none;
+}
+.postlist .postlist-item .postimage img {
+  width: 100%;
+  position: static;
+}

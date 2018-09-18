@@ -1,0 +1,36 @@
+
+@import "compass";
+
+// Sass variables
+@import "../partials/variables";
+
+
+@import "honyomi-otome/481up";
+@import "honyomi-otome/768up";
+@import "honyomi-otome/900up";
+@import "honyomi-otome/1030up";
+
+
+.lt-ie9 {
+  .container_inner {
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  .honyomi-otome_related .container_inner {
+    max-width: 930px;
+  }
+
+  .honyomi-otome_intro .container_inner {
+    max-width: 830px;
+  }
+
+  .btn_pagetop img {
+    width: 80px;
+    height: 80px;
+  }
+  .btn_pagedown img {
+    width: 80px;
+    height: 80px;
+  }
+}

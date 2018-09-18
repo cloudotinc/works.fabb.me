@@ -1,0 +1,90 @@
+//@import "compass";
+
+
+
+.booklist {
+  .book_item_large {
+
+    .book_cover {
+      width: 30%;
+      float: left;
+      img {
+        width: 100%;
+        margin: 0;
+        float: none;
+        &.first {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .book_info {
+      width: 67%;
+      float: right;
+    }
+  }
+}
+
+
+
+.block_img_2col {
+  margin-bottom: 40px;
+  img {
+    width: 40%;
+    max-width: 100%;
+    float: left;
+    margin-bottom: 0;
+  }
+  & > div {
+    width: 56%;
+    float: right;
+  }
+}
+
+
+
+.copyright_wrapper {
+  width: 50%;
+  float: right;
+  clear: both;
+  padding-top: 0;
+  margin-bottom: 20px;
+}
+
+
+.footer_menu {
+  .title {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin: 40px 15px 20px;
+  }
+}
+
+
+
+.pagetitle {
+  font-size: 22px;
+}
+
+.interview #content_interview .profile_block .profile_image {
+  width: 37%;
+  margin-bottom: 20px;
+  float: left;
+}
+.interview #content_interview .profile_block .profile_item {
+  width: 60%;
+  padding: 0 0 0 10px;
+  margin-bottom: 20px;
+  float: right;
+}
+.interview #content_interview .profile_block .btn_official_site a {
+  margin: 0;
+}
+
+.interview #content_interview .profile_col1 {
+  .profile_item {
+    width: 100%;
+    float: none;
+    clear: both;
+    padding: 0;
+  }
+}

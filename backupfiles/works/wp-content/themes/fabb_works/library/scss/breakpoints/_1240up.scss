@@ -1,0 +1,220 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Super Large Monitor Stylesheet
+
+You can add some advanced styles here if you like. This kicks in
+on larger screens.
+
+******************************************************************/
+
+.wrap {
+  //max-width: 1200px;
+
+}
+.wrap-single {
+  //max-width: 1100px;
+}
+
+
+.header-toolbar {
+  .welcome {
+    display: inline-block;
+  }
+}
+
+
+#header-fixed {
+
+  .wrap {
+    padding: 0 30px;
+    max-width: 1040px;
+  }
+
+  .logo {
+    margin-top: 18px;
+    img {
+      height: 22px;
+    }
+  }
+
+  .menu-wrapper {
+    margin-top: 3px;
+  }
+
+  .menulist {
+    margin: 0;
+    &>li {
+      margin: 13px 14px;
+      &>a {
+        font-size: 16px;
+        padding: 4px 0;
+      }
+    }
+  }
+
+  .std-btn-small, .std-btn-small-inv {
+    font-size: 16px;
+    width: 100px;
+  }
+
+  .snslinks {
+    display: block;
+  }
+
+}
+
+
+
+
+.postlist-ss {
+  .postlist-item {
+    margin-bottom: 15px;
+  }
+}
+
+
+//.postlist-m {
+//  padding-top: 10px;
+//  .postlist-item {
+//    float: left;
+//    width: 23.5%;
+//    margin: 0 2% 4% 0;
+//
+//    &.right2 {
+//      float: left;
+//      margin-right: 2%;
+//    }
+//    &.right3 {
+//      float: left;
+//      margin-right: 2%;
+//    }
+//    &.right4 {
+//      margin-right: 0;
+//    }
+//    &.left2 {
+//      clear: none;
+//    }
+//    &.left3 {
+//      clear: none;
+//    }
+//    &.left4 {
+//      clear: both;
+//    }
+//  }
+//
+//}
+
+
+
+
+.header-toolbar {
+
+}
+.header-search {
+  margin: 20px 30px;
+}
+.site-description {
+  //right: 25px;
+}
+
+
+
+/* TOP */
+
+
+
+
+/* SINGLE */
+body.single {
+
+  #inner-content {
+    position: relative;
+  }
+
+  #main {
+    margin: 0 0 1% 0;
+    padding-bottom: 0;
+
+    .entry-header {
+      .title_wrapper {
+        padding: 10px 0 0;
+      }
+    }
+    .entry-title {
+    }
+  }
+  #sidebar {
+    margin-bottom: 1%;
+    .postlist-s, .postlist-m {
+      .postlist-item {
+        margin-bottom: 25px;
+        .postimage {
+          width: 34%;
+        }
+        .postinfo {
+          width: 63%;
+        }
+        .title {
+          margin: 0 !important;
+        }
+        .posttitle {
+        }
+      }
+    }
+
+    right: 0;
+    top: 0;
+
+    &.fixed {
+      position: fixed;
+      height: auto;
+    }
+    &.clearfixed {
+      position: absolute;
+      height: auto;
+      min-height: 0 !important;
+    }
+
+  }
+  #main_bottom {
+    margin-bottom: 2%;
+  }
+
+  .link_backnumber {
+    max-width: 220px;
+  }
+
+}
+
+
+
+/* ARCHIVE */
+.archive, #search {
+  .postlist-m {
+    .postlist-item {
+      &.right2 {
+        float: left;
+        margin-right: 2%;
+      }
+      &.right3 {
+        float: left;
+        margin-right: 2%;
+      }
+      &.right4 {
+        margin-right: 0;
+      }
+      &.left2 {
+        clear: none;
+      }
+      &.left3 {
+        clear: none;
+      }
+      &.left4 {
+        clear: both;
+      }
+    }
+  }
+}
+

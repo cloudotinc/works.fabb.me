@@ -1,0 +1,733 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*  update 2017.12.31  */
+
+
+/* FABB layout_sp.css */
+/********************************************/
+/* メディアクエリ1024PX以下 ------------*/
+@media screen and (max-width :1024px){
+/*-----コンセプト｜メディアクエリipad -----*/  
+.con_box02 {
+  margin: 0 10px 0 10px;
+}
+  
+/*----- 404ページ -----*/
+  #nf #nf_box { 
+    width: 90%;
+  }
+/*----- ホームページ制作 -----*/
+  #d_main {
+    width: 100%;
+    padding: 0 10px;
+  }
+  #d_plan h3 {
+    text-align: center;
+  }
+  #d_plan br.clear { display: inline; }
+  #d_plan strong {
+    padding-left: 4%;
+  }
+  #detail {
+    padding: 0;
+  }
+
+/*----- サービス -----*/ 
+#se_service ul {
+  justify-content: space-around;
+}
+ 
+/*----- ワーカー一覧 -----*/ 
+#wo_worker {
+    padding: 0;
+}
+    
+.wor_sortnav {
+    width: 66%;
+    margin-right: auto;
+    margin-left: auto;
+    flex-flow: row wrap;
+    -webkit-flex-wrap: row wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+
+.wor_sortnav li:first-child {
+    margin-left: 10px;
+}
+
+.wor_sortnav li:last-child {
+    margin-right: 10px;
+}
+
+#wo_contents {
+    width: 100%;
+}
+    
+#wo_contents li {
+    margin-right: 1%;
+    margin-left: 1%;
+}
+    
+#wo_contents .wor_word br {
+    display: none;
+}
+    
+.wor_word {
+
+}
+
+#wo_page {
+    margin: 38px 0 0 0;
+} 
+ 
+/*----- 在宅ワーカー -----*/
+/* 紹介 */
+  #wo_syokai {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  #shokai_box {
+    display: flex;
+    justify-content: center;
+  }
+  #wo_profie {
+    margin: auto;
+  }
+  #wo_prof_box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  #wo_profie img {
+    margin: auto;
+  }
+  #syokai_txt {
+    width: 100%;
+  }
+  
+/*----- 実績 -----*/ 
+  #works_wrap {
+    padding: 0;
+  }
+  
+ .works_sortnav {
+    width: 66%;
+    margin-right: auto;
+    margin-left: auto;
+    flex-flow: row wrap;
+    -webkit-flex-wrap: row wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+
+  .works_sortnav li:first-child {
+    margin-left: 10px;
+}
+
+  .works_sortnav li:last-child {
+    margin-right: 10px;
+ }
+
+  #works_contents ul {
+      padding: 0 4%;
+  }
+  #works_wrap {
+    margin-bottom: 0;
+  }  
+ 
+/*----- faq -----*/
+#faq #fa_main,
+#faq #fa_main .faq_question,
+#faq #fa_main .faq_anser,
+#faq #fa_main .faq_atext {
+  width: 100%;
+}
+
+input[type="checkbox"].on-off:checked + section.faq_anser{
+  height: 140px;
+}
+  
+/*----- Guide -----*/
+/*主なご利用の流れ*/
+#guide #gu_main1 {
+  width: 100%;
+  padding: 0 10px;
+}
+
+#guide .gui_description {
+  float: none;
+  width: auto;
+  margin-left: 208px;
+  padding-top: 19px; 
+}
+  
+/*ガイドライン*/
+#gu_guideline {
+  width: 92.1875%;
+}  
+ 
+}
+
+/********************************************/
+/* メディアクエリ768px以上、1023PX以下 ------------*/
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1023px){
+   
+/*コンセプト｜メディアクエリipad*/
+img {
+  max-width: 100%;
+}
+
+.con_box {
+  margin: 0 7px 0 7px;
+}
+
+.con_box dl {
+  top: 50%;
+  left: 2%;
+  padding-right: 5px;
+}
+
+.con_box02 dl {
+  top: 37%;
+  left: 2%;
+}
+
+.con_box dd,
+.con_box02 dd {
+  line-height: 1.7;
+  font-size: 0.8em;
+}
+
+.con_box dd {
+  padding: 0 10px 0 10px;
+}
+
+.con_box02 dd {
+  padding: 0 25px 0 25px;
+}
+
+.con_box dt,
+.con_box02 dt {
+  margin-bottom: 0em;
+}
+
+.con_box02 dt {
+  line-height: 40px;
+}
+
+.con_box dd br,
+.con_box02 dd br {
+  display: none;
+}
+
+.con_box02 {
+  margin: 0 5px 0 5px;
+}
+}
+
+/********************************************/
+/* メディアクエリ768PX以下 ------------*/
+@media screen and (max-width :768px){
+/*----- ワーカー一覧 -----*/  
+#wo_button {
+    width: 100%;
+}
+
+.wor_sortnav {
+    width: 100%;
+}
+    
+.wor_sortnav li {
+    width: 23%;
+    min-width: 130px;
+}
+    
+.wor_sortnav li a {
+    font-size: 16px;
+}
+
+.wor_sortnav li:first-child {
+    margin-left: 10px;
+}
+
+.wor_sortnav li:last-child {
+    margin-right: 10px;
+}
+
+/*----- 実績 -----*/
+#works_button {
+    width: 100%;
+    padding: 0;
+}
+
+.works_sortnav {
+    width: 100%;
+}
+    
+.works_sortnav li {
+    width: 23%;
+    min-width: 130px;
+}
+    
+.works_sortnav li a {
+    font-size: 15px;
+}
+
+.works_sortnav li:first-child {
+    margin-left: 10px;
+}
+
+.works_sortnav li:last-child {
+    margin-right: 10px;
+}
+
+  #works_contents li{
+    width: 47%;
+    margin-bottom: 30px;
+  } 
+ 
+}
+
+/********************************************/
+/* メディアクエリ767PX以下 ------------*/
+@media screen and (max-width :767px){
+  
+/*----- concept -----*/ 
+h2 .con_mean {
+    padding: 0 5px;
+  }
+  
+  #co_order {
+    width: 80%;
+  }
+  
+  #con_pointbox,
+  #con_pointbox02 {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .con_box {
+    position: relative;
+    margin-top: 20px;
+  }
+  
+  .con_box dl {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+  }
+  
+  .con_box02 {
+    position: relative;
+    margin: 20px 0 0 0;
+  }
+  
+  .con_box02 dl {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    right: 10%;
+  }
+ 
+/*----- service -----*/
+ #se_servce ul {
+  justify-content: space-around;
+ }
+ 
+   #se_service ul li.s_se_box1{
+    width: auto;
+    height: auto;
+  }
+  
+  #se_service ul li h3,#se_service div.s_se_box2{
+    position: static;
+    margin: auto;
+  }
+  
+  #se_service div.s_se_box2 {
+    margin: 10px;
+  }
+  
+  #se_service li.s_se_box1 {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #se_service ul li div.s_circle {
+    align-self: center;
+    margin-left: 0;
+  }
+  
+  #se_service div.s_se_rightbox {
+    align-self: center;
+    text-align: center;
+    margin: 15px auto;
+  }
+ 
+/*----- ワーカー一覧 -----*/  
+#wo_contents {
+    width: 100%;
+}
+    
+#wo_contents h3 {
+    padding-bottom: 0;
+}
+
+.wor_tittle {
+    line-height: 22px;
+}
+
+.wor_tittle .wor_none {
+    display: inline;
+}
+
+.wor_tittle span {
+    margin: 10px 0;
+}
+
+.wor_team {
+    margin-left: calc(30% + 15px);
+}
+    
+.wor_word {
+    overflow: hidden;
+}
+    
+.wor_word br {
+    display: none;
+}
+    
+.wor_face {
+    width: 30%;
+    margin-top: 15px;
+}
+
+/*----- 在宅ワーカー -----*/ 
+  #wo_syokai {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .wo_se_box a {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+ /*紹介*/
+  #shokai_box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  } 
+  p.blue_border {
+    margin: 10px auto 0;
+  }
+  #wo-prof {
+    margin: auto;
+  }
+  #wo_prof_box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 15px 15px;
+  }
+    #wo_prof_box .img_box {
+        width: 50%;
+        margin: 0 auto 20px;
+        max-width: 200px;
+    }
+  #syokai_txt {
+    width: 100%;
+    margin: auto;
+    padding: 0;
+  }
+  #syokai_txt p {
+    font-size: 15px;
+    text-align: left;
+  }
+  #syokai_contact a {
+    margin: auto;
+  }
+   #syokai_contact {
+    text-align: left;/*ie*/
+  }
+  
+/*サービス*/
+  #wo_service {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  #wo_se_boxes {
+    padding-top: 20px;
+  }
+  .wo_se_box {
+    text-align: center;
+    margin: 15px;
+  }
+  .wo_se_box img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto 15px;
+    max-width: 300px;
+  }
+  .wo_se_rightbox ul {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    align-items: center;
+  }
+  .wo_se_rightbox {
+    padding: 0;
+  }
+  .wo_se24 {
+    border: none;
+  }
+  .wo_se36 {
+    padding: 0;
+    line-height: 2;/*ie*/
+  }
+  .wo_se18 {
+    padding: 0;
+  }
+  .wo_se_rightbox p {
+    padding: 0;
+  }
+/* 実績 */
+  #wo_site_boxes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .wo_si_box {
+  margin: auto;
+  }
+
+    /*----- Guide -----*/
+/*主なご利用の流れ*/
+  #guide #gu_main1,
+  #guide #gu_main1 .gui_flow_box,
+  #guide #gu_main1 .gui_description,
+  #guide #gu_main1 .gui_description p{
+    width: 100%;
+  }
+  
+  #gu_main1 .gui_step_icon{
+    padding:0;
+  }
+  #gu_main1 .gui_flow_box{
+    width:100%;
+    display:flex;
+    padding: 5% 1% 1%;
+    border:5px solid #fff;
+  }
+  
+  #gu_main1 section.gui_description{
+    margin-top:0;
+    margin-left:10px;
+  }
+ 
+ /*ガイドライン*/
+   #gu_guideline {
+    width: 100%;
+    padding: 0 5%;
+    box-sizing: border-box;
+  }
+  #gu_guideline h2 {
+    text-align: center;
+  }
+ 
+/*----- 404 -----*/ 
+  #nf #nf_icon {
+    float: none;
+    text-align: center;
+  }
+  #nf #nf_messege {
+    margin-left: 0;
+  }
+ 
+/*----- homepage -----*/ 
+  #s_kv { 
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  #d_plan {
+    width: 100%;
+  }
+  #d_plan p {
+    width: auto; 
+  }
+  #d_item img { 
+    width: 400px;
+    float: none;
+    padding: 0 15px;
+  }
+  #d_item {
+    text-align: center;
+  }
+  #d_plan p {
+    text-align: left;
+  }
+  #d_plan br.clear { display: none; }
+  #detail tr:nth-child(odd) {
+    background-color: transparent;
+  }
+  #detail th { 
+    display: block;
+    width: 100%;
+    background-color: #f7f7f7;
+    line-height: 2em;
+  }
+  #detail td { 
+    display: block;
+    background-color: transparent;
+    padding-left: 3em;
+  }
+  #detail .sp, .sp1, .sp2 { 
+    padding-left: 3em; 
+  }
+ 
+/*----- faq -----*/
+#faq #fa_main {
+  padding: 0 5%;
+  box-sizing: border-box;
+}
+  
+#faq #fa_main .faq_question {
+  display: flex;
+  flex-direction: column;
+}
+
+#faq #fa_main .faq_qcapital {
+  width: 80px;
+  padding-left: 0px;
+}
+
+#faq #fa_main .faq_qtitle {
+  width: 100%;
+}
+
+#faq #fa_main .faq_triangle {
+  float: right;
+  padding-right: 5px;
+}
+
+#faq #fa_main .faq_triangle:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+#faq #fa_main .faq_anser {
+  display: flex;
+  flex-direction: column;
+  padding-right: 0px;
+}
+  
+#faq #fa_main .faq_acapital {
+  padding-left: 0px;
+  padding-bottom: 20px;
+}
+
+input[type="checkbox"].on-off:checked + section.faq_anser{
+  height: 300px;
+} 
+ 
+/*----- 共通 -----*/ 
+  img {
+    max-width: 100%;
+  } 
+ 
+  header,#gnav,ser_inner,#footer_topbox,#etc,#f_nav,section {
+  width: 100%;  
+ }
+ 
+ 
+ 
+}
+
+
+/********************************************/
+/* メディアクエリ480PX以下 ------------*/
+@media screen and (max-width :480px){
+    #works_contents li{
+        width: 100%;
+    }
+}
+
+
+
+/********************************************/
+/* メディアクエリ375PX以下 ------------*/
+@media screen and (max-width :375px){
+ 
+/*----- concept -----*/   
+  .con_box dd br,
+  .con_box02 dd br {
+    display: none;
+  } 
+ 
+/*----- Guide -----*/
+  #gu_main1 .gui_flow_box{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #gu_main1 .gui_flow_box .gui_step_icon{
+    margin: 0 auto;
+    width:30%;
+  }
+  
+  #gu_main1 .gui_flow_box section.gui_description h3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  #gu_main1 section.gui_description{
+ margin: 0;
+    padding: 10px;
+  }
+  
+  #guide h2{
+    width: 60%;
+    margin: 30px auto;
+  }
+ 
+/*----- homepage -----*/ 
+  #d_plan span {
+  padding-left: 1.5%;
+ } 
+}
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

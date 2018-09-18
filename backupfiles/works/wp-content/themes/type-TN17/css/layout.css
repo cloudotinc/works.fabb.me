@@ -1,0 +1,688 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*  update  */
+
+
+/* FABB layout.css */
+/*********** コンセプト **********/
+#co_kv {
+  text-align: center;
+  margin-top: 44px;
+}
+
+.con_kv {
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(../images/concept/concept_kv.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h2 .con_word {
+  padding: 115px 0 96px 0;
+}
+
+#co_contents {
+  width: 100%;
+}
+
+h2 .con_mean {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 78px;
+}
+
+#co_order {
+  width: 400px;
+  background-color: #f2b6b6;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 49px;
+}
+
+#co_order img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+}
+
+#co_order:hover {
+  opacity: 0.7;
+}
+
+#co_point {
+  margin-top: 60px;
+  background-color: #fff5f5;
+}
+
+h2 .con_three {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 49px 0;
+}
+
+#con_pointbox {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+.con_box {
+  position: relative;
+  margin: 0 20px 0 20px;
+}
+
+.con_box dl {
+  position: absolute;
+  top:244px;
+  left: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.con_box dt,
+.con_box02 dt {
+  line-height: 46px;
+  font-size: 21px;
+  margin-bottom: 0.5em;
+}
+
+.con_box dd,
+.con_box02 dd {
+  line-height: 27px;
+  font-size: 14px;
+}
+
+h2 .con_three02 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 73px 0 49px 0;
+}
+
+#con_pointbox02 {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 71px;
+}
+
+.con_box02 {
+  position: relative;
+  margin: 0 18px 0 18px;
+}
+
+.con_box02 dl {
+  position: absolute;
+  top:120px;
+  left: 29px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+/*********** サービス **********/
+/*-- メイン --*/
+#se_title {
+text-align: center;
+}
+
+ .ser_title {
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),url(../images/service/se.kv.jpg)
+;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 280px;
+ }
+.ser_title img {
+ padding-top: 110px;
+}
+
+/*-- サービス一覧 --*/
+
+h2.ser {
+ margin-top: 59px;
+ font-size: 30px;
+ text-align: center;
+ padding-bottom: 14px;
+ 
+}
+
+#se_service {
+ padding-top: 45px;
+}
+
+#se_servce ul {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+}
+
+#se_servce ul li {
+ padding-top: 45px;
+}
+
+.ser_inner a {
+ margin: 22px;
+ display: block;
+}
+.ser_innne {
+ display: flex;
+}
+
+
+/*********** ご利用ガイド **********/
+/* 主なご利用の流れ */
+#guide{
+  width: 100%;
+  margin:0 auto;
+}
+
+#guide #gu_kv{
+  width: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(../images/guide/kv_bg_guide.jpg);
+  margin: 0 auto;
+  background-size: cover;
+  text-align: center;
+}
+
+#guide #gu_kv img{
+  padding: 122px 0px 101px;
+}
+
+#guide h2,
+#gu_guideline h2{
+  text-align: center;
+}
+
+#guide h2{
+  margin: 0 0 53px;
+}
+
+#guide #gu_main1{
+  width: 1024px;
+  margin:0 auto;
+}
+
+#guide .gui_flow_box{
+  background-color: #eeeeee;
+}
+
+#guide .gui_step_icon{
+  float: left;
+  padding: 20px 28px 17px 40px;
+}
+
+#guide .gui_description{
+  float: left;
+  width: 78%; /*--check--*/
+  margin-top: 19px; /*--check--*/
+}
+
+#guide .gui_description h3{
+  font-size: 22px;
+  border-bottom: 1px solid #f2b6b6;
+  padding: 10px 0 10px;
+}
+
+#guide .gui_description p{
+  font-size: 14px;
+  line-height: 27px;
+  margin: 7px 23px 0 0;
+}
+
+#guide img.gui_arrow{
+  display: block;
+  margin: 12px auto;
+}
+
+/* ガイドライン */
+#gu_guideline {
+  width: 944px;
+  margin: 0 auto;
+  padding-bottom: 17px;
+}
+
+#gu_guideline h2 {
+  margin: 77px 0 51px;
+}
+
+#gu_guideline h3 {
+  font-size: 20px;
+  border-bottom: solid 2px;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+}
+
+#gu_guideline h4 {
+  font-size: 18px;
+  line-height: 37px;
+}
+
+#gu_guideline p {
+  font-size: 14px;
+  line-height: 27px;
+}
+
+#gu_guideline .gui_first_half {
+  padding-bottom: 20px;
+}
+
+#gu_guideline .gui_prepayment {
+  padding-bottom: 59px;
+}
+/*********** 実績 **********/
+
+
+
+/*********** 運営会社 **********/
+
+
+
+/*********** 問い合わせ **********/
+
+
+
+/*********** サイトマップ **********/
+#sitemap{
+  width: 100%;
+  margin: 0 auto;
+}
+
+#sitemap h2{
+  width: 75%;
+  margin-top: 50px;
+  font-size: 30px;
+  line-height:40px;
+  margin-left:12%;
+  text-indent: 1em;
+  border-bottom:2px solid #f2b6b6;
+}
+
+#sitemap_ul{
+  width:300px;
+  text-align: left;
+  margin-top:20px;
+  margin-left:16%;
+}
+
+#sitemap #sitemap_ul li{
+  font-size: 16px;
+  line-height: 40px;
+}
+
+#sitemap #sitemap_ul li a:hover{
+  text-decoration: underline;
+}
+
+/*********** 404ページ **********/
+#nf #nf_box { 
+  width: 1024px;
+  margin: 100px auto;
+  background-color: #eeeeee;
+  padding: 15px;
+}
+#nf #nf_icon {
+  float: left;
+  overflow: hidden;
+}
+#nf_messege { margin-left: 190px;}
+#nf strong {
+  display: block;
+  font-size: 20px;
+  line-height: 34px;
+  margin-top: 30px;
+}
+#nf_line {
+  background-color: #f2b6b6;
+  width: auto;
+  height: 2px;
+  margin-bottom: 10px;
+}
+#nf p {
+  line-height: 2em;
+}
+.nf_right { 
+  margin-top: 10px;
+  line-height: 20px;
+  float: right; 
+}
+.nf_right span { 
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+/*********** homepage **********/
+#servis_detail header { margin-bottom: 42px;}
+#s_kv {
+  width: 100%;
+  height: 280px;
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(../images/homepage/hp_kv.jpg);
+  background-size: cover;
+  margin-bottom: 128px;
+  text-align: center;
+  overflow: hidden;
+}
+
+#s_kv h2 {
+  font-size: 30px;
+  color: #fff;
+  font-weight: normal;
+  line-height: 280px;
+  padding-top: 3px;
+}
+
+#d_main {
+  width: 1024px;
+  margin: 0 auto;
+}
+#d_item {
+  overflow: hidden;
+  margin-bottom: 112px;
+}
+#d_item img {
+  float: left;
+  padding: 10px 40px;
+}
+#d_plan {
+  width: 512px;
+  margin-left: auto;
+}
+#d_plan h3 {
+  width: auto;
+  font-size: 26px;
+  align-items: baseline;
+  letter-spacing: -4px;
+}
+#d_plan strong {
+  font-size: 50px;
+  line-height: 50px;
+  letter-spacing: -1px;
+  padding-left: 3px;
+}
+#d_plan span {
+  font-size: 24px;
+  letter-spacing: normal;
+  vertical-align: middle;
+}
+#d_plan .d_line {
+  height: 3px;
+  width: auto;
+  background-color: #f2b6b6;
+  margin-bottom: 33px;
+}
+#d_plan p {
+  width: 25em;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 74px;
+  line-height: 30px;
+}
+#d_plan #d_app_btn {
+  background-color: #f2b6b6;
+  width: 290px;
+  height: 80px;
+  color: #fff;
+  font-size: 24px;
+/*  font-weight: bold;*/
+  margin: 0 auto;
+  line-height: 80px;
+  text-align: center;
+  
+}
+a:hover div {
+   opacity: 0.8;
+}
+#detail {
+  clear: both;
+  padding: 0 20px;
+}
+#detail h2 {
+  font-size: 24px;
+  line-height: 36px;
+  border-left: 7px solid #f2b6b6;
+  padding-left: 12px;
+  margin-bottom: 6px;
+}
+#detail table {
+  width: 1024px;
+  margin-bottom: 48px;
+}
+#detail tr:nth-child(odd) {background-color: #f7f7f7; }
+#detail th {
+  width: 335px;
+  font-size: 18px;
+  padding-left: 20px;
+  margin: auto 0;
+  color: #444;
+  vertical-align: middle;
+}
+#detail td {
+  font-weight: bold;
+  line-height: 32px;
+  padding: 20px 20px 15px 20px;
+}
+#detail .sp { padding: 10px 20px 20px 20px; }
+#detail .sp1 { padding-bottom: 21px; }
+#detail .sp2 { padding-bottom: 24px 20px 15px 20px; }
+#detail .d_btn {
+  display: block;
+  width: 290px;
+  height: 80px;
+  margin: 0 auto;
+  border: 1px solid #4b4b4b;
+  text-align: center;
+}
+#detail .d_btn p {
+  font-size: 22px;
+  line-height: 74px;
+}
+
+
+
+/********************************************/
+/* メディアクエリ767PX以下 ------------*/
+@media screen and (max-width :767px){
+/*----- concept -----*/ 
+  h2 .con_mean {
+    padding: 0 5px;
+  }
+  
+  #co_order {
+    width: 80%;
+  }
+  
+  #con_pointbox,
+  #con_pointbox02 {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .con_box {
+    position: relative;
+    margin-top: 20px;
+  }
+  
+  .con_box dl {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+  }
+  
+  .con_box02 {
+    position: relative;
+    margin: 20px 0 0 0;
+  }
+  
+  .con_box02 dl {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    right: 10%;
+  }
+ 
+/*----- service -----*/
+ #se_servce ul {
+  justify-content: space-around;
+ } 
+ 
+/*----- Guide -----*/
+/* 主なご利用の流れ */
+  #guide #gu_main1,
+  #guide #gu_main1 .gui_flow_box,
+  #guide #gu_main1 .gui_description,
+  #guide #gu_main1 .gui_description p{
+    width: 100%;
+  }
+  
+  #gu_main1 .gui_step_icon{
+    padding:0;
+  }
+  #gu_main1 .gui_flow_box{
+    width:100%;
+    display:flex;
+    padding: 5% 1% 1%;
+    border:5px solid #fff;
+  }
+  
+  #gu_main1 section.gui_description{
+    margin-top:0;
+    margin-left:10px;
+  }
+ 
+ /* ガイドライン */
+   #gu_guideline {
+    width: 100%;
+    padding: 0 5%;
+    box-sizing: border-box;
+  }
+  #gu_guideline h2 {
+    text-align: center;
+  }
+ 
+/*----- 404 -----*/ 
+  #nf header,
+  #nf footer { 
+    padding:  0 1%;
+  }
+  #nf #nf_box {
+    width: 100%;
+    text-align: center;
+  }
+  #nf #nf_icon {
+    float: none;
+  }
+  #nf #nf_messege {
+    margin-left: 0;
+  }
+ 
+/*----- homepage -----*/ 
+  #s_kv, #d_main, #d_item, #detail { width: 100%;}
+  #servis_detail { padding: 0 1%; }
+  .d_contact {
+    width: 68.06%;
+    margin: 0 auto;
+  }
+  #d_plan {
+    width: 100%;
+  }
+  
+  #d_plan p,
+  aside p {
+    width: auto; 
+  }
+  #d_item img { 
+    max-width: 100%;
+    float: none; 
+  }
+  #d_item { text-align: center;}
+  #detail { padding: 0; }
+  #detail table { 
+    width: 100%;
+    margin: 0 auto;
+  }
+  #detail th { 
+    display: block;
+    width: 100%;
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+  }
+  #detail td { 
+    display: block;
+    background-color: #fff;
+    padding-left: 50px;
+  } 
+ 
+/*----- 共通 -----*/ 
+  img {
+    max-width: 100%;
+  } 
+}
+
+
+
+
+/* メディアクエリ375PX以下 ------------*/
+@media screen and (max-width :375px){
+/*----- concept -----*/   
+  /*#con_pointbox {
+    flex-direction: column;
+  }*/
+  
+  .con_box dd br,
+  .con_box02 dd br {
+    display: none;
+  }
+ 
+ /*----- Guide -----*/
+  #gu_main1 .gui_flow_box{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #gu_main1 .gui_flow_box .gui_step_icon{
+    margin: 0 auto;
+    width:30%;
+  }
+  
+  #gu_main1 .gui_flow_box section.gui_description h3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  #gu_main1 section.gui_description{
+ margin: 0;
+    padding: 10px;
+  }
+  
+  #guide h2{
+    width: 60%;
+    margin: 30px auto;
+  }
+}
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

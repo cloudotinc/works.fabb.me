@@ -1,0 +1,46 @@
+
+.video_wrapper {
+
+  .title_wrapper {
+    .title {
+      padding: 10px 5px;
+      min-height: 42px;
+      font-size: 16px;
+      line-height: 1.4;
+
+    }
+  }
+}
+
+
+.playlist_wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  ul {
+    li {
+      margin-bottom: 20px;
+      overflow: hidden;
+
+      .thumb {
+        width: 240px;
+        float: left;
+        margin: 0 15px 0 0;
+      }
+
+      .info {
+        padding-left: 255px;
+        p {
+          margin-bottom: 15px;
+        }
+        .title {
+          font-weight: bold;
+          font-size: 15px;
+          margin: 0;
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+}
