@@ -278,8 +278,21 @@ function output_hdr_sitesw() {
                     </a>
 
                     <div class="menu-wrapper">
+                        <ul class="menulist cf">
+                            <li class="<?php is_active_class($curmenu, "service") ?>">
+                                <a href="<?php echo get_option('home'); ?>/service/">サービス一覧</a>
+                            </li>
+                            <li class="<?php is_active_class($curmenu,"casestudy") ?>">
+                                <a href="<?php echo get_option('home'); ?>/casestudy/">制作事例</a>
+                            </li>
+                            <li class="<?php is_active_class($curmenu, "worker") ?>">
+                                <a href="<?php echo get_option('home'); ?>/worker/">ワーカー一覧</a>
+                            </li>
+                            <li class="<?php is_active_class($curmenu,"contact") ?>">
+                                <a href="<?php echo get_option('home'); ?>/contact/">お問い合わせ</a>
+                            </li>
+                        </ul>
                     <?php
-                    output_hdr_menulist($curmenu);
                     output_hdr_usermenu();
                     ?>
                     </div>
